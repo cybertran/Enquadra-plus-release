@@ -15,22 +15,22 @@ Este checklist registra o estado de segurança do repositório público. Itens e
 - [x] Security policy gate configurado.
 - [x] Secret scan especializado configurado.
 - [x] Dependency Review configurado.
-- [ ] Dependency graph do GitHub habilitado para tornar o Dependency Review operacional.
+- [x] Dependency graph do GitHub habilitado para tornar o Dependency Review operacional.
 - [x] Dependabot configurado para Gradle e GitHub Actions.
 - [x] CodeQL configurado para Java/Kotlin.
 - [x] Workflows públicos usam runners hospedados pelo GitHub.
 - [x] Workflows de bootstrap usam permissões mínimas.
 - [x] Actions de terceiros no bootstrap estão fixadas por commit SHA.
-- [ ] Ruleset/proteção de `main` configurado no GitHub.
-- [ ] Private vulnerability reporting habilitado nas configurações do GitHub.
-- [ ] Código sanitizado importado do repositório privado.
-- [ ] Build Android aprovado após a importação do código.
-- [ ] Testes unitários aprovados após a importação do código.
-- [ ] Android lint aprovado após a importação do código.
-- [ ] Scanner de segredos aprovado após a importação do código.
-- [ ] Dependency Review aprovado após a importação do código.
-- [ ] CodeQL aprovado após a importação do código.
-- [ ] Revisão final confirmou ausência de material de assinatura no histórico público.
+- [x] Ruleset/proteção de `main` configurado no GitHub.
+- [x] Private vulnerability reporting habilitado nas configurações do GitHub.
+- [x] Código sanitizado importado do repositório privado.
+- [x] Build Android aprovado após a importação do código.
+- [x] Testes unitários aprovados após a importação do código.
+- [x] Android lint aprovado após a importação do código.
+- [x] Scanner de segredos aprovado após a importação do código.
+- [x] Dependency Review aprovado após a importação do código.
+- [x] CodeQL aprovado após a importação do código.
+- [x] Revisão final confirmou ausência de material de assinatura no histórico público.
 
 ## Revisão por mudança
 
