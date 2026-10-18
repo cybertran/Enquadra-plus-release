@@ -7,7 +7,7 @@ O GitHub Actions pode compilar e validar o aplicativo, mas **não recebe a chave
 Certificado oficial esperado:
 
 ```text
-SHA-256: BE:58:EA:ED:F7:AD:76:B6:5F:75:FC:08:6A:DC:71:89:E4:91:A7:25:67:B5:8E:E7:BB:E3:EA:DA:3A:2C:93:A9
+SHA-256: BE:58:EA:ED:F7:AD:76:B6:5F:75:FC:08:6A:DC:71:89:F4:91:A7:25:67:B5:8F:E7:BB:F3:EA:DA:3A:2C:93:A9
 Alias: app-release
 ```
 
