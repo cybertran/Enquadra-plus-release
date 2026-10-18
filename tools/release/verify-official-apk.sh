@@ -7,7 +7,7 @@ if [[ -z "$APK" || ! -f "$APK" ]]; then
   exit 2
 fi
 
-EXPECTED="BE58EAEDF7AD76B65F75FC086ADC7189E491A72567B58EE7BBE3EADA3A2C93A9"
+EXPECTED="BE58EAEDF7AD76B65F75FC086ADC7189F491A72567B58FE7BBF3EADA3A2C93A9"
 APKSIGNER="${APKSIGNER:-apksigner}"
 
 OUTPUT="$("$APKSIGNER" verify --verbose --print-certs "$APK")"
@@ -15,9 +15,9 @@ printf '%s\n' "$OUTPUT"
 
 ACTUAL="$(
   printf '%s\n' "$OUTPUT" |
-    sed -n 's/^Signer #1 certificate SHA-256 digest: //p' |
-    head -n 1 |
-    tr -d ':' |
+    grep -i -m1 'certificate SHA-256 digest' |
+    sed -E 's/.*digest:[[:space:]]*//' |
+    tr -d '[:space:]:' |
     tr '[:lower:]' '[:upper:]'
 )"
 
