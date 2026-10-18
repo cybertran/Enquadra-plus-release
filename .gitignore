@@ -1,0 +1,55 @@
+# Android / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+**/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing material — never commit
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*.der
+*.cer
+keystore.properties
+signing.properties
+key.properties
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
+!.env.sample
+*.secrets
+*credentials*
+*credential*
+*password*
+*secret*
+*.token
+google-services.json
+
+# Local tooling / IDE / OS
+.vscode/
+*.swp
+*.swo
+Thumbs.db
+desktop.ini
+
+# Python tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated security reports
+gitleaks-report.*
+codeql-db/
+sarif-results/

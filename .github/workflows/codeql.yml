@@ -1,0 +1,75 @@
+name: CodeQL
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 5 * * 2"
+
+permissions:
+  contents: read
+  security-events: write
+  packages: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Detect Java/Kotlin source
+        id: detect
+        shell: bash
+        run: |
+          if find . -type f \( -name '*.kt' -o -name '*.java' \) -print -quit | grep -q .; then
+            echo "source=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "source=false" >> "$GITHUB_OUTPUT"
+            echo "Nenhum código Java/Kotlin presente no bootstrap; análise será ativada após a importação."
+          fi
+
+      - name: Set up JDK 17
+        if: steps.detect.outputs.source == 'true'
+        uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        if: steps.detect.outputs.source == 'true'
+        uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
+
+      - name: Initialize CodeQL
+        if: steps.detect.outputs.source == 'true'
+        uses: github/codeql-action/init@ce5e7eeac396d720fe2d802714996c8ce561e311 # v3
+        with:
+          languages: java-kotlin
+
+      - name: Install Android SDK packages
+        if: steps.detect.outputs.source == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          yes | sdkmanager --licenses >/dev/null || true
+          sdkmanager "platform-tools" "platforms;android-37.0" "build-tools;36.0.0" "build-tools;37.0.0"
+
+      - name: Set up Gradle 9.6
+        if: steps.detect.outputs.source == 'true'
+        uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4.4.3
+        with:
+          gradle-version: "9.6.0"
+          cache-disabled: true
+
+      - name: Build for CodeQL
+        if: steps.detect.outputs.source == 'true'
+        shell: bash
+        run: gradle --no-daemon --stacktrace :app:assembleDebug
+
+      - name: Analyze
+        if: steps.detect.outputs.source == 'true'
+        uses: github/codeql-action/analyze@ce5e7eeac396d720fe2d802714996c8ce561e311 # v3
