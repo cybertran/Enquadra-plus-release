@@ -1,0 +1,209 @@
+{
+  "resolution": "Resolução CONTRAN nº 1009/2024",
+  "removeCodes": [
+    "764-10",
+    "765-00"
+  ],
+  "upserts": [
+    {
+      "code": "779-00",
+      "status": "VERIFIED",
+      "article": "Art. 165-B, caput",
+      "shortDescription": "Dirigir veículo sem realizar o exame toxicológico previsto no caput do art. 148-A.",
+      "description": "Dirigir veículo sem realizar o exame toxicológico previsto no art. 148-A deste Código.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+      "verificationMethod": "Mediante abordagem.",
+      "penalty": "Multa (5x); em caso de reincidência no período de 12 meses: multa (10x) e suspensão do direito de dirigir.",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Condutor habilitado nas categorias C, D ou E conduzindo veículo que exija uma dessas categorias sem ter realizado o exame toxicológico exigido para obtenção ou renovação da CNH, inclusive nas mudanças para essas categorias."
+      ],
+      "whenNotToCite": [
+        "Condutor das categorias C, D ou E sem realizar o exame no prazo, mas conduzindo veículo das categorias A ou B.",
+        "Condutor C, D ou E, com menos de 70 anos, conduzindo veículo que exija uma dessas categorias, sem comprovar o exame toxicológico periódico do § 2º do art. 148-A após 30 dias do vencimento: utilizar 780-30.",
+        "Condutor inabilitado conduzindo veículo das categorias C, D ou E: utilizar 501-00, art. 162, I.",
+        "Condutor habilitado apenas nas categorias A ou B conduzindo veículo que exija C, D ou E: utilizar 503-71, art. 162, III.",
+        "Exame toxicológico válido e CNH vencida há mais de 30 dias: utilizar 504-50, art. 162, V."
+      ],
+      "procedures": [
+        "A realização do exame toxicológico deve ser verificada exclusivamente na base do RENACH; a impossibilidade de consulta impede a lavratura do AIT.",
+        "Para renovação da CNH, considera-se regular a situação quando houver no RENACH coleta de amostra realizada, no máximo, 90 dias antes da fiscalização, observado o § 3º do art. 10-B da Resolução CONTRAN nº 923/2022.",
+        "O campo de observações do AIT deve registrar a data de vencimento do exame e a data da última coleta de amostra registrada no RENACH; se não houver coleta, registrar essa ausência.",
+        "Em caso de reincidência em até 12 meses, aplicam-se multa de dez vezes e suspensão do direito de dirigir."
+      ],
+      "aitObservations": [
+        "Condutor habilitado na categoria “AC” dirigindo veículo da categoria “C”, com exame toxicológico vencido em DD/MM/AAAA e sem nova coleta registrada nos últimos 90 dias."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1009-779-00",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1009/2024",
+          "section": "Ficha de fiscalização - código 779-00",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+          "effectiveFrom": "2024-04-25",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 165-B, caput do CTB"
+      ]
+    },
+    {
+      "code": "780-30",
+      "status": "VERIFIED",
+      "article": "Art. 165-B c/c parágrafo único",
+      "shortDescription": "Dirigir veículo sem realizar o exame toxicológico previsto no § 2º do art. 148-A.",
+      "description": "Dirigir veículo sem realizar o exame toxicológico previsto no art. 148-A deste Código.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+      "verificationMethod": "Mediante abordagem.",
+      "penalty": "Multa (5x)",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Condutor das categorias C, D ou E, com menos de 70 anos, conduzindo veículo que exija uma dessas categorias, sem realizar o exame toxicológico periódico a cada 2 anos e 6 meses da obtenção ou renovação da CNH, após 30 dias do vencimento do prazo."
+      ],
+      "whenNotToCite": [
+        "Condutor das categorias C, D ou E sem realizar o exame periódico no prazo, mas conduzindo veículo das categorias A ou B.",
+        "Condutor C, D ou E, com menos de 70 anos, conduzindo veículo que exija uma dessas categorias, sem realizar o exame toxicológico previsto no caput do art. 148-A, com CNH vencida há mais de 30 dias: utilizar 779-00.",
+        "Condutor inabilitado conduzindo veículo das categorias C, D ou E: utilizar 501-00, art. 162, I.",
+        "Condutor habilitado apenas nas categorias A ou B conduzindo veículo que exija C, D ou E: utilizar 503-71, art. 162, III.",
+        "Exame toxicológico válido e CNH vencida há mais de 30 dias: utilizar 504-50, art. 162, V."
+      ],
+      "procedures": [
+        "O exame toxicológico periódico corresponde aos exames exigidos entre os períodos de obtenção ou renovação da CNH.",
+        "A realização do exame deve ser verificada exclusivamente na base do RENACH; a impossibilidade de consulta impede a lavratura do AIT.",
+        "O exame periódico é considerado regular quando estiver dentro dos 30 dias de seu vencimento ou quando o RENACH registrar coleta de amostra realizada, no máximo, 90 dias antes da fiscalização, nos termos do § 3º do art. 10-B da Resolução CONTRAN nº 923/2022.",
+        "Se houver mais de um exame periódico vencido, aplica-se apenas uma penalidade, referente ao último exame vencido.",
+        "O campo de observações do AIT deve registrar a data de vencimento do exame periódico e a data da última coleta registrada no RENACH; na ausência, registrar que não foram encontradas coletas.",
+        "Em caso de reincidência em até 12 meses, aplicam-se multa de dez vezes e suspensão do direito de dirigir.",
+        "A infração aplica-se mesmo com a CNH vencida; após a renovação da CNH, os prazos recomeçam a ser contados conforme o § 1º do art. 10-A da Resolução CONTRAN nº 923/2022."
+      ],
+      "aitObservations": [
+        "Condutor com menos de 70 anos, habilitado na categoria “D”, dirigindo veículo da categoria “D”, com exame toxicológico periódico vencido em DD/MM/AAAA e sem nova coleta registrada nos últimos 90 dias."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1009-780-30",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1009/2024",
+          "section": "Ficha de fiscalização - código 780-30",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+          "effectiveFrom": "2024-04-25",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 165-B c/c parágrafo único do CTB"
+      ]
+    },
+    {
+      "code": "781-10",
+      "status": "VERIFIED",
+      "article": "Art. 165-C",
+      "shortDescription": "Dirigir veículo tendo obtido resultado positivo no exame toxicológico previsto no caput do art. 148-A.",
+      "description": "Dirigir veículo tendo obtido resultado positivo no exame toxicológico previsto no caput do art. 148-A deste Código.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+      "verificationMethod": "Mediante abordagem.",
+      "penalty": "Multa (5x)",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Condutor habilitado nas categorias C, D ou E conduzindo veículo que exija uma dessas categorias com resultado positivo no exame toxicológico realizado para renovação da CNH."
+      ],
+      "whenNotToCite": [
+        "Condutor das categorias C, D ou E com resultado positivo no exame toxicológico para renovação da CNH, mas conduzindo veículo das categorias A ou B.",
+        "Condutor C, D ou E, com menos de 70 anos, com resultado positivo no exame toxicológico periódico do § 2º do art. 148-A; nesse caso aplica-se apenas a suspensão prevista no inciso II do § 5º do art. 148-A, pela autoridade executiva de trânsito responsável pelo registro da CNH."
+      ],
+      "procedures": [
+        "O resultado do exame toxicológico deve ser verificado exclusivamente na base do RENACH; a impossibilidade de consulta impede a lavratura do AIT.",
+        "Em caso de reincidência em até 12 meses, aplicam-se multa de dez vezes e suspensão do direito de dirigir."
+      ],
+      "aitObservations": [
+        "Condutor habilitado na categoria “AE” dirigindo veículo da categoria “E”, com resultado positivo no exame toxicológico para renovação da CNH."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1009-781-10",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1009/2024",
+          "section": "Ficha de fiscalização - código 781-10",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+          "effectiveFrom": "2024-04-25",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 165-C do CTB"
+      ]
+    },
+    {
+      "code": "782-00",
+      "status": "VERIFIED",
+      "article": "Art. 165-D",
+      "shortDescription": "Deixar de realizar o exame toxicológico previsto no § 2º do art. 148-A, após 30 dias do vencimento.",
+      "description": "Deixar de realizar o exame toxicológico previsto no § 2º do art. 148-A deste Código, após 30 dias do vencimento do prazo estabelecido.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade Executiva de Trânsito Estadual.",
+      "verificationMethod": "Vide procedimentos.",
+      "penalty": "Multa (5x)",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Condutor das categorias C, D ou E, com menos de 70 anos, que não realizou o exame toxicológico periódico a cada 2 anos e 6 meses da obtenção ou renovação da CNH, após 30 dias do vencimento do prazo."
+      ],
+      "whenNotToCite": [
+        "Condutor C, D ou E, com menos de 70 anos, conduzindo veículo que exija uma dessas categorias e sem comprovar o exame periódico após 30 dias do vencimento: utilizar 780-30.",
+        "Condutor C, D ou E conduzindo veículo que exija uma dessas categorias, sem realizar o exame previsto no caput do art. 148-A, com CNH vencida há mais de 30 dias: utilizar 779-00.",
+        "Condutor falecido com registro no RENACH nas categorias C, D ou E."
+      ],
+      "procedures": [
+        "O exame toxicológico periódico corresponde aos exames exigidos entre os períodos de obtenção ou renovação da CNH.",
+        "A realização do exame deve ser verificada exclusivamente na base do RENACH; a impossibilidade de consulta impede a lavratura do AIT.",
+        "Para o art. 165-D, o exame periódico é considerado regular quando estiver dentro dos 30 dias do vencimento ou quando o RENACH registrar coleta de amostra realizada até 90 dias antes do vencimento, observadas as regras do § 3º do art. 10-B da Resolução CONTRAN nº 923/2022.",
+        "A cada exame periódico vencido corresponde um AIT, ressalvados os casos abrangidos pela Deliberação CONTRAN nº 272/2024.",
+        "A data do cometimento da infração é o 31º dia após o vencimento do último exame toxicológico periódico; a lavratura pode ocorrer depois, desde que respeitado o prazo de expedição da notificação.",
+        "A hora do cometimento corresponde a zero hora do 31º dia após o vencimento do último exame toxicológico periódico.",
+        "O local do cometimento corresponde ao endereço da sede do órgão ou entidade executiva de trânsito responsável pelo registro da CNH do infrator.",
+        "O campo da placa de identificação do veículo deve ser preenchido com a expressão SEMPLACA.",
+        "A infração é de responsabilidade pessoal vinculada à CNH, aplicando-se o § 8º do art. 159 do CTB; o prontuário do condutor é de preenchimento obrigatório.",
+        "O órgão máximo executivo de trânsito da União e os órgãos executivos dos Estados e do Distrito Federal devem manter alinhamentos para tornar a fiscalização eficiente e segura.",
+        "O campo de observações do AIT deve registrar a data de vencimento do exame periódico e a data da última coleta registrada no RENACH; na ausência, registrar que não foram encontradas coletas.",
+        "A infração aplica-se mesmo com a CNH vencida; após a renovação da CNH, os prazos recomeçam conforme o § 1º do art. 10-A da Resolução CONTRAN nº 923/2022."
+      ],
+      "aitObservations": [
+        "Exame toxicológico periódico vencido em DD/MM/AA."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1009-782-00",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1009/2024",
+          "section": "Ficha de fiscalização - código 782-00",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+          "effectiveFrom": "2024-04-25",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 165-D do CTB"
+      ]
+    }
+  ]
+}

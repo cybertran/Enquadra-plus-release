@@ -1,0 +1,117 @@
+{
+  "batchId": "2026-10-10-batch-02",
+  "reviewedAt": "2026-10-10",
+  "scope": {
+    "candidateCount": 60,
+    "promotedCount": 51,
+    "heldCount": 9,
+    "promotedCodes": [
+      "537-10",
+      "542-83",
+      "542-84",
+      "543-60",
+      "544-40",
+      "545-24",
+      "545-25",
+      "545-26",
+      "545-27",
+      "546-00",
+      "547-90",
+      "548-70",
+      "549-50",
+      "550-90",
+      "551-72",
+      "551-73",
+      "552-50",
+      "553-30",
+      "554-13",
+      "556-80",
+      "557-60",
+      "558-40",
+      "559-20",
+      "560-60",
+      "561-41",
+      "561-42",
+      "561-43",
+      "561-44",
+      "562-21",
+      "562-22",
+      "562-23",
+      "562-24",
+      "562-25",
+      "563-00",
+      "564-91",
+      "564-92",
+      "564-93",
+      "565-70",
+      "568-10",
+      "569-00",
+      "570-30",
+      "571-10",
+      "572-00",
+      "573-80",
+      "574-62",
+      "574-63",
+      "576-20",
+      "577-01",
+      "577-02",
+      "577-03",
+      "577-04"
+    ],
+    "held": [
+      {
+        "code": "502-92",
+        "reason": "Colunas operacionais da ficha oficial ainda não foram recuperadas integralmente pelo pipeline."
+      },
+      {
+        "code": "506-10",
+        "reason": "A ficha federal indexada não foi recuperada integralmente nesta rodada; manter parcial até conferência completa."
+      },
+      {
+        "code": "511-80",
+        "reason": "Exemplos do AIT e parte do conteúdo operacional ainda exigem conferência completa."
+      },
+      {
+        "code": "516-92",
+        "reason": "A Resolução CONTRAN nº 1031/2026 já está parcialmente vigente, mas a alteração das fichas do Anexo do MBFT só entra em vigor 60 dias após 18/08/2026; manter parcial durante a transição."
+      },
+      {
+        "code": "554-12",
+        "reason": "Layout oficial ainda mistura colunas operacionais na extração."
+      },
+      {
+        "code": "554-14",
+        "reason": "Layout oficial ainda mistura colunas operacionais na extração."
+      },
+      {
+        "code": "554-17",
+        "reason": "Layout oficial ainda mistura colunas operacionais na extração."
+      },
+      {
+        "code": "555-00",
+        "reason": "Layout oficial ainda mistura colunas operacionais na extração."
+      },
+      {
+        "code": "574-61",
+        "reason": "Ficha substituída pela Resolução CONTRAN nº 1023/2026; patch atual não contém todos os campos operacionais para promoção."
+      }
+    ]
+  },
+  "sourceCheck": {
+    "mbft": "Resolução CONTRAN nº 985/2022 e respectivo Anexo/MBFT oficial.",
+    "currentIndexCheckedAt": "2026-10-10",
+    "currentIndexNote": "Índice oficial do CONTRAN atualizado em 06/10/2026 conferido antes da promoção.",
+    "curatedOperationalFields": [
+      "537-10",
+      "554-13",
+      "556-80"
+    ]
+  },
+  "amendmentCheck": {
+    "relevant": [
+      "Resolução CONTRAN nº 1023/2026 — afeta 574-61.",
+      "Resolução CONTRAN nº 1031/2026 — alteração do Anexo do MBFT com vigência diferida; afeta a transição de fichas ligadas ao art. 165."
+    ],
+    "note": "Nenhuma outra alteração posterior listada no índice oficial do CONTRAN substitui as fichas promovidas neste lote."
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "resolution": "Resolução CONTRAN nº 1023/2026",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "574-61",
+      "status": "VERIFIED",
+      "article": "Art. 187, I",
+      "shortDescription": "Transitar em local ou horário não permitido pela regulamentação estabelecida pela autoridade.",
+      "description": "Transitar em locais e horários não permitidos pela regulamentação estabelecida pela autoridade competente para todos os tipos de veículos.",
+      "severity": "Média",
+      "points": 4,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo transitando em via, pista ou faixa de trânsito seletivo em desacordo com as placas R-10, R-13, R-37, R-38 e/ou informação complementar.",
+        "Veículo desrespeitando informação complementar das placas R-3, R-4a, R-4b, R-24a, R-25a, R-25b, R-25c, R-25d ou R-26 quando ela estabelecer local de trânsito seletivo.",
+        "Quadriciclo ou triciclo motorizado de cabine fechada transitando em rodovias federais, estaduais ou do Distrito Federal.",
+        "Veículo ou combinação desrespeitando restrição de trânsito em datas, locais e horários regulamentados em ato administrativo da autoridade com circunscrição sobre a via.",
+        "Veículo novo inacabado, usado incompleto ou remonta transitando no período noturno.",
+        "Veículo ou carga acima dos limites legais de peso/dimensão quando houver restrição de tráfego de local ou horário não constante na AET/AE e imposta pelo órgão com circunscrição sobre a via.",
+        "Veículo automotor de uso exclusivo fora de estrada circulando fora das situações autorizadas pelo órgão com circunscrição sobre a via."
+      ],
+      "whenNotToCite": [
+        "Veículo desobedecendo R-32 ou R-39 que regulamenta circulação em faixa/pista: utilizar os enquadramentos específicos do art. 184.",
+        "Veículo desrespeitando informação complementar de R-3, R-4a, R-4b, R-25a, R-25b, R-25c, R-25d ou R-26 quando ela regulamentar faixa/pista para ônibus, caminhão, motoneta, motocicleta ou ciclomotor: utilizar enquadramentos do art. 184.",
+        "Veículo circulando em desacordo com legislação municipal de rodízio: utilizar 574-62, art. 187, I.",
+        "Fiscalização por sistema automático não metrológico de veículos do inciso VII do art. 29 do CTB, desde que externamente caracterizados por pintura ou plotagem."
+      ],
+      "procedures": [
+        "LOCAL DE TRÂNSITO SELETIVO: via, pista ou faixa definida por sinalização em que o trânsito de determinado tipo, espécie, PBT etc. é restrito.",
+        "A circulação de triciclo automotor de cabine fechada é restrita às vias urbanas, sendo proibida em rodovias federais, estaduais e do Distrito Federal, conforme a Resolução CONTRAN nº 129/2001 e alterações.",
+        "A circulação de quadriciclo é restrita às vias urbanas e proibida em rodovias federais, estaduais e do Distrito Federal, conforme a Resolução CONTRAN nº 573/2015."
+      ],
+      "aitObservations": [
+        "Veículo transitando em desacordo com a sinalização de regulamentação R-10.",
+        "Quadriciclo transitando pela Rodovia XX.",
+        "Motocicleta transitando em local de trânsito proibido, sinalizado com a placa R-37."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1023-574-61",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1023/2026",
+          "section": "Ficha de fiscalização - código 574-61",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+          "effectiveFrom": "2026-07-03",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 187, I do CTB"
+      ]
+    },
+    {
+      "code": "658-00",
+      "status": "VERIFIED",
+      "article": "Art. 230, IV",
+      "shortDescription": "Conduzir o veículo sem qualquer uma das placas de identificação.",
+      "description": "Conduzir o veículo sem qualquer uma das placas de identificação.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Proprietário",
+      "authority": "Órgão ou Entidade de Trânsito Estadual e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Remoção do veículo (Vide a Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo registrado sem uma ou ambas as placas de identificação.",
+        "Automóvel, caminhonete, camioneta ou utilitário transportando carga ou bicicleta que encubra total ou parcialmente a placa traseira sem possuir segunda placa traseira.",
+        "Veículo com engate para reboque encobrindo a placa traseira, sem possuir segunda placa, com ou sem lacre, conforme o caso.",
+        "Veículo com carroceria intercambiável (camper) encobrindo total ou parcialmente a PIV traseira, sem segunda PIV traseira.",
+        "Triciclo, quadriciclo, ATV ou UTV sem placa traseira."
+      ],
+      "whenNotToCite": [
+        "Veículo com placa em desacordo com o padrão estabelecido: utilizar 640-80, art. 221.",
+        "Veículo sem registro: utilizar 659-91, art. 230, V.",
+        "Veículo de uso bélico.",
+        "Tratores e demais aparelhos automotores destinados a puxar/arrastar maquinaria agrícola ou executar trabalhos agrícolas, fabricados a partir de 1º de janeiro de 2016, quando facultados a transitar em via pública.",
+        "Tratores destinados a trabalhos de construção ou pavimentação, fabricados a partir de 1º de janeiro de 2016.",
+        "Tratores destinados a serviços portuários, aeroportuários e em mineradoras quando transitarem em vias públicas adjacentes às áreas de suas atividades."
+      ],
+      "procedures": [
+        "O veículo deve ser identificado externamente por placas dianteira e traseira, lacradas em sua estrutura quando exigido, obedecidas as especificações e modelos estabelecidos pelo CONTRAN."
+      ],
+      "aitObservations": [
+        "Veículo sem a placa dianteira.",
+        "Veículo sem ambas as placas.",
+        "Caminhonete transportando carga com compartimento de carga aberto, sem a segunda placa traseira.",
+        "Automóvel transportando bicicleta nas partes externas, encobrindo a placa traseira, sem segunda placa traseira.",
+        "Veículo com engate para reboque encobrindo a placa traseira, sem segunda placa traseira.",
+        "Veículo com carroceria intercambiável (camper), com a placa traseira totalmente coberta, sem segunda placa traseira."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1023-658-00",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1023/2026",
+          "section": "Ficha de fiscalização - código 658-00",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+          "effectiveFrom": "2026-07-03",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 230, IV do CTB"
+      ]
+    },
+    {
+      "code": "659-91",
+      "status": "VERIFIED",
+      "article": "Art. 230, V",
+      "shortDescription": "Conduzir o veículo que não esteja registrado.",
+      "description": "Conduzir o veículo que não esteja registrado e devidamente licenciado.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Proprietário",
+      "authority": "Órgão ou Entidade de Trânsito Estadual e Rodoviário.",
+      "verificationMethod": "Mediante abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Remoção do veículo (Vide a Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo novo, acabado ou inacabado, sem registro, fora do prazo para registro, fora do itinerário/destino previsto, sem documento fiscal/alfandegário/instrumento de doação exigido ou com documento vencido para registro.",
+        "Veículo novo acabado transportando carga ou pessoas de forma remunerada sem Autorização para Trânsito de Veículo (ATV), com ATV vencida ou fora do itinerário autorizado.",
+        "Veículo consignado a concessionário ou adquirido por entidade privada/pública, a ser licenciado nas categorias particular ou oficial, transportando carga de terceiros ou pessoas sem vínculo empregatício.",
+        "Veículo novo inacabado transportando pessoas ou cargas de forma remunerada.",
+        "Veículo novo destinado à exportação que descumpra os requisitos da Resolução CONTRAN nº 911/2022, inclusive itinerário, comunicação aos órgãos rodoviários ou medidas adicionais de segurança.",
+        "Veículo novo inacabado circulando em via pública sem os equipamentos obrigatórios mínimos exigidos pela Resolução CONTRAN nº 911/2022.",
+        "Veículo novo inacabado transportando outro veículo novo inacabado por remonta em desacordo com as especificações técnicas da Resolução CONTRAN nº 911/2022.",
+        "Veículo artesanal ou outro veículo sem gravação do Número de Identificação Veicular (VIN) no chassi ou monobloco.",
+        "Veículo circulando em via pública com baixa permanente, inclusive irrecuparável, definitivamente desmontado, sinistrado com perda total/grande monta, vendido ou leiloado como sucata ou com informação de frota desativada.",
+        "Veículo novo nacional ou importado utilizado para finalidade diferente das previstas na Resolução CONTRAN nº 911/2022.",
+        "Veículo novo, inclusive inacabado, antes do primeiro registro, deslocando-se entre estabelecimentos vinculados à mesma montadora/encarroçadora/concessionária ou pessoa jurídica interligada sem DANFe/documento alfandegário ou fora do prazo.",
+        "Veículo recém-produzido beneficiado por regime tributário especial, sem nota fiscal, fora do itinerário permitido entre pátios, em raio superior a 10 km ou sem relação de produção contendo a numeração do chassi.",
+        "Trator ou aparelho automotor agrícola fabricado a partir de 1º de janeiro de 2016 sem registro no MAPA após o prazo aplicável.",
+        "Aparelho automotor destinado a puxar/arrastar maquinaria ou executar trabalhos de construção ou pavimentação transitando em via pública sem registro no órgão executivo de trânsito.",
+        "Triciclo motorizado, quadriciclo motorizado ou veículo automotor de uso exclusivo fora de estrada que deva estar registrado e esteja circulando sem registro."
+      ],
+      "whenNotToCite": [
+        "Veículo com placa de fabricante, quando devidamente autorizado.",
+        "Veículo novo nacional ou importado antes do registro/licenciamento, circulando de dia dentro dos prazos de 15 dias, ou 30 dias nos Estados da Região Norte, e nos trajetos autorizados pela Resolução CONTRAN nº 911/2022.",
+        "Veículo automotor rebocado ou transportado como carga em guincho, prancha ou Combinação para Transporte de Veículos (CTV).",
+        "Quando faltar apenas documento de porte obrigatório previsto na Resolução CONTRAN nº 911/2022: utilizar 691-20, art. 232.",
+        "Quando houver falta, inoperância ou ineficiência de equipamento obrigatório: utilizar 663-71 ou 663-72, art. 230, IX.",
+        "Quando houver desconformidade de equipamento obrigatório: utilizar 664-50, art. 230, X.",
+        "Veículo novo inacabado ou remonta transitando no período noturno em desacordo com a Resolução CONTRAN nº 911/2022: utilizar 574-61, art. 187, I.",
+        "Veículo novo inacabado sem cabine ou com cabine incompleta cujo condutor esteja sem capacete/óculos de proteção exigidos: utilizar 520-70, art. 169.",
+        "Uso indevido de placa de fabricante, experiência, representação ou coleção, ou uso em desacordo com a Resolução CONTRAN nº 969/2022: utilizar 640-80, art. 221."
+      ],
+      "procedures": [
+        "VEÍCULO NOVO: veículo automotor, elétrico, reboque e semirreboque antes do registro e licenciamento.",
+        "VEÍCULO ACABADO: veículo automotor, elétrico, reboque ou semirreboque que sai de fábrica pronto para registro e licenciamento, sem necessidade de complementação.",
+        "VEÍCULO INACABADO: chassi/plataforma ou veículo com cabine completa, incompleta ou sem cabine que necessita complementação antes do registro e licenciamento.",
+        "VEÍCULO USADO INCOMPLETO: veículo já registrado/licenciado que se encontra em condição análoga à de veículo inacabado e necessita complementação para transferência de propriedade.",
+        "CONTAGEM DO PRAZO: considera-se a data de saída registrada no documento fiscal/alfandegário; na compra eletrônica, a entrega efetiva; na ausência da data de saída, a emissão do documento. A contagem é em dias consecutivos e prorroga-se para o primeiro dia útil quando o vencimento cair em dia sem expediente.",
+        "ORIGEM E DESTINO: o trânsito de veículo novo antes do registro é permitido entre os estabelecimentos e destinos previstos na Resolução CONTRAN nº 911/2022, respeitados prazo e documentação.",
+        "VEÍCULOS EM REGIME TRIBUTÁRIO ESPECIAL: o trânsito sem nota fiscal limita-se aos deslocamentos autorizados entre pátios, em raio máximo de 10 km, acompanhado da relação de produção com numeração de chassi.",
+        "VEÍCULO COMPRADO POR MEIO ELETRÔNICO: o prazo é contado da data de efetiva entrega ao proprietário, comprovada pelo registro ou documento fiscal.",
+        "VEÍCULO DOADO: o instrumento de doação deve acompanhar o veículo no trajeto até o Município de destino para registro.",
+        "EQUIPARAÇÃO: indústrias encarroçadoras e empresas responsáveis por transformação de veículos devem registrar no documento fiscal a data de saída após adaptação ou transformação.",
+        "DOLLY: veículo rebocado, semicompleto, intermediário entre dois veículos rodoviários, distribuidor de peso e sujeito a registro, emplacamento e licenciamento.",
+        "DOLLY COM RALA: implemento distribuidor de peso ligado definitivamente ao veículo rebocado, desprovido de quinta roda e não sujeito a registro, emplacamento e licenciamento.",
+        "CARGA PRÓPRIA: veículos consignados ou adquiridos para licenciamento particular/oficial podem transportar apenas cargas próprias e pessoas com vínculo empregatício, nas condições regulamentadas.",
+        "AUTÔNOMOS E EMPRESAS TRANSPORTANDO CARGAS OU PESSOAS: veículos adquiridos por transportadores autorizados podem executar serviço remunerado desde que atendam à legislação e às exigências dos poderes concedentes.",
+        "Veículo novo inacabado sem os equipamentos mínimos da Resolução CONTRAN nº 911/2022 deve ser transportado embarcado.",
+        "A fiscalização de trator/máquina agrícola não registrado no MAPA deve observar o prazo definido pelo Ministério da Agricultura para cadastro em sistema próprio.",
+        "VEÍCULOS NÃO REGISTRADOS: para esta ficha, veículos não registrados são equiparados a veículos novos, independentemente do ano de fabricação."
+      ],
+      "aitObservations": [
+        "Veículo novo transitando sem possuir documento fiscal.",
+        "Veículo novo transitando com nota fiscal nº xxxx, carimbo de saída em DD/MM/AA, sem registro no Detran e além do prazo de 15 dias.",
+        "Veículo novo efetuando transporte de pessoas antes do registro/licenciamento, entre concessionária e Município de emplacamento, sem ATV.",
+        "Veículo sem documento fiscal, beneficiado por regime tributário especial, transitando em local diverso do pátio externo.",
+        "Veículo novo realizando remonta cujo conjunto possui 15 metros de comprimento.",
+        "Veículo com baixa permanente no RENAVAM por sinistro com classificação de danos de grande monta, em circulação.",
+        "Motocicleta com baixa no RENAVAM, leiloada como sucata, em circulação.",
+        "Veículo com registro de frota desativada no RENAVAM, em circulação.",
+        "Trator destinado a trabalhos agrícolas, fabricado em 2017, sem registro no MAPA."
+      ],
+      "related": [
+        {
+          "code": "659-92",
+          "reason": "Veículo registrado, mas não devidamente licenciado."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mbft-1023-659-91",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1023/2026",
+          "section": "Ficha de fiscalização - código 659-91",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+          "effectiveFrom": "2026-07-03",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 230, V do CTB"
+      ]
+    }
+  ]
+}

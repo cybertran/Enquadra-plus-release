@@ -1,0 +1,127 @@
+{
+  "resolution": "Resolução CONTRAN nº 1012/2024",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "762-51",
+      "status": "VERIFIED",
+      "article": "Art. 181, XX",
+      "shortDescription": "Estacionar nas vagas reservadas às pessoas com deficiência, sem credencial.",
+      "description": "Estacionar o veículo nas vagas reservadas às pessoas com deficiência ou idosos, sem credencial que comprove tal condição.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Remoção do veículo (Vide a Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo estacionado em vaga sinalizada como de uso exclusivo de pessoa com deficiência com comprometimento de mobilidade: sem credencial; com credencial física temporária vencida; com credencial física ou versão impressa da digital ilegível; com cópia ou reprodução da credencial física; com credencial física ou impressão digital rasurada, alterada ou falsificada; ou com credencial física/impressa sem condições de visualização no painel.",
+        "Veículo estacionado em vaga de pessoa com deficiência com credencial, mas sem estar sendo utilizado para o transporte do beneficiário."
+      ],
+      "whenNotToCite": [
+        "Veículo estacionado em vaga sinalizada como de uso exclusivo de pessoa idosa: utilizar 762-52, art. 181, XX."
+      ],
+      "procedures": [
+        "ESTACIONAMENTO: imobilização de veículos por tempo superior ao necessário para embarque ou desembarque de passageiros.",
+        "A ausência de credencial é caracterizada quando não houver credencial física nem digital. Na modalidade digital, também se configura quando não houver credencial expedida pela SENATRAN, quando ela não estiver vinculada a veículo ou quando a versão impressa não estiver no veículo.",
+        "A credencial em formato físico é nominal à pessoa com deficiência e não está vinculada à placa do veículo.",
+        "Para uso da credencial digital em sua versão digital, o beneficiário deve vinculá-la a um único veículo, podendo substituir o veículo vinculado a qualquer tempo.",
+        "Para fins de fiscalização, o órgão máximo executivo de trânsito da União disponibiliza consulta on-line ao veículo vinculado à credencial.",
+        "É obrigatório o uso da credencial nas vagas reservadas, quando utilizada em formato físico ou como versão impressa da credencial digital.",
+        "A credencial física somente tem validade quando utilizada no original.",
+        "A credencial deve ser apresentada à autoridade de trânsito ou aos seus agentes sempre que solicitada.",
+        "A recusa em apresentar a credencial à autoridade ou ao agente sujeita o condutor à infração do art. 238 do CTB, sem prejuízo da autuação desta ficha.",
+        "A situação de uso da vaga com credencial sem transporte do beneficiário somente é constatada mediante abordagem.",
+        "Credenciais emitidas com base na Resolução CONTRAN nº 304/2008, sem prazo de validade, produzem efeitos até 31 de maio de 2027; depois disso, devem ser substituídas por nova credencial."
+      ],
+      "aitObservations": [
+        "Veículo sem credencial sobre o painel.",
+        "Veículo com credencial vencida.",
+        "Veículo com credencial sem condições de visualização no interior do veículo.",
+        "Veículo possui credencial, mas não está sendo utilizado para o transporte da pessoa com deficiência."
+      ],
+      "related": [
+        {
+          "code": "762-52",
+          "reason": "Vaga reservada a pessoa idosa."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mbft-1012-762-51",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1012/2024",
+          "section": "Ficha de fiscalização - código 762-51",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf",
+          "effectiveFrom": "2024-10-16",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 181, XX do CTB"
+      ]
+    },
+    {
+      "code": "762-52",
+      "status": "VERIFIED",
+      "article": "Art. 181, XX",
+      "shortDescription": "Estacionar nas vagas reservadas a idosos, sem credencial.",
+      "description": "Estacionar o veículo nas vagas reservadas às pessoas com deficiência ou idosos, sem credencial que comprove tal condição.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Remoção do veículo (Vide Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo estacionado em vaga sinalizada como de uso exclusivo de pessoa idosa, com idade igual ou superior a 60 anos: sem credencial; com credencial física ou versão impressa da digital ilegível; com cópia ou reprodução da credencial física; com credencial física ou impressão digital rasurada, alterada ou falsificada; ou com credencial física/impressa sem condições de visualização no painel.",
+        "Veículo estacionado em vaga de pessoa idosa com credencial, mas sem estar sendo utilizado para o transporte do beneficiário."
+      ],
+      "whenNotToCite": [
+        "Veículo estacionado em vaga sinalizada como de uso exclusivo de pessoa com deficiência com comprometimento de mobilidade: utilizar 762-51, art. 181, XX."
+      ],
+      "procedures": [
+        "ESTACIONAMENTO: imobilização de veículos por tempo superior ao necessário para embarque ou desembarque de passageiros.",
+        "A ausência de credencial é caracterizada quando não houver credencial física nem digital. Na modalidade digital, também se configura quando não houver credencial expedida pela SENATRAN, quando ela não estiver vinculada a veículo ou quando a versão impressa não estiver no veículo.",
+        "A credencial em formato físico é nominal à pessoa idosa e não está vinculada à placa do veículo.",
+        "Para uso da credencial digital em sua versão digital, o beneficiário deve vinculá-la a um único veículo, podendo substituir o veículo vinculado a qualquer tempo.",
+        "Para fins de fiscalização, o órgão máximo executivo de trânsito da União disponibiliza consulta on-line ao veículo vinculado à credencial.",
+        "É obrigatório o uso da credencial nas vagas reservadas, quando utilizada em formato físico ou como versão impressa da credencial digital.",
+        "A credencial física somente tem validade quando utilizada no original.",
+        "A credencial deve ser apresentada à autoridade de trânsito ou aos seus agentes sempre que solicitada.",
+        "A recusa em apresentar a credencial à autoridade ou ao agente sujeita o condutor à infração do art. 238 do CTB, sem prejuízo da autuação desta ficha.",
+        "A situação de uso da vaga com credencial sem transporte do beneficiário somente é constatada mediante abordagem.",
+        "Credenciais emitidas com base na Resolução CONTRAN nº 303/2008, sem prazo de validade, produzem efeitos até 31 de maio de 2027; depois disso, devem ser substituídas por nova credencial."
+      ],
+      "aitObservations": [
+        "Veículo sem credencial sobre o painel.",
+        "Veículo com credencial sem condições de visualização no interior do veículo.",
+        "Veículo possui credencial, mas não está sendo utilizado para o transporte da pessoa idosa."
+      ],
+      "related": [
+        {
+          "code": "762-51",
+          "reason": "Vaga reservada a pessoa com deficiência."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mbft-1012-762-52",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1012/2024",
+          "section": "Ficha de fiscalização - código 762-52",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf",
+          "effectiveFrom": "2024-10-16",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 181, XX do CTB"
+      ]
+    }
+  ]
+}

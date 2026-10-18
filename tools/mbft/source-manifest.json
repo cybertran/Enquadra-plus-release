@@ -1,0 +1,65 @@
+{
+  "document": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+  "lastCheckedAt": "2026-10-13",
+  "officialIndexUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes-contran",
+  "base": {
+    "resolution": "Resolução CONTRAN nº 985/2022",
+    "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/mbvt20222.pdf",
+    "effectiveFrom": "2023-01-02"
+  },
+  "amendments": [
+    {
+      "resolution": "Resolução CONTRAN nº 1003/2023",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1003",
+      "effectiveFrom": "2024-01-02",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/RESOLUCAO_CONTRAN_N_1.003__ANEXO.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1009/2024",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1009",
+      "effectiveFrom": "2024-04-25",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10092024.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1012/2024",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1012",
+      "effectiveFrom": "2024-10-16",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10122024.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1013/2024",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1013",
+      "effectiveFrom": "2024-10-16",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10132024.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1022/2026",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1022",
+      "effectiveFrom": "2026-07-01",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10222026c.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1023/2026",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1023",
+      "effectiveFrom": "2026-07-03",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf",
+      "extractionMode": "MANUAL_PATCH"
+    },
+    {
+      "resolution": "Resolução CONTRAN nº 1031/2026",
+      "status": "FUTURE_PATCH",
+      "effectiveRule": "Alteração do Anexo da Resolução 985/2022 entra em vigor 60 dias após a publicação de 18/08/2026."
+    }
+  ]
+}

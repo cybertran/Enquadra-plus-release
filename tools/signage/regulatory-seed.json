@@ -1,0 +1,347 @@
+{
+  "source": "Manual Brasileiro de Sinalização de Trânsito, Volume I",
+  "entries": [
+    {
+      "code": "R-1",
+      "title": "Parada obrigatória",
+      "pageIndex": 3,
+      "manualPage": 43
+    },
+    {
+      "code": "R-2",
+      "title": "Dê a preferência",
+      "pageIndex": 3,
+      "manualPage": 46
+    },
+    {
+      "code": "R-3",
+      "title": "Sentido proibido",
+      "pageIndex": 3,
+      "manualPage": 70
+    },
+    {
+      "code": "R-4a",
+      "title": "Proibido virar à esquerda",
+      "pageIndex": 3,
+      "manualPage": 73
+    },
+    {
+      "code": "R-4b",
+      "title": "Proibido virar à direita",
+      "pageIndex": 3,
+      "manualPage": 75
+    },
+    {
+      "code": "R-5a",
+      "title": "Proibido retornar à esquerda",
+      "pageIndex": 3,
+      "manualPage": 77
+    },
+    {
+      "code": "R-5b",
+      "title": "Proibido retornar à direita",
+      "pageIndex": 3,
+      "manualPage": 79
+    },
+    {
+      "code": "R-6a",
+      "title": "Proibido estacionar",
+      "pageIndex": 3,
+      "manualPage": 141
+    },
+    {
+      "code": "R-6b",
+      "title": "Estacionamento regulamentado",
+      "pageIndex": 3,
+      "manualPage": 147
+    },
+    {
+      "code": "R-6c",
+      "title": "Proibido parar e estacionar",
+      "pageIndex": 3,
+      "manualPage": 151
+    },
+    {
+      "code": "R-7",
+      "title": "Proibido ultrapassar",
+      "pageIndex": 3,
+      "manualPage": 95
+    },
+    {
+      "code": "R-8a",
+      "title": "Proibido mudar de faixa ou pista de trânsito da esquerda para direita",
+      "pageIndex": 3,
+      "manualPage": 98
+    },
+    {
+      "code": "R-8b",
+      "title": "Proibido mudar de faixa ou pista de trânsito da direita para esquerda",
+      "pageIndex": 3,
+      "manualPage": 100
+    },
+    {
+      "code": "R-9",
+      "title": "Proibido trânsito de caminhões",
+      "pageIndex": 4,
+      "manualPage": 107
+    },
+    {
+      "code": "R-10",
+      "title": "Proibido trânsito de veículos automotores",
+      "pageIndex": 4,
+      "manualPage": 109
+    },
+    {
+      "code": "R-11",
+      "title": "Proibido trânsito de veículos de tração animal",
+      "pageIndex": 4,
+      "manualPage": 111
+    },
+    {
+      "code": "R-12",
+      "title": "Proibido trânsito de bicicletas",
+      "pageIndex": 4,
+      "manualPage": 113
+    },
+    {
+      "code": "R-13",
+      "title": "Proibido trânsito de tratores e máquinas de obras",
+      "pageIndex": 4,
+      "manualPage": 115
+    },
+    {
+      "code": "R-14",
+      "title": "Peso bruto total máximo permitido",
+      "pageIndex": 4,
+      "manualPage": 131
+    },
+    {
+      "code": "R-15",
+      "title": "Altura máxima permitida",
+      "pageIndex": 4,
+      "manualPage": 133
+    },
+    {
+      "code": "R-16",
+      "title": "Largura máxima permitida",
+      "pageIndex": 4,
+      "manualPage": 135
+    },
+    {
+      "code": "R-17",
+      "title": "Peso máximo permitido por eixo",
+      "pageIndex": 4,
+      "manualPage": 137
+    },
+    {
+      "code": "R-18",
+      "title": "Comprimento máximo permitido",
+      "pageIndex": 4,
+      "manualPage": 139
+    },
+    {
+      "code": "R-19",
+      "title": "Velocidade máxima permitida",
+      "pageIndex": 4,
+      "manualPage": 45
+    },
+    {
+      "code": "R-20",
+      "title": "Proibido acionar buzina ou sinal sonoro",
+      "pageIndex": 4,
+      "manualPage": 128
+    },
+    {
+      "code": "R-21",
+      "title": "Alfândega",
+      "pageIndex": 4,
+      "manualPage": 129
+    },
+    {
+      "code": "R-22",
+      "title": "Uso obrigatório de corrente",
+      "pageIndex": 4,
+      "manualPage": 130
+    },
+    {
+      "code": "R-23",
+      "title": "Conserve-se à direita",
+      "pageIndex": 5,
+      "manualPage": 102
+    },
+    {
+      "code": "R-24a",
+      "title": "Sentido de circulação da via/pista",
+      "pageIndex": 5,
+      "manualPage": 61
+    },
+    {
+      "code": "R-24b",
+      "title": "Passagem obrigatória",
+      "pageIndex": 5,
+      "manualPage": 81
+    },
+    {
+      "code": "R-25a",
+      "title": "Vire à esquerda",
+      "pageIndex": 5,
+      "manualPage": 83
+    },
+    {
+      "code": "R-25b",
+      "title": "Vire à direita",
+      "pageIndex": 5,
+      "manualPage": 85
+    },
+    {
+      "code": "R-25c",
+      "title": "Siga em frente ou à esquerda",
+      "pageIndex": 5,
+      "manualPage": 87
+    },
+    {
+      "code": "R-25d",
+      "title": "Siga em frente ou à direita",
+      "pageIndex": 5,
+      "manualPage": 90
+    },
+    {
+      "code": "R-26",
+      "title": "Siga em frente",
+      "pageIndex": 5,
+      "manualPage": 93
+    },
+    {
+      "code": "R-27",
+      "title": "Ônibus, caminhões e veículos de grande porte mantenham-se à direita",
+      "pageIndex": 5,
+      "manualPage": 104
+    },
+    {
+      "code": "R-28",
+      "title": "Duplo sentido de circulação",
+      "pageIndex": 5,
+      "manualPage": 66
+    },
+    {
+      "code": "R-29",
+      "title": "Proibido trânsito de pedestres",
+      "pageIndex": 5,
+      "manualPage": 154
+    },
+    {
+      "code": "R-30",
+      "title": "Pedestre, ande pela esquerda",
+      "pageIndex": 5,
+      "manualPage": 155
+    },
+    {
+      "code": "R-31",
+      "title": "Pedestre, ande pela direita",
+      "pageIndex": 5,
+      "manualPage": 156
+    },
+    {
+      "code": "R-32",
+      "title": "Circulação exclusiva de ônibus",
+      "pageIndex": 5,
+      "manualPage": 117
+    },
+    {
+      "code": "R-33",
+      "title": "Sentido de circulação na rotatória",
+      "pageIndex": 6,
+      "manualPage": 68
+    },
+    {
+      "code": "R-34",
+      "title": "Circulação exclusiva de bicicletas",
+      "pageIndex": 6,
+      "manualPage": 119
+    },
+    {
+      "code": "R-35a",
+      "title": "Ciclista, transite à esquerda",
+      "pageIndex": 6,
+      "manualPage": 157
+    },
+    {
+      "code": "R-35b",
+      "title": "Ciclista, transite à direita",
+      "pageIndex": 6,
+      "manualPage": 158
+    },
+    {
+      "code": "R-36a",
+      "title": "Ciclistas à esquerda, pedestres à direita",
+      "pageIndex": 6,
+      "manualPage": 159
+    },
+    {
+      "code": "R-36b",
+      "title": "Pedestres à esquerda, ciclistas à direita",
+      "pageIndex": 6,
+      "manualPage": 160
+    },
+    {
+      "code": "R-37",
+      "title": "Proibido trânsito de motocicletas, motonetas e ciclomotores",
+      "pageIndex": 6,
+      "manualPage": 121
+    },
+    {
+      "code": "R-38",
+      "title": "Proibido trânsito de ônibus",
+      "pageIndex": 6,
+      "manualPage": 123
+    },
+    {
+      "code": "R-39",
+      "title": "Circulação exclusiva de caminhão",
+      "pageIndex": 6,
+      "manualPage": 125
+    },
+    {
+      "code": "R-40",
+      "title": "Trânsito proibido a carros de mão",
+      "pageIndex": 6,
+      "manualPage": 127
+    },
+    {
+      "code": "R-41",
+      "title": "Circulação exclusiva de VLT / bonde",
+      "pageIndex": 25,
+      "manualPage": null
+    },
+    {
+      "code": "R-42",
+      "title": "Ciclistas à direita, VLT à esquerda",
+      "pageIndex": 26,
+      "manualPage": null
+    },
+    {
+      "code": "R-43",
+      "title": "Ciclistas à esquerda, VLT à direita",
+      "pageIndex": 26,
+      "manualPage": null
+    },
+    {
+      "code": "R-44",
+      "title": "Veículos à esquerda, VLT à direita",
+      "pageIndex": 25,
+      "manualPage": null
+    },
+    {
+      "code": "R-45",
+      "title": "Veículos à direita, VLT à esquerda",
+      "pageIndex": 25,
+      "manualPage": null
+    },
+    {
+      "code": "R-46",
+      "title": "Circulação compartilhada de ciclistas e pedestres",
+      "pageIndex": 26,
+      "manualPage": null
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "lastCheckedAt": "2026-10-15",
+  "sources": [
+    {
+      "agency": "CONTRAN",
+      "actType": "RESOLUÇÃO",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes-contran"
+    },
+    {
+      "agency": "CONTRAN",
+      "actType": "DELIBERAÇÃO",
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes-contran"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2026,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2025,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2025"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2024,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2024"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2023,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/portarias-2023"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2022,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/portarias-2022"
+    },
+    {
+      "agency": "SENATRAN",
+      "actType": "PORTARIA",
+      "year": 2021,
+      "url": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/portarias-2021"
+    }
+  ]
+}

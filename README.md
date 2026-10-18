@@ -2,11 +2,19 @@
 
 Repositório público e open source do Enquadra+, aplicativo Android para consulta rápida de informações oficiais de trânsito e apoio à fiscalização.
 
-## Estado deste repositório
+## Estado
 
-Este repositório está em fase de bootstrap de segurança. O código do aplicativo será importado somente após sanitização e revisão do conteúdo vindo do repositório privado de desenvolvimento.
+O código-fonte da versão **v0.2.0-alpha.8** foi importado para revisão pública com histórico Git limpo, após sanitização do snapshot de desenvolvimento.
 
 O projeto usa fontes públicas e oficiais, como CTB, MBFT, Resoluções CONTRAN, atos da Senatran e demais normas aplicáveis. O Enquadra+ é independente e não incorpora análises jurídicas, comentários, resumos de jurisprudência ou outros conteúdos autorais de produtos de terceiros.
+
+A arquitetura é Android nativo com Kotlin, Jetpack Compose e Material Design 3, com funcionamento local-first e pesquisa offline. O roteiro funcional está em [docs/FUNCTIONAL_ROADMAP.md](docs/FUNCTIONAL_ROADMAP.md).
+
+## Documentação
+
+Consulte [docs/PRODUCT.md](docs/PRODUCT.md), [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DATA_MODEL.md](docs/DATA_MODEL.md), [docs/SOURCES.md](docs/SOURCES.md), [docs/IMPORTER.md](docs/IMPORTER.md) e [docs/SAFE_NORMATIVE_UPDATE_DOSSIER.md](docs/SAFE_NORMATIVE_UPDATE_DOSSIER.md).
+
+O processo da primeira importação pública está registrado em [docs/OPEN_SOURCE_IMPORT.md](docs/OPEN_SOURCE_IMPORT.md).
 
 ## Builds oficiais
 

@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "parserVersion": "mbft-hash-patch-v1",
+  "recognizedAmendments": [
+    {
+      "number": 1003,
+      "year": 2023
+    },
+    {
+      "number": 1009,
+      "year": 2024
+    },
+    {
+      "number": 1012,
+      "year": 2024
+    },
+    {
+      "number": 1013,
+      "year": 2024
+    },
+    {
+      "number": 1022,
+      "year": 2026
+    },
+    {
+      "number": 1023,
+      "year": 2026
+    },
+    {
+      "number": 1031,
+      "year": 2026
+    }
+  ],
+  "patches": [
+    {
+      "number": 1031,
+      "year": 2026,
+      "resolution": "Resolução CONTRAN nº 1.031/2026",
+      "publicationDate": "2026-08-18",
+      "effectiveFrom": "2026-10-17",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+      "expectedSha256": "9F6D8D8C6E7B7996FCE21326A229C9B262D45178907FFF7BD9DD159CA5BA9B5A",
+      "removeCodes": [
+        "757-90"
+      ],
+      "upserts": [
+        {
+          "code": "516-91",
+          "status": "VERIFIED",
+          "article": "Art. 165",
+          "shortDescription": "Dirigir sob a influência de álcool.",
+          "description": "Dirigir sob a influência de álcool ou de qualquer outra substância psicoativa que determine dependência.",
+          "severity": "Gravíssima",
+          "points": null,
+          "offenderResponsibility": "Condutor",
+          "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+          "verificationMethod": "Mediante abordagem.",
+          "penalty": "Multa (10 vezes) e suspensão do direito de dirigir por 12 meses.",
+          "administrativeMeasure": "Recolhimento do documento de habilitação e retenção do veículo, observado o disposto no art. 270, § 4º, do CTB. (Vide a Parte Geral deste Manual).",
+          "canConfigureTrafficCrime": true,
+          "whenToCite": [
+            "Condutor que apresentar concentração de álcool igual ou superior a 0,05 miligrama de álcool por litro de ar alveolar expirado (0,05 mg/L - medição realizada - MR) em teste de etilômetro.",
+            "Condutor que se recusar a se submeter ao teste do etilômetro e que apresentar pelo menos dois sinais de alteração da capacidade psicomotora."
+          ],
+          "whenNotToCite": [
+            "Condutor que, em teste de etilômetro, apresentou concentração de álcool igual ou inferior a 0,04 mg/L de ar alveolar (medição realizada - MR).",
+            "Condutor dirigindo veículo sob influência de qualquer outra substância psicoativa que determine dependência, utilizar enquadramento específico: 516-92, art. 165.",
+            "Condutor que se recusar a se submeter ao teste do etilômetro e não apresentar pelo menos dois sinais da alteração da capacidade psicomotora, utilizar enquadramento específico: 757-91, art. 165-A.",
+            "Condutor dirigindo o veículo com incapacidade física ou mental temporária, que comprometa a segurança do trânsito, utilizar enquadramento específico: 733-10, art. 252, III."
+          ],
+          "procedures": [
+            "ETILÔMETRO - aparelho destinado à medição do teor alcoólico no ar alveolar.",
+            "AR ALVEOLAR - ar expirado pela boca de um indivíduo, originário dos alvéolos pulmonares.",
+            "Do resultado do etilômetro (medição realizada - MR) deverá ser descontada a margem de tolerância, que será o erro máximo admissível, conforme legislação metrológica, de acordo com a Tabela de Valores Referenciais para Etilômetro constante em normativo do Contran.",
+            "Para constatar a alteração da capacidade psicomotora do condutor deverão ser identificados, pelo menos, dois sinais que comprovem que ele se encontra sob a influência de álcool, conforme normativo do Contran, os quais devem constar do AIT ou em termo específico que acompanhe o auto. De forma suplementar, poderão ser utilizados prova testemunhal, imagem, vídeo ou qualquer outro meio de prova em direito admitido.",
+            "Quando o teste do etilômetro apresentar valor igual ou superior a 0,34 mg/L de ar alveolar (MR), ou quando o condutor apresentar dois ou mais sinais de alteração da capacidade psicomotora, estará caracterizado o crime do art. 306 do CTB, motivo pelo qual deverá ser noticiado o fato à autoridade competente para o registro da infração penal.",
+            "Em caso de não apresentação de condutor habilitado, o veículo deverá ser encaminhado ao local definido pelo órgão autuador.",
+            "É vedada a lavratura simultânea de autos de infração com base nos artigos 165 e 165-A, na mesma abordagem.",
+            "O condutor deverá se submeter ao teste ofertado pelo agente da autoridade de trânsito, não lhe sendo facultado escolher qual modalidade de verificação pretende realizar.",
+            "Será considerado como recusa a simulação do sopro por parte do usuário durante o teste com etilômetro, o que poderá configurar infração do art. 165 ou 165-A, conforme o caso.",
+            "É permitida a lavratura da infração do art. 165 no caso de atendimento de sinistros de trânsito, desde que seja possível ao condutor realizar o teste ou apresente dois ou mais sinais de alteração da capacidade psicomotora. Nestes casos, o horário da infração é o horário em que efetivamente foi realizado o teste ou constatados os sinais, sendo que o horário do sinistro deve ser registrado no campo de observações.",
+            "Em caso de reincidência no período de até 12 meses, a multa aplica-se em dobro."
+          ],
+          "aitObservations": [
+            "Condutor realizou teste de etilômetro, tendo como resultado 0,20 mg/L de álcool por litro de ar alveolar. Etilômetro aferido pelo Inmetro.",
+            "Condutor se recusou a se submeter ao teste do etilômetro marca xx, modelo xx e nº de série xx, apresentando pelo menos dois sinais de alteração da capacidade psicomotora, conforme termo de constatação que acompanha o AIT.",
+            "Condutor se recusou a se submeter ao teste do etilômetro marca xx, modelo xx e nº de série xx, apresentando os seguintes sinais de alteração da capacidade psicomotora: xxxxxxxxxx."
+          ],
+          "related": [],
+          "sources": [
+            {
+              "id": "mbft-1031-516-91",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026 — Anexo III (MBFT)",
+              "section": "Ficha de fiscalização - código 516-91",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            },
+            {
+              "id": "contran-1031-516-91",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026",
+              "section": "Arts. 14 e 16",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            }
+          ],
+          "legalBasis": [
+            "Art. 165"
+          ]
+        },
+        {
+          "code": "516-92",
+          "status": "VERIFIED",
+          "article": "Art. 165",
+          "shortDescription": "Dirigir sob influência de outra substância psicoativa que determine dependência.",
+          "description": "Dirigir sob a influência de álcool ou de qualquer outra substância psicoativa que determine dependência.",
+          "severity": "Gravíssima",
+          "points": null,
+          "offenderResponsibility": "Condutor",
+          "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+          "verificationMethod": "Mediante abordagem.",
+          "penalty": "Multa (10 vezes) e suspensão do direito de dirigir por 12 meses.",
+          "administrativeMeasure": "Recolhimento do documento de habilitação e retenção do veículo, observado o disposto no art. 270, § 4º, do CTB. (Vide a Parte Geral deste Manual).",
+          "canConfigureTrafficCrime": true,
+          "whenToCite": [
+            "Condutor que esteja conduzindo veículo automotor sob influência de outra substância psicoativa, constatada por teste em aparelho destinado à verificação da presença de outra substância psicoativa.",
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à verificação da presença de outras substâncias psicoativas e apresente pelo menos dois sinais da alteração da capacidade psicomotora."
+          ],
+          "whenNotToCite": [
+            "Condutor dirigindo veículo sob influência de álcool, utilizar enquadramento específico: 516-91, art. 165.",
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à verificação da presença de outras substâncias psicoativas e não apresentar pelo menos dois sinais da alteração da capacidade psicomotora, utilizar enquadramento específico: 757-92, art. 165-A do CTB.",
+            "Condutor dirigindo o veículo com incapacidade física ou mental temporária, que comprometa a segurança do trânsito, utilizar enquadramento específico: 733-10, art. 252, III."
+          ],
+          "procedures": [
+            "Aparelho destinado à verificação da presença de outra substância psicoativa, certificado no âmbito do Sistema Brasileiro de Avaliação da Conformidade - SBAC, por organismo acreditado pelo Inmetro.",
+            "O condutor deverá se submeter ao teste ofertado pelo agente da autoridade de trânsito, não lhe sendo facultado escolher qual modalidade de verificação pretende realizar.",
+            "Para constatar a alteração da capacidade psicomotora do condutor deverão ser identificados, pelo menos, dois sinais que comprovem que ele se encontra sob a influência de outra substância psicoativa que determine dependência, conforme normativo do Contran, os quais devem constar do AIT ou em termo específico que acompanhe o auto. De forma suplementar, poderão ser utilizados prova testemunhal, imagem, vídeo ou qualquer outro meio de prova em direito admitido.",
+            "Em caso de não apresentação de condutor habilitado, o veículo deverá ser encaminhado ao local definido pelo órgão autuador.",
+            "Sendo constatada a condução do veículo sob influência de outra substância psicoativa, estará caracterizado o crime do art. 306 do CTB, motivo pelo qual deverá ser noticiado o fato à autoridade competente para o registro da infração penal.",
+            "É vedada a lavratura simultânea de autos de infração com base nos artigos 165 e 165-A, na mesma abordagem.",
+            "Será considerado como recusa a simulação por parte do usuário durante o teste com aparelho destinado à verificação da presença de outra substância psicoativa.",
+            "É permitida a lavratura da infração do art. 165 no caso de atendimento de sinistros de trânsito, desde que seja possível ao condutor realizar o teste ou apresente dois ou mais sinais de alteração da capacidade psicomotora. Nestes casos, o horário da infração é o horário em que efetivamente foi realizado o teste ou constatados os sinais, sendo que o horário do sinistro deve ser registrado no campo de observações.",
+            "Em caso de reincidência no período de até 12 meses, a multa aplica-se em dobro."
+          ],
+          "aitObservations": [
+            "Condutor realizou teste em aparelho destinado à verificação da presença de outra substância psicoativa, para verificação da presença de outra substância psicoativa tendo tido resultado positivo, para a substância: xxxxxxxxxx.",
+            "Condutor se recusou a se submeter a teste em aparelho destinado à verificação da presença de outra substância psicoativa e apresentou pelo menos dois sinais da alteração da capacidade psicomotora: xxxxxxxxxx."
+          ],
+          "related": [],
+          "sources": [
+            {
+              "id": "mbft-1031-516-92",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026 — Anexo III (MBFT)",
+              "section": "Ficha de fiscalização - código 516-92",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            },
+            {
+              "id": "contran-1031-516-92",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026",
+              "section": "Arts. 14 e 16",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            }
+          ],
+          "legalBasis": [
+            "Art. 165"
+          ]
+        },
+        {
+          "code": "757-91",
+          "status": "VERIFIED",
+          "article": "Art. 165-A",
+          "shortDescription": "Rec sub test, ex clin, peric ou proc q perm cert infl álc for art. 277.",
+          "description": "Recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma estabelecida pelo art. 277.",
+          "severity": "Gravíssima",
+          "points": null,
+          "offenderResponsibility": "Condutor",
+          "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+          "verificationMethod": "Mediante abordagem.",
+          "penalty": "Multa (10X) e suspensão do direito de dirigir por 12 meses",
+          "administrativeMeasure": "Recolhimento do documento de habilitação e retenção do veículo, observado o disposto no § 4º do art. 270. (Vide Parte Geral deste Manual).",
+          "canConfigureTrafficCrime": false,
+          "whenToCite": [
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à medição do teor alcoólico no ar alveolar e NÃO apresentar pelo menos dois sinais da alteração da capacidade psicomotora."
+          ],
+          "whenNotToCite": [
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à medição do teor alcoólico no ar alveolar e apresentar dois ou mais sinais de alteração da capacidade psicomotora, utilizar enquadramento específico: 516-91 (álcool), art. 165.",
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à verificação da presença de outras substâncias psicoativas e apresentar pelo menos dois sinais de alteração da capacidade psicomotora, utilizar enquadramento específico: 516-92, art. 165."
+          ],
+          "procedures": [
+            "ETILÔMETRO: aparelho destinado à medição do teor alcoólico no ar alveolar.",
+            "RECUSA: caracterizada pela manifestação inequívoca do condutor após ser a ele ofertada a possibilidade de realizar qualquer teste e esclarecido que a recusa configura infração, não lhe sendo facultado escolher qual modalidade de verificação pretende realizar. Após a referida manifestação, estará configurada a infração, não sendo possível nova oportunidade para realização do teste.",
+            "Não se dará o preenchimento do termo específico, se o condutor não apresentar ou apresentar apenas um sinal de alteração da capacidade psicomotora.",
+            "Em caso de recusa ao teste do etilômetro, não é obrigatória a emissão do registro da recusa, sendo necessária, entretanto, a menção à marca, modelo e número de série do aparelho ofertado, no auto de infração.",
+            "Será considerado como recusa a simulação do sopro por parte do usuário durante o teste com etilômetro.",
+            "É permitida a lavratura da infração do art. 165-A no caso de atendimento de sinistros de trânsito, desde que seja possível ao condutor realizar o teste e, deliberadamente, ocorra a recusa. Nestes casos, o horário da infração é o horário em que efetivamente se deu o ato da recusa, sendo que o horário do sinistro deve ser registrado no campo de observações.",
+            "É vedada a lavratura simultânea de autos de infração com base nos artigos 165 e 165-A, na mesma abordagem.",
+            "Em caso de reincidência no período de até 12 meses, a multa aplica-se em dobro."
+          ],
+          "aitObservations": [
+            "Condutor recusou-se a se submeter ao teste de etilômetro e não apresentava sinal da alteração da capacidade psicomotora. Etilômetro marca xx, modelo xx e nº de série xx.",
+            "Condutor recusou-se a se submeter ao teste de etilômetro e apresentava apenas um sinal da alteração da capacidade psicomotora. Etilômetro marca xx, modelo xx e nº de série xx."
+          ],
+          "related": [],
+          "sources": [
+            {
+              "id": "mbft-1031-757-91",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026 — Anexo III (MBFT)",
+              "section": "Ficha de fiscalização - código 757-91",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            },
+            {
+              "id": "contran-1031-757-91",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026",
+              "section": "Arts. 14 e 16",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            }
+          ],
+          "legalBasis": [
+            "Art. 165-A"
+          ]
+        },
+        {
+          "code": "757-92",
+          "status": "VERIFIED",
+          "article": "Art. 165-A",
+          "shortDescription": "Rec sub test, ex clin, peric ou proc q perm cert influ out subst psic, for art. 277.",
+          "description": "Recusar-se a ser submetido a teste, exame clínico, perícia ou outro procedimento que permita certificar influência de álcool ou outra substância psicoativa, na forma estabelecida pelo art. 277.",
+          "severity": "Gravíssima",
+          "points": null,
+          "offenderResponsibility": "Condutor",
+          "authority": "Órgão ou Entidade de Trânsito Estadual, Municipal e Rodoviário.",
+          "verificationMethod": "Mediante abordagem.",
+          "penalty": "Multa (10X) e suspensão do direito de dirigir por 12 meses",
+          "administrativeMeasure": "Recolhimento do documento de habilitação e retenção do veículo, observado o disposto no § 4º do art. 270. (Vide Parte Geral deste Manual).",
+          "canConfigureTrafficCrime": false,
+          "whenToCite": [
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à verificação da presença de outras substâncias psicoativas e NÃO apresentar pelo menos dois sinais da alteração da capacidade psicomotora."
+          ],
+          "whenNotToCite": [
+            "Condutor que se recusar a se submeter a teste em aparelho destinado à verificação da presença de outras substâncias psicoativas e apresentar pelo menos dois sinais da alteração da capacidade psicomotora, utilizar enquadramento específico: 516-92, art. 165.",
+            "Condutor que se recusar a se submeter ao teste em aparelho destinado à medição do teor alcoólico no ar alveolar e apresentar dois ou mais sinais de alteração da capacidade psicomotora, utilizar enquadramento específico: 516-91 (álcool), art. 165."
+          ],
+          "procedures": [
+            "Aparelho destinado à verificação da presença de outra substância psicoativa, certificado no âmbito do Sistema Brasileiro de Avaliação da Conformidade - SBAC, por organismo acreditado pelo Inmetro.",
+            "RECUSA: caracterizada pela manifestação inequívoca do condutor após ser a ele ofertada a possibilidade de realizar qualquer teste e esclarecido que a recusa configura infração, não lhe sendo facultado escolher qual modalidade de verificação pretende realizar. Após a referida manifestação, estará configurada a infração não sendo possível nova oportunidade para realização do teste.",
+            "Não se dará o preenchimento do termo específico, se o condutor não apresentar ou apresentar apenas um sinal de alteração da capacidade psicomotora.",
+            "Será considerado como recusa a simulação por parte do usuário durante o teste com aparelho destinado à verificação da presença de outra substância psicoativa.",
+            "É permitida a lavratura da infração do art. 165-A no caso de atendimento de sinistros de trânsito, desde que seja possível ao condutor realizar o teste e, deliberadamente, ocorra a recusa. Nestes casos, o horário da infração é o horário em que efetivamente se deu o ato da recusa, sendo que o horário do sinistro deve ser registrado no campo de observações.",
+            "É vedada a lavratura simultânea de autos de infração com base nos artigos 165 e 165-A, na mesma abordagem."
+          ],
+          "aitObservations": [
+            "Condutor recusou-se a se submeter ao teste com aparelho destinado à verificação da presença de outra substância psicoativa e não apresentava sinais da alteração da capacidade psicomotora. Equipamento marca xx, modelo xx e nº de identificação xx.",
+            "Condutor recusou-se a se submeter ao teste com aparelho destinado à verificação da presença de outra substância psicoativa e apresentava apenas um sinal da alteração da capacidade psicomotora. Equipamento marca xx, modelo xx e nº de identificação xx."
+          ],
+          "related": [],
+          "sources": [
+            {
+              "id": "mbft-1031-757-92",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026 — Anexo III (MBFT)",
+              "section": "Ficha de fiscalização - código 757-92",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            },
+            {
+              "id": "contran-1031-757-92",
+              "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+              "document": "Resolução CONTRAN nº 1.031/2026",
+              "section": "Arts. 14 e 16",
+              "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+              "effectiveFrom": "2026-10-17",
+              "lastCheckedAt": "2026-10-13"
+            }
+          ],
+          "legalBasis": [
+            "Art. 165-A"
+          ]
+        }
+      ]
+    }
+  ]
+}

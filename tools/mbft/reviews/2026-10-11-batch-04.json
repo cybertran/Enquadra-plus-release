@@ -1,0 +1,206 @@
+{
+  "batchId": "2026-10-11-batch-04",
+  "reviewedAt": "2026-10-11",
+  "candidateCount": 100,
+  "promotedCount": 73,
+  "heldCount": 27,
+  "promotedCodes": [
+    "638-60",
+    "639-41",
+    "639-42",
+    "639-43",
+    "639-44",
+    "642-40",
+    "643-21",
+    "643-22",
+    "644-00",
+    "645-91",
+    "645-92",
+    "646-70",
+    "647-50",
+    "648-30",
+    "649-10",
+    "650-50",
+    "651-30",
+    "652-10",
+    "653-00",
+    "655-61",
+    "655-62",
+    "655-63",
+    "655-64",
+    "655-65",
+    "656-40",
+    "657-20",
+    "660-20",
+    "661-01",
+    "661-02",
+    "662-90",
+    "664-50",
+    "665-31",
+    "665-32",
+    "667-00",
+    "668-80",
+    "669-61",
+    "669-62",
+    "670-00",
+    "671-80",
+    "672-62",
+    "673-40",
+    "674-20",
+    "675-00",
+    "677-70",
+    "678-51",
+    "678-52",
+    "678-53",
+    "679-30",
+    "680-70",
+    "681-50",
+    "682-31",
+    "683-11",
+    "684-01",
+    "684-02",
+    "685-80",
+    "687-41",
+    "687-42",
+    "688-20",
+    "689-00",
+    "690-40",
+    "692-01",
+    "692-02",
+    "692-03",
+    "692-04",
+    "693-91",
+    "693-92",
+    "694-71",
+    "694-72",
+    "695-50",
+    "696-30",
+    "698-00",
+    "699-80",
+    "700-51"
+  ],
+  "held": [
+    {
+      "code": "502-92",
+      "reason": "Colunas operacionais incompletas e vazamento de cabeçalho no parser."
+    },
+    {
+      "code": "506-10",
+      "reason": "Vazamento de cabeçalho e perda de rótulo de referência de campo."
+    },
+    {
+      "code": "511-80",
+      "reason": "Vazamento de cabeçalho e perda de rótulo de referência de campo."
+    },
+    {
+      "code": "516-92",
+      "reason": "Colunas operacionais incompletas e transição normativa da Resolução CONTRAN nº 1031/2026 com vigência diferida para o Anexo do MBFT."
+    },
+    {
+      "code": "554-12",
+      "reason": "Colunas de quando autuar/não autuar não recuperadas e layout misturado."
+    },
+    {
+      "code": "554-14",
+      "reason": "Colunas de quando autuar/não autuar não recuperadas e layout misturado."
+    },
+    {
+      "code": "554-17",
+      "reason": "Colunas de quando autuar/não autuar não recuperadas e layout misturado."
+    },
+    {
+      "code": "555-00",
+      "reason": "Colunas de quando autuar/não autuar não recuperadas e layout misturado."
+    },
+    {
+      "code": "574-61",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1023/2026; patch atual não contém os campos operacionais completos."
+    },
+    {
+      "code": "581-92",
+      "reason": "Artigo malformado e colunas de quando autuar/não autuar ausentes."
+    },
+    {
+      "code": "582-70",
+      "reason": "Vazamento de cabeçalho no conteúdo operacional."
+    },
+    {
+      "code": "606-82",
+      "reason": "Campo quando não autuar ausente e vazamento de cabeçalho."
+    },
+    {
+      "code": "619-00",
+      "reason": "Campo quando não autuar não recuperado integralmente."
+    },
+    {
+      "code": "620-30",
+      "reason": "Vazamento de cabeçalho no conteúdo operacional."
+    },
+    {
+      "code": "641-60",
+      "reason": "Campos quando autuar e quando não autuar ausentes no staging."
+    },
+    {
+      "code": "654-80",
+      "reason": "Vazamento de cabeçalho no conteúdo operacional."
+    },
+    {
+      "code": "658-00",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1023/2026; patch sem campos operacionais completos."
+    },
+    {
+      "code": "659-91",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1023/2026; patch sem campos operacionais completos."
+    },
+    {
+      "code": "666-10",
+      "reason": "Campo quando não autuar ausente, vazamento de cabeçalho e perda de rótulo."
+    },
+    {
+      "code": "672-63",
+      "reason": "Campo quando não autuar não recuperado integralmente."
+    },
+    {
+      "code": "683-12",
+      "reason": "Campos quando autuar e quando não autuar ausentes no staging."
+    },
+    {
+      "code": "683-13",
+      "reason": "Campos quando autuar e quando não autuar ausentes no staging."
+    },
+    {
+      "code": "686-61",
+      "reason": "Campos quando autuar e quando não autuar ausentes no staging."
+    },
+    {
+      "code": "686-62",
+      "reason": "Campos quando autuar e quando não autuar ausentes no staging."
+    },
+    {
+      "code": "694-73",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1003/2023; patch sem campos operacionais completos."
+    },
+    {
+      "code": "697-10",
+      "reason": "Campo quando não autuar ausente e perda de rótulo de referência."
+    },
+    {
+      "code": "700-52",
+      "reason": "Campos quando autuar/não autuar ausentes e vazamento de cabeçalho."
+    }
+  ],
+  "sourceCheck": {
+    "base": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+    "officialIndex": "Resoluções CONTRAN — Ministério dos Transportes",
+    "officialIndexLastUpdated": "2026-10-06",
+    "method": "Conferência do staging extraído da fonte oficial, validação dos campos obrigatórios e cruzamento com alterações posteriores vigentes."
+  },
+  "amendmentCheck": {
+    "relevant": [
+      "Resolução CONTRAN nº 1003/2023 — altera o MBFT e afeta 694-73.",
+      "Resolução CONTRAN nº 1023/2026 — altera o Anexo da Resolução 985/2022 e afeta 574-61, 658-00 e 659-91.",
+      "Resolução CONTRAN nº 1031/2026 — alteração do Anexo da Resolução 985/2022 com vigência diferida de 60 dias após 18/08/2026."
+    ],
+    "note": "As fichas promovidas neste lote não foram identificadas como substituídas por alteração posterior vigente no índice oficial."
+  }
+}

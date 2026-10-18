@@ -1,0 +1,229 @@
+{
+  "source": "app/src/main/assets/ctb/articles.json#anexo-i",
+  "verifiedAt": "2026-10-13",
+  "entryCount": 37,
+  "entries": [
+    {
+      "term": "Acostamento",
+      "officialHeading": "ACOSTAMENTO",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas a diferenciação da pista, a finalidade de emergência e a condição para pedestres/bicicletas."
+    },
+    {
+      "term": "Agente da autoridade de trânsito",
+      "officialHeading": "AGENTE DA AUTORIDADE DE TRÂNSITO",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas as categorias de agente e a exigência de designação legal quando aplicável."
+    },
+    {
+      "term": "Automóvel",
+      "officialHeading": "AUTOMÓVEL",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva finalidade e limite de passageiros, excluído o condutor."
+    },
+    {
+      "term": "Autoridade de trânsito",
+      "officialHeading": "AUTORIDADE DE TRÂNSITO",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada a vinculação ao órgão ou entidade executivo integrante do SNT."
+    },
+    {
+      "term": "Bicicleta",
+      "officialHeading": "BICICLETA",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva propulsão humana, duas rodas e distinção legal."
+    },
+    {
+      "term": "Bicicletário",
+      "officialHeading": "BICICLETÁRIO",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada a informação de que o local pode estar na via ou fora dela."
+    },
+    {
+      "term": "Caminhão",
+      "officialHeading": "CAMINHÃO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva transporte de carga, PBT superior a 3.500 kg e limite pela CMT."
+    },
+    {
+      "term": "Caminhão-trator",
+      "officialHeading": "CAMINHÃO-TRATOR",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva a finalidade de tracionar ou arrastar outro veículo."
+    },
+    {
+      "term": "Caminhonete",
+      "officialHeading": "CAMINHONETE",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva transporte de carga e PBT até 3.500 kg."
+    },
+    {
+      "term": "Camioneta",
+      "officialHeading": "CAMIONETA",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva transporte misto no mesmo compartimento."
+    },
+    {
+      "term": "Calçada",
+      "officialHeading": "CALÇADA",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas segregação/nível, exclusão do tráfego veicular e demais usos permitidos."
+    },
+    {
+      "term": "Ciclo",
+      "officialHeading": "CICLO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva ao menos duas rodas e propulsão humana."
+    },
+    {
+      "term": "Ciclofaixa",
+      "officialHeading": "CICLOFAIXA",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas as referências à pista de rolamento e à sinalização específica."
+    },
+    {
+      "term": "Ciclomotor",
+      "officialHeading": "CICLOMOTOR",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva número de rodas, limites de cilindrada/potência e velocidade."
+    },
+    {
+      "term": "Ciclovia",
+      "officialHeading": "CICLOVIA",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva pista própria e separação física."
+    },
+    {
+      "term": "Circulação",
+      "officialHeading": "CIRCULAÇÃO",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada a abrangência de vias públicas ou privadas abertas ao público e o 'conduzidos ou não'."
+    },
+    {
+      "term": "Conversão",
+      "officialHeading": "CONVERSÃO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva mudança angular à esquerda ou direita."
+    },
+    {
+      "term": "Cruzamento",
+      "officialHeading": "CRUZAMENTO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva interseção de duas vias em nível."
+    },
+    {
+      "term": "Dispositivo de segurança",
+      "officialHeading": "DISPOSITIVO DE SEGURANÇA",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas a função específica e as consequências de perigo previstas na definição."
+    },
+    {
+      "term": "Estacionamento",
+      "officialHeading": "ESTACIONAMENTO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva a imobilização além do tempo de embarque/desembarque."
+    },
+    {
+      "term": "Estrada",
+      "officialHeading": "ESTRADA",
+      "status": "CONFORME",
+      "rationale": "Resumo coincide semanticamente com via rural não pavimentada."
+    },
+    {
+      "term": "Etilômetro",
+      "officialHeading": "ETILÔMETRO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva a medição do teor alcoólico no ar alveolar."
+    },
+    {
+      "term": "Faixa de trânsito",
+      "officialHeading": "FAIXAS DE TRÂNSITO",
+      "status": "AJUSTADO",
+      "rationale": "Restaurados subdivisão da pista, presença ou ausência de marcas longitudinais e circulação de veículos automotores."
+    },
+    {
+      "term": "Motocicleta",
+      "officialHeading": "MOTOCICLETA",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada a possibilidade de side-car."
+    },
+    {
+      "term": "Motoneta",
+      "officialHeading": "MOTONETA",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva duas rodas e posição sentada do condutor."
+    },
+    {
+      "term": "Ônibus",
+      "officialHeading": "ÔNIBUS",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada a regra de capacidade superior a vinte mesmo com adaptações que reduzam ocupação."
+    },
+    {
+      "term": "Parada",
+      "officialHeading": "PARADA",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada expressamente a finalidade da imobilização, além do tempo estritamente necessário."
+    },
+    {
+      "term": "Rodovia",
+      "officialHeading": "RODOVIA",
+      "status": "CONFORME",
+      "rationale": "Resumo coincide semanticamente com via rural pavimentada."
+    },
+    {
+      "term": "Trânsito",
+      "officialHeading": "TRÂNSITO",
+      "status": "CONFORME",
+      "rationale": "Resumo coincide semanticamente com movimentação e imobilização nas vias terrestres."
+    },
+    {
+      "term": "Triciclo",
+      "officialHeading": "TRICICLO",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas as posições sentada ou montada do condutor."
+    },
+    {
+      "term": "Ultrapassagem",
+      "officialHeading": "ULTRAPASSAGEM",
+      "status": "AJUSTADO",
+      "rationale": "Restaurados veículo em menor velocidade e mesma faixa como elementos definidores."
+    },
+    {
+      "term": "Veículo articulado",
+      "officialHeading": "VEÍCULO ARTICULADO",
+      "status": "AJUSTADO",
+      "rationale": "A redação foi aproximada da definição legal, que exige combinação acoplada com um dos veículos automotor."
+    },
+    {
+      "term": "Veículo de grande porte",
+      "officialHeading": "VEÍCULO DE GRANDE PORTE",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva os limiares de carga e passageiros."
+    },
+    {
+      "term": "Veículo especial",
+      "officialHeading": "VEÍCULO ESPECIAL",
+      "status": "AJUSTADO",
+      "rationale": "Restauradas as classes de veículo abrangidas e a necessidade de arranjos específicos para a função especial."
+    },
+    {
+      "term": "Via",
+      "officialHeading": "VIA",
+      "status": "AJUSTADO",
+      "rationale": "Restaurada expressamente a circulação de veículos, pessoas e animais sobre a superfície."
+    },
+    {
+      "term": "Via arterial",
+      "officialHeading": "VIA ARTERIAL",
+      "status": "AJUSTADO",
+      "rationale": "Restaurados acessos a lotes e vias secundárias/locais, além da conexão entre regiões."
+    },
+    {
+      "term": "Via de trânsito rápido",
+      "officialHeading": "VIA DE TRÂNSITO RÁPIDO",
+      "status": "CONFORME",
+      "rationale": "Resumo preserva acessos especiais e as três ausências definidoras."
+    }
+  ]
+}

@@ -1,0 +1,1642 @@
+{
+  "schemaVersion": 1,
+  "sourceDocument": "Resolução CONTRAN nº 993/2023 — Anexo",
+  "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023Anexo.pdf",
+  "verifiedAt": "2026-10-13",
+  "sourcePageCount": 53,
+  "annexI": {
+    "explicitCellCount": 848,
+    "requiredCellCount": 462,
+    "vehicleTypes": [
+      {
+        "id": "automovel",
+        "label": "Automóvel",
+        "table": 1
+      },
+      {
+        "id": "camioneta",
+        "label": "Camioneta",
+        "table": 1
+      },
+      {
+        "id": "utilitario",
+        "label": "Utilitário",
+        "table": 1
+      },
+      {
+        "id": "caminhonete",
+        "label": "Caminhonete",
+        "table": 1
+      },
+      {
+        "id": "micro_onibus_leve",
+        "label": "Micro-ônibus — PBT até 3.500 kg",
+        "table": 1
+      },
+      {
+        "id": "caminhao",
+        "label": "Caminhão",
+        "table": 2
+      },
+      {
+        "id": "caminhao_trator",
+        "label": "Caminhão-trator",
+        "table": 2
+      },
+      {
+        "id": "micro_onibus_pesado",
+        "label": "Micro-ônibus — PBT acima de 3.500 kg",
+        "table": 2
+      },
+      {
+        "id": "onibus",
+        "label": "Ônibus",
+        "table": 2
+      },
+      {
+        "id": "trator",
+        "label": "Trator de rodas/esteiras/misto (inclui máquinas de elevação/guindastes)",
+        "table": 3
+      },
+      {
+        "id": "reboque_semirreboque",
+        "label": "Reboque / semirreboque",
+        "table": 3
+      },
+      {
+        "id": "ciclomotor",
+        "label": "Ciclomotor",
+        "table": 4
+      },
+      {
+        "id": "moto_triciclo",
+        "label": "Motoneta / motocicleta / triciclo",
+        "table": 4
+      },
+      {
+        "id": "triciclo_cabine",
+        "label": "Triciclo de cabine fechada",
+        "table": 4
+      },
+      {
+        "id": "quadriciclo",
+        "label": "Quadriciclo",
+        "table": 4
+      },
+      {
+        "id": "quadriciclo_cabine",
+        "label": "Quadriciclo de cabine fechada",
+        "table": 4
+      }
+    ],
+    "notes": {
+      "1": "Veículos de 1/1/1999 a 30/1/2020: cintos de três pontos graduáveis nos assentos, admitido subabdominal no central; a partir de 30/1/2020, três pontos com retrator, salvo exceções da Res. 951/2022.",
+      "2": "Uso do cinto é facultativo em veículos de uso bélico nas situações de preparo, emprego e missões institucionais das Forças Armadas.",
+      "3": "Isenção para passageiros, condutor e tripulante em veículos produzidos até 1/1/1999.",
+      "4": "Isenção em veículos cujo percurso permita viajar em pé.",
+      "5": "Cinto de três ou quatro pontos para condutor e passageiros em posição sentada.",
+      "6": "Obrigatório para veículos fabricados a partir de 30/1/2020; o uso do Isofix/Latch pelo dispositivo infantil é opcional.",
+      "7": "Requerido para máquinas de elevação/guindaste e, quando necessário, para os demais veículos desse tipo.",
+      "8": "Opcional para veículos produzidos antes de 1/1/1990.",
+      "9": "Opcional para veículos da categoria O se agrupado com outros dispositivos luminosos traseiros.",
+      "10": "Opcional em reboque da categoria O1.",
+      "11": "Obrigatório, quando aplicável, a partir de 1/1/2009.",
+      "12": "Exigido quando o veículo permitir marcha à ré.",
+      "13": "Obrigatório para veículos produzidos a partir de 1/1/2021.",
+      "14": "Isenção para caminhões cuja carroceria integre o projeto original, com características semelhantes a caminhonete e comprimento inferior a 7 m.",
+      "15": "Isenção para veículos inacabados.",
+      "16": "Isenções específicas para cargas autoportantes/veículos muito longos com AET, incompatibilidade de uso prevista na Res. 952/2022, uso bélico, coleção, uso fora de estrada e exportação.",
+      "17": "Isenção para veículos completos com para-choque traseiro incorporado ao projeto original.",
+      "18": "Categorias N2, N3, O3 e O4 fabricadas e registradas até 31/12/2016 seguem a regra transitória indicada na Res. 952/2022.",
+      "19": "Os requisitos da Res. 952/2022 indicados nesta nota aplicam-se a caminhão, reboque e semirreboque.",
+      "20": "Aplicável a veículos com motor dianteiro e PBT superior a 14 t, quando cabível.",
+      "21": "Obrigatório para categoria M3 com PBT superior a 14 t e altura do para-choque acima de 550 mm, desde 1/1/2010.",
+      "22": "Capuz que abre pela frente e pode encobrir a visão pelo para-brisa deve ter travamento em dois estágios ou segunda trava.",
+      "23": "Aplicável a uso urbano e rodoviário, inclusive intermunicipal, interestadual e internacional.",
+      "24": "Fiscalização de janelas/saídas: mecanismo de abertura em uso, instrução de uso e identificação.",
+      "25": "Aplicável a veículos com PBT superior a 750 kg produzidos a partir de 1997.",
+      "26": "Obrigatório a partir de 1/1/1999.",
+      "27": "Isenção para veículos produzidos antes de 1/1/1974.",
+      "28": "Isenção para veículos produzidos até 1/1/1999.",
+      "29": "Quando há alerta e monitoramento traseiro simultâneos, o funcionamento de apenas um atende à norma.",
+      "30": "Desde 1/1/2009, sistemas de exaustão de motocicletas devem ter redutores de temperatura nos pontos críticos, segundo o fabricante e o Anexo III.",
+      "31": "Isenção para pneus run-flat ou veículo com enchimento emergencial automático.",
+      "32": "Isenção para veículos blindados de transporte de valores.",
+      "33": "Para PBT até 3,5 t, a dispensa pode ser reconhecida pelo órgão máximo executivo da União quando inerente ao projeto e houver solução alternativa.",
+      "34": "Veículo exclusivamente elétrico até 3,5 t pode ser isento se possuir kit de reparo ou tecnologia alternativa.",
+      "35": "Isenção em veículos com características específicas para transporte de lixo e de concreto.",
+      "36": "Isenção para veículos integrantes de sistemas urbanos de transporte de passageiros nas áreas indicadas pela norma.",
+      "37": "Protetores traseiros devem reduzir projeção de objetos; os requisitos da Res. 888/2021 não se aplicam a esses dispositivos.",
+      "38": "Requisitos técnicos, cronogramas e exceções devem ser verificados na Res. 888/2021.",
+      "39": "Obrigatório para CMT igual ou superior a 19 t.",
+      "40": "Obrigatório para PBT superior a 4.536 kg fabricado a partir de 1/1/1999.",
+      "41": "A isenção da nota 14 não vale para veículo registrado na categoria aluguel.",
+      "42": "Isenção para uso bélico, placa de fabricante e veículo do tipo motorcasa.",
+      "43": "Não exigido em transporte coletivo ou misto particular, sem transporte remunerado, fabricado antes de 1/1/2024.",
+      "44": "Obrigatório para veículos capazes de desenvolver velocidade acima de 60 km/h.",
+      "45": "Obrigatório para veículos produzidos até 31/12/2021.",
+      "46": "O equipamento deve estar acondicionado para não ser projetado contra ocupantes, outros veículos ou usuários da via.",
+      "47": "Encosto de cabeça: regras por data de fabricação e exceções conforme Res. 951/2022.",
+      "48": "DRL obrigatório em novos projetos desde 1/1/2021 e em todos os projetos desde 1/1/2024.",
+      "49": "Obrigatório para veículos fabricados a partir de 1/1/2011."
+    },
+    "requirements": [
+      {
+        "id": "seat_belts",
+        "label": "Cinto de segurança para todos os ocupantes",
+        "reference": "CONTRAN 951/22, 939/22, 959/22",
+        "cells": {
+          "automovel": "X:1,2",
+          "camioneta": "X:1,2",
+          "utilitario": "X:1,2",
+          "caminhonete": "X:1,2",
+          "micro_onibus_leve": "X:2,3,4",
+          "caminhao": "X:2",
+          "caminhao_trator": "X:2",
+          "micro_onibus_pesado": "X:2,3,4",
+          "onibus": "X:2,3,4",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X:5",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "X:5"
+        }
+      },
+      {
+        "id": "headrest",
+        "label": "Encosto de cabeça",
+        "reference": "CONTRAN 951/22, 573/15",
+        "cells": {
+          "automovel": "X:47",
+          "camioneta": "X:47",
+          "utilitario": "X:47",
+          "caminhonete": "X:47",
+          "micro_onibus_leve": "-",
+          "caminhao": "X:47",
+          "caminhao_trator": "X:47",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "X:47"
+        }
+      },
+      {
+        "id": "isofix",
+        "label": "Ancoragem de sistema de retenção infantil (Isofix/Latch)",
+        "reference": "CONTRAN 951/22",
+        "cells": {
+          "automovel": "X:6",
+          "camioneta": "X:6",
+          "utilitario": "X:6",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "wheelchair_restraint",
+        "label": "Sistema de retenção da cadeira de rodas e seu usuário",
+        "reference": "CONTRAN 939/22, 959/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "headlamp",
+        "label": "Farol principal dianteiro",
+        "reference": "CONTRAN 970/22, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "front_position_lamp",
+        "label": "Lanterna de posição dianteira",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "front_turn_signal",
+        "label": "Lanternas indicadoras de direção dianteiras",
+        "reference": "CONTRAN 970/22, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "drl",
+        "label": "Luz de rodagem diurna (DRL)",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X:48",
+          "camioneta": "X:48",
+          "utilitario": "X:48",
+          "caminhonete": "X:48",
+          "micro_onibus_leve": "X:48",
+          "caminhao": "X:48",
+          "caminhao_trator": "X:48",
+          "micro_onibus_pesado": "X:48",
+          "onibus": "X:48",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "front_reflector",
+        "label": "Retrorrefletor dianteiro não triangular",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_position_lamp",
+        "label": "Lanterna de posição traseira",
+        "reference": "CONTRAN 970/22, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "side_turn_signal",
+        "label": "Indicador de direção lateral",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "side_reflector",
+        "label": "Retrorrefletor lateral não triangular",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_turn_signal",
+        "label": "Lanternas indicadoras de direção traseiras",
+        "reference": "CONTRAN 970/22, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "plate_lamp",
+        "label": "Lanterna de iluminação da placa traseira, se aplicável",
+        "reference": "CONTRAN 970/22, 573/15, 587/16",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X:7",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "rear_reflector_nontri",
+        "label": "Retrorrefletores traseiros não triangulares",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X:8",
+          "camioneta": "X:8",
+          "utilitario": "X:8",
+          "caminhonete": "X:8",
+          "micro_onibus_leve": "X:8",
+          "caminhao": "X:8",
+          "caminhao_trator": "X:8",
+          "micro_onibus_pesado": "X:8",
+          "onibus": "X:8",
+          "trator": "-",
+          "reboque_semirreboque": "X:8,9",
+          "ciclomotor": "X:8",
+          "moto_triciclo": "X:8",
+          "triciclo_cabine": "X:8",
+          "quadriciclo": "X:8",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_reflector_tri",
+        "label": "Retrorrefletores traseiros triangulares",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "X:10,11",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "reverse_lamp",
+        "label": "Lanterna de marcha à ré",
+        "reference": "CONTRAN 970/22, 573/15",
+        "cells": {
+          "automovel": "X:8",
+          "camioneta": "X:8",
+          "utilitario": "X:8",
+          "caminhonete": "X:8",
+          "micro_onibus_leve": "X:8",
+          "caminhao": "X:8",
+          "caminhao_trator": "X:8",
+          "micro_onibus_pesado": "X:8",
+          "onibus": "X:8",
+          "trator": "X:8",
+          "reboque_semirreboque": "X:8,10",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "X:12"
+        }
+      },
+      {
+        "id": "brake_lamp",
+        "label": "Lanterna de freio",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "hazard_lamps",
+        "label": "Lanternas intermitentes de advertência",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "third_brake_lamp",
+        "label": "Lanterna de freio elevada (3ª luz de freio)",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "X:13",
+          "camioneta": "X:13",
+          "utilitario": "X:13",
+          "caminhonete": "X:13",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "warning_triangle",
+        "label": "Dispositivo de sinalização de emergência (triângulo)",
+        "reference": "CONTRAN 827/97",
+        "cells": {
+          "automovel": "X:46",
+          "camioneta": "X:46",
+          "utilitario": "X:46",
+          "caminhonete": "X:46",
+          "micro_onibus_leve": "X:46",
+          "caminhao": "X:46",
+          "caminhao_trator": "X:46",
+          "micro_onibus_pesado": "X:46",
+          "onibus": "X:46",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X:46",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "marker_side_lamps",
+        "label": "Lanternas delimitadoras e lanternas laterais, quando as dimensões exigirem",
+        "reference": "CONTRAN 970/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "retroreflective_strip",
+        "label": "Faixa / dispositivo / película retrorrefletiva",
+        "reference": "CONTRAN 948/22, 939/22, 959/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X",
+          "caminhao": "X:14",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "front_bumper",
+        "label": "Para-choque dianteiro",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_bumper",
+        "label": "Para-choque traseiro",
+        "reference": "CONTRAN 952/22 / Resolução 993/23",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X:15",
+          "micro_onibus_leve": "X",
+          "caminhao": "X:15,16,17,18,19",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X:15,16,18,19",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_underrun",
+        "label": "Dispositivo de proteção anti-intrusão traseira",
+        "reference": "CONTRAN 959/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X:20,21",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X:20,21",
+          "onibus": "X:20,21",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "side_guard",
+        "label": "Protetor lateral",
+        "reference": "CONTRAN 953/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "X:49",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "X:49",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "hood_lock",
+        "label": "Sistema de travamento do capuz",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X:22",
+          "camioneta": "X:22",
+          "utilitario": "X:22",
+          "caminhonete": "X:22",
+          "micro_onibus_leve": "X:22",
+          "caminhao": "X:22",
+          "caminhao_trator": "X:22",
+          "micro_onibus_pesado": "X:22",
+          "onibus": "X:22",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "fire_extinguisher",
+        "label": "Extintor de incêndio",
+        "reference": "CONTRAN 919/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X:46",
+          "caminhao": "X:46",
+          "caminhao_trator": "X:46",
+          "micro_onibus_pesado": "X:46",
+          "onibus": "X:46",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "emergency_windows",
+        "label": "Janelas de emergência",
+        "reference": "CONTRAN 939/22, 959/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X:23,24",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X:23,24",
+          "onibus": "X:23,24",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "emergency_exits",
+        "label": "Saídas de emergência",
+        "reference": "CONTRAN 939/22, 959/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X:24",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "X:24",
+          "onibus": "X:24",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "service_parking_brakes",
+        "label": "Freios de estacionamento e de serviço, com comandos independentes",
+        "reference": "CONTRAN 915/22, 573/15, 129/01",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "X:25",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "internal_mirror",
+        "label": "Espelho retrovisor interno ou dispositivo de visão indireta",
+        "reference": "CONTRAN 966/22, 924/22",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "external_mirrors",
+        "label": "Espelhos retrovisores externos ou dispositivo de visão indireta",
+        "reference": "CONTRAN 966/22, 924/22, 573/15",
+        "cells": {
+          "automovel": "X:26",
+          "camioneta": "X:26",
+          "utilitario": "X:26",
+          "caminhonete": "X:26",
+          "micro_onibus_leve": "X:26",
+          "caminhao": "X:26",
+          "caminhao_trator": "X:26",
+          "micro_onibus_pesado": "X:26",
+          "onibus": "X:26",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "windshield_washer",
+        "label": "Lavador de para-brisa",
+        "reference": "CONTRAN 224/07",
+        "cells": {
+          "automovel": "X:27",
+          "camioneta": "X:27",
+          "utilitario": "X:27",
+          "caminhonete": "X:27",
+          "micro_onibus_leve": "X:28",
+          "caminhao": "X:28",
+          "caminhao_trator": "X:28",
+          "micro_onibus_pesado": "X:28",
+          "onibus": "X:28",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "windshield_wiper",
+        "label": "Limpador de para-brisa",
+        "reference": "CONTRAN 224/07",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "sun_visor",
+        "label": "Pala interna de proteção contra o sol para o condutor",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_alert_monitor",
+        "label": "Sistema de alerta ou monitoramento traseiro",
+        "reference": "CONTRAN 759/18",
+        "cells": {
+          "automovel": "X:29",
+          "camioneta": "X:29",
+          "utilitario": "X:29",
+          "caminhonete": "X:29",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "horn",
+        "label": "Buzina",
+        "reference": "CONTRAN 764/18, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "reverse_alarm",
+        "label": "Alerta sonoro de marcha à ré",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "exhaust_noise",
+        "label": "Dispositivo de controle de ruído do motor / sistema de escapamento",
+        "reference": "Resolução 993/23, CONTRAN 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "exhaust_heat_guard",
+        "label": "Dispositivo protetor de escapamento",
+        "reference": "Resolução 993/23, Anexo III",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X:30",
+          "moto_triciclo": "X:30",
+          "triciclo_cabine": "-",
+          "quadriciclo": "X:30",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "tires_tracks",
+        "label": "Pneus e esteiras em condições adequadas de segurança",
+        "reference": "CONTRAN 913/22, 573/15",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "spare_wheel",
+        "label": "Roda sobressalente",
+        "reference": "CONTRAN 913/22",
+        "cells": {
+          "automovel": "X:31,32,33,34",
+          "camioneta": "X:31,32,33,34",
+          "utilitario": "X:31,32,33,34",
+          "caminhonete": "X:31,32,33,34",
+          "micro_onibus_leve": "X:31,32,36",
+          "caminhao": "X:31,32,35",
+          "caminhao_trator": "X:31,32,35",
+          "micro_onibus_pesado": "X:31,32,36",
+          "onibus": "X:31,36",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "screwdriver",
+        "label": "Chave de fenda ou ferramenta para remoção de calotas",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X:46",
+          "camioneta": "X:46",
+          "utilitario": "X:46",
+          "caminhonete": "X:46",
+          "micro_onibus_leve": "X:46",
+          "caminhao": "X:46",
+          "caminhao_trator": "X:46",
+          "micro_onibus_pesado": "X:46",
+          "onibus": "X:46",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X:46",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "lug_wrench",
+        "label": "Chave de roda",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X:31,32,33,46",
+          "camioneta": "X:31,32,33,46",
+          "utilitario": "X:31,32,33,46",
+          "caminhonete": "X:31,32,33,46",
+          "micro_onibus_leve": "X:31,32,36,46",
+          "caminhao": "X:31,32,35,46",
+          "caminhao_trator": "X:31,32,35,46",
+          "micro_onibus_pesado": "X:31,32,36,46",
+          "onibus": "X:31,36,46",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X:46",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "jack",
+        "label": "Macaco compatível com o peso e carga do veículo",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X:31,32,33,46",
+          "camioneta": "X:31,32,33,46",
+          "utilitario": "X:31,32,33,46",
+          "caminhonete": "X:31,32,33,46",
+          "micro_onibus_leve": "X:31,32,35,46",
+          "caminhao": "X:31,32,35,46",
+          "caminhao_trator": "X:31,32,35,46",
+          "micro_onibus_pesado": "X:31,32,35,46",
+          "onibus": "X:31,36,46",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "X:46",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "rear_wheel_guards",
+        "label": "Protetores das rodas traseiras",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "X:37",
+          "caminhao_trator": "X:37",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "X",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "wheel_guards",
+        "label": "Protetores das rodas",
+        "reference": "CONTRAN 888/21",
+        "cells": {
+          "automovel": "X:38",
+          "camioneta": "X:38",
+          "utilitario": "X:38",
+          "caminhonete": "-",
+          "micro_onibus_leve": "-",
+          "caminhao": "-",
+          "caminhao_trator": "-",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "antispray",
+        "label": "Sistema antispray",
+        "reference": "CONTRAN 888/21",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "X:38",
+          "micro_onibus_leve": "-",
+          "caminhao": "X:38",
+          "caminhao_trator": "X:38",
+          "micro_onibus_pesado": "-",
+          "onibus": "-",
+          "trator": "-",
+          "reboque_semirreboque": "X:38",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "tachograph",
+        "label": "Registrador instantâneo e inalterável de velocidade e tempo (cronotacógrafo)",
+        "reference": "CONTRAN 938/22",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "-",
+          "micro_onibus_leve": "X:42,43",
+          "caminhao": "X:39,40,14,41,42",
+          "caminhao_trator": "X:39,40,42",
+          "micro_onibus_pesado": "X:42,43",
+          "onibus": "X:42,43",
+          "trator": "X:42,44",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      },
+      {
+        "id": "speedometer",
+        "label": "Velocímetro",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "X",
+          "camioneta": "X",
+          "utilitario": "X",
+          "caminhonete": "X",
+          "micro_onibus_leve": "X",
+          "caminhao": "X",
+          "caminhao_trator": "X",
+          "micro_onibus_pesado": "X",
+          "onibus": "X",
+          "trator": "X:44",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "X",
+          "moto_triciclo": "X",
+          "triciclo_cabine": "X",
+          "quadriciclo": "X",
+          "quadriciclo_cabine": "X"
+        }
+      },
+      {
+        "id": "driveshaft_belt",
+        "label": "Cinto de segurança para a árvore de transmissão em veículos de transporte coletivo e carga",
+        "reference": "Resolução 993/23",
+        "cells": {
+          "automovel": "-",
+          "camioneta": "-",
+          "utilitario": "-",
+          "caminhonete": "X:45",
+          "micro_onibus_leve": "X:45",
+          "caminhao": "X:45",
+          "caminhao_trator": "X:45",
+          "micro_onibus_pesado": "X:45",
+          "onibus": "X:45",
+          "trator": "-",
+          "reboque_semirreboque": "-",
+          "ciclomotor": "-",
+          "moto_triciclo": "-",
+          "triciclo_cabine": "-",
+          "quadriciclo": "-",
+          "quadriciclo_cabine": "-"
+        }
+      }
+    ]
+  },
+  "pageAudit": [
+    {
+      "page": 1,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 2,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 3,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 4,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 5,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 6,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 7,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 8,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 9,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 10,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 11,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 12,
+      "section": "ANEXO_I",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 13,
+      "section": "ANEXO_I_ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 14,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 15,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 16,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 17,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 18,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 19,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 20,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 21,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 22,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 23,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 24,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 25,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 26,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 27,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 28,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 29,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 30,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 31,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 32,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 33,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 34,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 35,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 36,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 37,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 38,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 39,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 40,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 41,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 42,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 43,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 44,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 45,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 46,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 47,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 48,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 49,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 50,
+      "section": "ANEXO_II",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 51,
+      "section": "ANEXO_II_ANEXO_III",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 52,
+      "section": "ANEXO_III",
+      "status": "CELL_BY_CELL_VERIFIED"
+    },
+    {
+      "page": 53,
+      "section": "ANEXO_III",
+      "status": "CELL_BY_CELL_VERIFIED"
+    }
+  ],
+  "annexIIAudit": {
+    "status": "CELL_BY_CELL_VERIFIED",
+    "pages": "13-51",
+    "purpose": "Índice de resoluções/requisitos gerais; células de aplicabilidade auditadas como índice normativo, sem promover requisito adicional ao checklist do Anexo I."
+  },
+  "annexIIIAudit": {
+    "status": "CELL_AND_ILLUSTRATION_VERIFIED",
+    "pages": "51-53",
+    "purpose": "Configurações do sistema de exaustão; vinculadas à nota 30 do Anexo I."
+  }
+}
