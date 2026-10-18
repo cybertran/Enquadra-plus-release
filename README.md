@@ -28,6 +28,14 @@ BE:58:EA:ED:F7:AD:76:B6:5F:75:FC:08:6A:DC:71:89:E4:91:A7:25:67:B5:8E:E7:BB:E3:EA
 
 A chave privada de assinatura e sua senha não fazem parte deste repositório e não devem ser enviadas em issues, pull requests, workflows ou commits.
 
+O fluxo público gera apenas um candidato de release **não assinado**. A assinatura oficial continua sendo feita fora do GitHub com a chave privada mantida offline. Depois da publicação da primeira release oficial, o arquivo para usuários será sempre chamado `Enquadra.apk`, permitindo usar o endereço permanente:
+
+```text
+https://github.com/cybertran/Enquadra-plus-release/releases/latest/download/Enquadra.apk
+```
+
+O procedimento completo está em [docs/RELEASING.md](docs/RELEASING.md).
+
 ## Segurança
 
 Leia [SECURITY.md](SECURITY.md), [SECURITY_BASELINE.md](SECURITY_BASELINE.md) e [SECURITY_CHECKLIST.md](SECURITY_CHECKLIST.md) antes de contribuir. Código produzido ou alterado por IA é tratado como não confiável até passar pelas verificações aplicáveis.
