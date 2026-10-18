@@ -1,0 +1,202 @@
+{
+  "resolution": "BASELINE",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "519-30",
+      "status": "VERIFIED",
+      "article": "Art. 168",
+      "shortDescription": "Transportar criança sem observância das normas de segurança estabelecidas p/ CTB.",
+      "description": "Transportar crianças em veículo automotor sem observância das normas de segurança especiais estabelecidas neste Código.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal, Estadual e Rodoviário.",
+      "verificationMethod": "Vide Procedimentos.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Retenção do veículo até que a irregularidade seja sanada. (Vide Parte Geral deste Manual)",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo transportando criança menor de dez anos de idade que não tenha atingido 1,45m de altura: sem o uso de DRC ou cinto de segurança; sem o uso do DRC adequado à idade, peso e altura; utilizando DRC diferente dos modelos regulamentados; ou utilizando DRC ineficiente, inoperante ou em desacordo com as prescrições do fabricante, inclusive o cinto de segurança de três ou dois pontos.",
+        "Veículo dotado de airbag no banco dianteiro do passageiro, transportando criança com até 7 anos e meio, em dispositivo de retenção: posicionado no sentido contrário à marcha do veículo; posicionado no sentido da marcha do veículo, com bandeja ou acessório equivalente, incorporado ao dispositivo de retenção; ou cujo banco do passageiro não esteja ajustado em sua última posição, salvo instruções contrárias do fabricante do veículo.",
+        "Criança de 4 a 7 anos e meio, transportada no banco traseiro, sem utilizar o cinto de dois pontos, em veículo originalmente fabricado com cinto de dois pontos no banco traseiro."
+      ],
+      "whenNotToCite": [
+        "Criança com idade inferior a 10 anos transportada com o uso do dispositivo adequado, no banco dianteiro do veículo: em veículos dotados exclusivamente de bancos dianteiros; quando a quantidade de crianças superar a capacidade máxima do banco traseiro; em veículos dotados originalmente de cintos de segurança subabdominais de dois pontos nos bancos traseiros e de três pontos no banco dianteiro; ou quando a criança já tiver atingido 1,45m de altura.",
+        "Para crianças com idade superior a quatro anos e inferior a sete anos e meio, é dispensado o uso do Assento de Elevação nos bancos traseiros (central, direito ou esquerdo), nos veículos dotados originalmente de cinto de dois pontos, quando se utilizar esse cinto.",
+        "Passageiro(s) excedente(s) menor de dez anos, que tenha atingido 1,45m de altura, utilizar enquadramento específico: art. 231, VII, 685-80."
+      ],
+      "procedures": [
+        "DRC - Dispositivo de retenção para o transporte de crianças.",
+        "A abordagem não será obrigatória nos casos em que ao agente não restar qualquer dúvida de que a criança é menor de sete anos, como por exemplo: criança transportada no colo de passageiro ou condutor; criança em pé entre os bancos da frente; criança ajoelhada no banco traseiro.",
+        "Quando a quantidade de passageiros (criança ou adulto) superar o número de assentos regulamentares, excluído o condutor, autuar também pela infração do art. 231, VII.",
+        "Para crianças até sete anos e meio não são exigidos o bebê conforto ou conversível, a cadeirinha, o assento de elevação, inclusive o cinto de segurança, nos veículos de transporte coletivo de passageiros, de aluguel, transporte remunerado individual de passageiros, veículos escolares e demais veículos com PBT superior a 3,5t. Exceto para o transporte remunerado individual de passageiros fora do exercício da função.",
+        "A criança com idade superior a quatro anos e inferior a sete anos e meio poderá ser transportada em banco traseiro de veículo originalmente dotado de cinto de dois pontos, utilizando este equipamento, ainda que haja assento com cinto de três pontos disponível."
+      ],
+      "aitObservations": [
+        "Criança menor de dez anos em pé entre os bancos da frente.",
+        "Criança maior de quatro anos com menos de 1,45m de altura, sendo transportada em cadeirinha.",
+        "Criança com até um ano de idade sendo transportada no colo do passageiro.",
+        "Criança com idade inferior a quatro anos sendo transportada sem qualquer dispositivo de retenção.",
+        "Criança com até um ano de idade sendo transportada no bebê conforto, mas o dispositivo de retenção não está fixado ao veículo."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-985-recovered-519-30",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Ficha individual aprovada do MBFT — código 519-30",
+          "section": "Art. 168 — código 519-30",
+          "officialUrl": "https://www.gov.br/participamaisbrasil/blob/baixar/6308",
+          "effectiveFrom": "2023-01-02",
+          "lastCheckedAt": "2026-10-15"
+        }
+      ],
+      "legalBasis": [
+        "Art. 168 do CTB"
+      ]
+    },
+    {
+      "code": "551-71",
+      "status": "VERIFIED",
+      "article": "Art. 181, XIV",
+      "shortDescription": "Estacionar nos viadutos.",
+      "description": "Estacionar o veículo nos viadutos, pontes e túneis.",
+      "severity": "Grave",
+      "points": 5,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Remoção do veículo. (Vide Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo estacionado sobre o viaduto (inclui suas alças).",
+        "Veículo estacionado sobre via elevada ou elevado."
+      ],
+      "whenNotToCite": [
+        "Viaduto sinalizado com regulamentação de estacionamento, utilizar enquadramento específico.",
+        "Veículo estacionado sobre ponte, utilizar enquadramento específico: 551-72, art. 181, XIV.",
+        "Veículo estacionado em túnel, utilizar enquadramento específico: 551-73, art. 181, XIV.",
+        "Veículo parado sobre viaduto, para embarque ou desembarque de passageiros, utilizar enquadramento específico: 564-91, art. 182, VIII."
+      ],
+      "procedures": [
+        "ESTACIONAMENTO - imobilização de veículos por tempo superior ao necessário para embarque ou desembarque de passageiros.",
+        "VIADUTO - obra da construção civil destinada a transpor uma depressão de terreno ou servir de passagem superior.",
+        "A alça de entrada e/ou saída é parte integrante do viaduto.",
+        "Via elevada ou elevado equipara-se a viaduto para fins de fiscalização."
+      ],
+      "aitObservations": [
+        "Estacionado na alça do viaduto.",
+        "Estacionado sobre o viaduto.",
+        "Estacionado sobre via elevada."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-985-recovered-551-71",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Ficha individual aprovada do MBFT — código 551-71",
+          "section": "Art. 181, XIV — código 551-71",
+          "officialUrl": "https://www.gov.br/participamaisbrasil/blob/baixar/6392",
+          "effectiveFrom": "2023-01-02",
+          "lastCheckedAt": "2026-10-15"
+        }
+      ],
+      "legalBasis": [
+        "Art. 181, XIV do CTB"
+      ]
+    },
+    {
+      "code": "566-50",
+      "status": "VERIFIED",
+      "article": "Art. 182, X",
+      "shortDescription": "Parar em local/horário proibidos especificamente pela sinalização.",
+      "description": "Parar o veículo em local e horário proibidos especificamente pela sinalização (placa - proibido parar e estacionar).",
+      "severity": "Média",
+      "points": 4,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Não",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo efetuando embarque ou desembarque em local sinalizado com placa R-6c (proibido parar e estacionar).",
+        "Veículo efetuando embarque ou desembarque em local/horário sinalizado com placa R-6c (Proibido Parar e Estacionar) em desobediência a informação complementar de horário, carga e descarga, tipo de veículo, etc."
+      ],
+      "whenNotToCite": [
+        "Veículo estacionado em local sinalizado com placa R-6c (proibido parar e estacionar), utilizar enquadramento específico: 556-80, art. 181, XIX."
+      ],
+      "procedures": [
+        "PARADA - imobilização do veículo com a finalidade e pelo tempo estritamente necessário para efetuar embarque ou desembarque de passageiros.",
+        "INTERRUPÇÃO DE MARCHA - imobilização do veículo para atender circunstância momentânea do trânsito."
+      ],
+      "aitObservations": [
+        "Veículo estacionado em local com placa R-6c (proibido parar e estacionar), visível."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-985-recovered-566-50",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Ficha individual aprovada do MBFT — código 566-50",
+          "section": "Art. 182, X — código 566-50",
+          "officialUrl": "https://www.gov.br/participamaisbrasil/blob/baixar/6456",
+          "effectiveFrom": "2023-01-02",
+          "lastCheckedAt": "2026-10-15"
+        }
+      ],
+      "legalBasis": [
+        "Art. 182, X do CTB"
+      ]
+    },
+    {
+      "code": "567-31",
+      "status": "VERIFIED",
+      "article": "Art. 183",
+      "shortDescription": "Parar sobre faixa de pedestres na mudança de sinal luminoso.",
+      "description": "Parar o veículo sobre faixa de pedestres na mudança do sinal luminoso.",
+      "severity": "Média",
+      "points": 4,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Não",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo que transpõe a linha de retenção na fase verde ou amarela e, mudando o semáforo para a fase vermelha, fica imobilizado sobre a faixa de pedestres."
+      ],
+      "whenNotToCite": [
+        "Veículo efetuando embarque e desembarque sobre a faixa de pedestre, utilizar enquadramento específico: 562-22, art. 182, VI.",
+        "Veículo imobilizado por interrupção inesperada do fluxo, sem mudança do sinal luminoso para o vermelho - fato atípico.",
+        "Local com a sinalização horizontal em mau estado de conservação, dificultando o seu entendimento pelos condutores."
+      ],
+      "procedures": [
+        "FAIXA DE TRAVESSIA DE PEDESTRES (FTP) - é a área destinada à travessia de pedestres e que regulamenta a prioridade de passagem dos mesmos em relação aos veículos, nos casos previstos pelo CTB.",
+        "As faixas de pedestres podem ser do tipo zebrada ou do tipo paralela.",
+        "LINHA DE RETENÇÃO (LRE) - a linha de retenção (LRE) indica ao condutor o local limite em que deve parar o veículo.",
+        "INTERRUPÇÃO DE MARCHA - imobilização do veículo para atender circunstância momentânea do trânsito."
+      ],
+      "aitObservations": [
+        "O veículo imobilizou-se sobre a faixa de pedestre na luz vermelha do semáforo."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-985-recovered-567-31",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Ficha individual aprovada do MBFT — código 567-31",
+          "section": "Art. 183 — código 567-31",
+          "officialUrl": "https://www.gov.br/participamaisbrasil/blob/baixar/6458",
+          "effectiveFrom": "2023-01-02",
+          "lastCheckedAt": "2026-10-15"
+        }
+      ],
+      "legalBasis": [
+        "Art. 183 do CTB"
+      ]
+    }
+  ]
+}

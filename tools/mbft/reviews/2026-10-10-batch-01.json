@@ -1,0 +1,104 @@
+{
+  "batchId": "2026-10-10-batch-01",
+  "reviewedAt": "2026-10-10",
+  "officialSource": {
+    "document": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+    "sha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+    "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/mbvt20222.pdf"
+  },
+  "scope": {
+    "candidateCount": 60,
+    "promotedCount": 55,
+    "heldCount": 5,
+    "promotedCodes": [
+      "502-91",
+      "503-71",
+      "503-72",
+      "505-31",
+      "505-32",
+      "505-33",
+      "505-34",
+      "507-01",
+      "507-02",
+      "508-81",
+      "508-82",
+      "509-60",
+      "510-01",
+      "510-02",
+      "510-03",
+      "510-04",
+      "512-61",
+      "512-62",
+      "513-41",
+      "513-42",
+      "514-20",
+      "515-01",
+      "515-02",
+      "515-03",
+      "515-04",
+      "517-70",
+      "521-51",
+      "521-52",
+      "522-31",
+      "522-32",
+      "523-11",
+      "523-12",
+      "524-00",
+      "525-81",
+      "525-82",
+      "525-83",
+      "526-61",
+      "526-62",
+      "526-63",
+      "527-41",
+      "527-42",
+      "528-20",
+      "529-00",
+      "530-40",
+      "531-20",
+      "532-00",
+      "533-90",
+      "534-70",
+      "535-50",
+      "536-30",
+      "539-80",
+      "540-10",
+      "541-00",
+      "542-81",
+      "542-82"
+    ],
+    "held": [
+      {
+        "code": "502-92",
+        "reason": "Campos operacionais ainda não extraídos integralmente do layout oficial."
+      },
+      {
+        "code": "506-10",
+        "reason": "Exemplo do campo de observações do AIT ainda não confirmado integralmente."
+      },
+      {
+        "code": "511-80",
+        "reason": "Exemplo do campo de observações do AIT ainda não confirmado integralmente."
+      },
+      {
+        "code": "516-92",
+        "reason": "Campos operacionais exigem conferência adicional e a Resolução CONTRAN nº 1031/2026 possui alteração futura do Anexo do MBFT ainda não vigente em 2026-10-10."
+      },
+      {
+        "code": "537-10",
+        "reason": "Campos operacionais ainda não extraídos integralmente do layout oficial."
+      }
+    ]
+  },
+  "amendmentCheck": {
+    "applied": [
+      "Resolução CONTRAN nº 1003/2023",
+      "Resolução CONTRAN nº 1009/2024",
+      "Resolução CONTRAN nº 1012/2024",
+      "Resolução CONTRAN nº 1013/2024",
+      "Resolução CONTRAN nº 1022/2026",
+      "Resolução CONTRAN nº 1023/2026"
+    ],
+    "note": "As alterações vigentes já incorporadas pelo pipeline não substituem as fichas promovidas neste lote. A alteração do Anexo da Resolução CONTRAN nº 1031/2026 permanece fora deste lote por vigência diferida."
+  }
+}

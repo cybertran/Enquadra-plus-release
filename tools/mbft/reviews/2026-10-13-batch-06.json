@@ -1,0 +1,50 @@
+{
+  "batchId": "2026-10-13-batch-06",
+  "reviewedAt": "2026-10-13",
+  "candidateCount": 14,
+  "promotedCount": 12,
+  "heldCount": 2,
+  "promotedCodes": [
+    "574-61",
+    "658-00",
+    "659-91",
+    "694-73",
+    "707-22",
+    "762-51",
+    "762-52",
+    "773-02",
+    "779-00",
+    "780-30",
+    "781-10",
+    "782-00"
+  ],
+  "held": [
+    {
+      "code": "516-92",
+      "reason": "Revisão concluída na fonte vigente, mas mantida PARTIAL_VALIDATION porque a Resolução CONTRAN nº 1031/2026 altera o Anexo do MBFT com vigência diferida de 60 dias após 18/08/2026."
+    },
+    {
+      "code": "757-90",
+      "reason": "Revisão concluída na fonte vigente, mas mantida PARTIAL_VALIDATION porque a Resolução CONTRAN nº 1031/2026 altera o Anexo do MBFT com vigência diferida de 60 dias após 18/08/2026."
+    }
+  ],
+  "sourceCheck": {
+    "officialIndex": "Resoluções CONTRAN — Ministério dos Transportes",
+    "checkedAt": "2026-10-13",
+    "method": "Conferência individual dos anexos oficiais vigentes e cruzamento com o índice oficial do CONTRAN."
+  },
+  "amendmentCheck": {
+    "verified": [
+      "Resolução CONTRAN nº 1003/2023 — 694-73.",
+      "Resolução CONTRAN nº 1009/2024 — 779-00, 780-30, 781-10 e 782-00.",
+      "Resolução CONTRAN nº 1012/2024 — 762-51 e 762-52.",
+      "Resolução CONTRAN nº 1013/2024 — 773-02.",
+      "Resolução CONTRAN nº 1022/2026 — 707-22.",
+      "Resolução CONTRAN nº 1023/2026 — 574-61, 658-00 e 659-91."
+    ],
+    "deferred": [
+      "Resolução CONTRAN nº 1031/2026 — alteração do Anexo da Resolução 985/2022 entra em vigor 60 dias após a publicação de 18/08/2026."
+    ]
+  },
+  "note": "Os campos operacionais das fichas promovidas foram incorporados nos patches versionados de cada resolução. As duas fichas retidas não possuem pendência de leitura; a retenção é deliberada por transição normativa iminente."
+}

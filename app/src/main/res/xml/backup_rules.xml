@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="database" path="enquadra-user.db" />
+    <exclude domain="database" path="enquadra-user.db-shm" />
+    <exclude domain="database" path="enquadra-user.db-wal" />
+</full-backup-content>

@@ -1,0 +1,316 @@
+{
+  "batchId": "2026-10-13-batch-05",
+  "reviewedAt": "2026-10-13",
+  "candidateCount": 114,
+  "promotedCount": 98,
+  "removedCount": 2,
+  "heldCount": 14,
+  "promotedCodes": [
+    "502-92",
+    "506-10",
+    "511-80",
+    "554-12",
+    "554-14",
+    "554-17",
+    "555-00",
+    "581-92",
+    "582-70",
+    "606-82",
+    "619-00",
+    "620-30",
+    "641-60",
+    "654-80",
+    "666-10",
+    "672-63",
+    "683-12",
+    "683-13",
+    "686-61",
+    "686-62",
+    "697-10",
+    "700-52",
+    "701-31",
+    "701-32",
+    "702-10",
+    "703-03",
+    "704-83",
+    "705-61",
+    "707-21",
+    "708-00",
+    "709-91",
+    "710-21",
+    "710-23",
+    "712-92",
+    "712-93",
+    "714-50",
+    "715-31",
+    "715-32",
+    "716-11",
+    "716-12",
+    "717-01",
+    "717-02",
+    "718-81",
+    "718-82",
+    "719-61",
+    "719-62",
+    "720-01",
+    "720-02",
+    "722-61",
+    "722-62",
+    "723-40",
+    "724-21",
+    "724-22",
+    "725-00",
+    "726-90",
+    "728-50",
+    "729-30",
+    "730-70",
+    "731-50",
+    "732-31",
+    "732-32",
+    "732-33",
+    "734-00",
+    "735-80",
+    "737-40",
+    "751-01",
+    "751-02",
+    "752-81",
+    "752-82",
+    "754-41",
+    "754-42",
+    "754-43",
+    "754-44",
+    "755-21",
+    "755-22",
+    "756-00",
+    "758-70",
+    "759-50",
+    "760-90",
+    "761-71",
+    "761-72",
+    "761-73",
+    "767-00",
+    "768-41",
+    "768-42",
+    "771-41",
+    "771-42",
+    "772-20",
+    "773-01",
+    "774-91",
+    "774-92",
+    "775-71",
+    "775-72",
+    "776-50",
+    "777-31",
+    "777-32",
+    "778-11",
+    "778-12"
+  ],
+  "removeCodes": [
+    "764-10",
+    "765-00"
+  ],
+  "recordPatches": {
+    "581-92": {
+      "article": "Art. 193",
+      "legalBasis": [
+        "Art. 193"
+      ]
+    },
+    "619-00": {
+      "procedures": [
+        "LOTE LINDEIRO: aquele situado ao longo das vias urbanas ou rurais e que com elas se limita.",
+        "Art. 36. O condutor que for ingressar numa via, procedente de um lote lindeiro a essa via, deverá dar preferência aos veículos e pedestres que por ela estejam transitando.",
+        "Art. 38. Antes de entrar à direita ou à esquerda, em outra via ou em lotes lindeiros, o condutor deverá: I - ao sair da via pelo lado direito, aproximar-se o máximo possível do bordo direito da pista e executar sua manobra no menor espaço possível; II - ao sair da via pelo lado esquerdo, aproximar-se o máximo possível de seu eixo ou da linha divisória da pista, quando houver, caso se trate de uma pista com circulação nos dois sentidos, ou do bordo esquerdo, tratando-se de uma pista de um só sentido."
+      ]
+    },
+    "701-32": {
+      "aitObservations": []
+    },
+    "722-61": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: [...] VII - o condutor manterá acesas, à noite, as luzes de posição quando o veículo estiver parado para fins de embarque ou desembarque de passageiros e carga ou descarga de mercadorias.",
+        "PARADA: imobilização do veículo com a finalidade e pelo tempo estritamente necessário para efetuar embarque ou desembarque de passageiros.",
+        "ESTACIONAMENTO: imobilização de veículos por tempo superior ao necessário para embarque ou desembarque de passageiros.",
+        "LUZ DE POSIÇÃO (lanterna): luz do veículo destinada a indicar a presença e a largura do veículo.",
+        "LANTERNA DE POSIÇÃO DIANTEIRA: é a lanterna utilizada para indicar a presença e a largura do veículo, quando visto frontalmente.",
+        "LANTERNA DE POSIÇÃO TRASEIRA: é a lanterna utilizada para indicar a presença e a largura do veículo, quando visto pela traseira.",
+        "NOITE: período do dia compreendido entre o pôr-do-sol e o nascer do sol."
+      ]
+    },
+    "722-62": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: [...] VII - o condutor manterá acesas, à noite, as luzes de posição quando o veículo estiver parado para fins de embarque ou desembarque de passageiros e carga ou descarga de mercadorias.",
+        "PARADA: imobilização do veículo com a finalidade e pelo tempo estritamente necessário para efetuar embarque ou desembarque de passageiros.",
+        "ESTACIONAMENTO: imobilização de veículos por tempo superior ao necessário para embarque ou desembarque de passageiros.",
+        "LUZ DE POSIÇÃO (lanterna): luz do veículo destinada a indicar a presença e a largura do veículo.",
+        "LANTERNA DE POSIÇÃO DIANTEIRA: é a lanterna utilizada para indicar a presença e a largura do veículo, quando visto frontalmente.",
+        "LANTERNA DE POSIÇÃO TRASEIRA: é a lanterna utilizada para indicar a presença e a largura do veículo, quando visto pela traseira.",
+        "NOITE: período do dia compreendido entre o pôr-do-sol e o nascer do sol."
+      ]
+    },
+    "735-80": {
+      "procedures": [
+        "Art. 28. O condutor deverá, a todo momento, ter domínio de seu veículo, dirigindo-o com atenção e cuidados indispensáveis à segurança do trânsito.",
+        "GESTOS DE CONDUTORES - movimentos convencionais de braço, adotados exclusivamente pelos condutores, para orientar ou indicar que vão efetuar uma manobra de mudança de direção, redução brusca de velocidade ou parada.",
+        "Os gestos convencionais dos condutores são aqueles mostrados no item 1 das “Informações Complementares” desta ficha."
+      ]
+    },
+    "775-72": {
+      "procedures": [
+        "Para os fins da fiscalização de trânsito, considera-se como TRANSPORTE DE ESCOLARES, a prestação de serviço regular, remunerado ou não, em veículos das categorias “oficial”, “particular” ou “aluguel”, para o transporte de crianças e adolescentes matriculadas nas redes pública ou privada de Educação Pré-Escolar (Infantil), Ensino Fundamental e Ensino Médio.",
+        "Considera-se, para os fins desta ficha, Prestação de Serviço Regular, o transporte contratado pelo Poder Público ou pelo particular.",
+        "Considera-se efetuando o transporte de escolares, as seguintes situações: 3.1. a condução de veículos identificados externamente para realização do transporte de escolares, nos moldes previstos no art. 136 do CTB, na efetiva prestação do serviço; 3.2. a condução de veículos que estejam efetivamente prestando serviço de transporte de escolares, ainda que não preencham os requisitos previstos na norma, como por exemplo a caracterização, a autorização do órgão executivo de trânsito, equipamentos obrigatórios específicos, etc; 3.3. o deslocamento do ponto de origem até o ponto inicial de prestação do serviço de transporte escolar; e também para o deslocamento do ponto final para o ponto inicial."
+      ],
+      "aitObservations": [
+        "Condutor de transporte de escolares transitando com a porta aberta."
+      ]
+    },
+    "778-12": {
+      "whenToCite": [
+        "Proprietário, ausente, que permitir a posse e condução do veículo a pessoa que: 1.1. não possua ou não tenha realizado curso especializado obrigatório, na forma regulamentada pelo Contran; 1.2. se encontra em qualquer das hipóteses previstas no campo “Quando Autuar”, do enquadramento: 774-92, art. 162, VII.",
+        "Quando o veículo for de propriedade de pessoa jurídica e o condutor se encontrar nas condições previstas no item 1, acima."
+      ],
+      "whenNotToCite": [
+        "Proprietário que entregar a direção do veículo a pessoa sem possuir Curso Especializado ou com este vencido, na forma regulamentada pelo Contran, utilizar enquadramento específico: 777-31, art. 163 c/c 162, VII.",
+        "Proprietário que entregar a direção do veículo a pessoa que não possua ou não tenha realizado curso específico obrigatório, na forma regulamentada pelo Contran, utilizar enquadramento específico: 777-32, art. 163 c/c 162, VII.",
+        "Proprietário ausente ou proprietário pessoa jurídica, que entregar o veículo a condutor sem possuir Curso Especializado ou com este vencido, na forma regulamentada pelo Contran, utilizar enquadramento específico: 778-12, art. 164 c/c 162, VII.",
+        "Proprietário que entregar a direção do veículo a condutor que se encontrar em qualquer das hipóteses previstas no campo “Quando NÃO Autuar”, do enquadramento: 774-92, art. 162, VII.",
+        "Quando o proprietário do veículo for o condutor que não possui o curso específico obrigatório."
+      ],
+      "procedures": [
+        "A conduta \"entregar\" exige a presença do proprietário junto ao condutor, no momento da abordagem.",
+        "A conduta \"permitir\" caracteriza-se pela ausência do proprietário junto ao condutor, no momento da abordagem.",
+        "Em caso de veículo objeto de penhor ou de contrato de arrendamento mercantil, comodato, aluguel ou arrendamento não vinculado ao financiamento do veículo, o possuidor, registrado no órgão executivo de trânsito do estado ou Distrito Federal, equipara-se ao proprietário do veículo.",
+        "A autuação neste enquadramento deve ser precedida pela lavratura do auto da infração no enquadramento 774-92, art. 162, VII."
+      ],
+      "aitObservations": [
+        "Proprietário ausente ao veículo, entregou a direção ao condutor que dirigia o veículo com pendência na realização do curso de reciclagem após a suspensão do direito de dirigir."
+      ]
+    },
+    "723-40": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: I - o condutor manterá acesos os faróis do veículo, por meio da utilização da luz baixa: a) à noite; b) mesmo durante o dia, em túneis e sob chuva, neblina ou cerração; II - nas vias não iluminadas o condutor deve usar luz alta, exceto ao cruzar com outro veículo ou ao segui-lo; III - a troca de luz baixa e alta, de forma intermitente e por curto período de tempo, com o objetivo de advertir outros motoristas, só poderá ser utilizada para indicar a intenção de ultrapassar o veículo que segue à frente ou para indicar a existência de risco à segurança para os veículos que circulam no sentido contrário.",
+        "DRL - Farol de rodagem diurna (Daytime Running Light): é o farol voltado para a dianteira do veículo a fim de torná-lo mais facilmente visível quando em circulação durante o período de dia. Res. 970/2022, Anexo XIV.",
+        "LUZ BAIXA: facho de luz do veículo destinada a iluminar a via diante do veículo, sem ocasionar ofuscamento ou incômodo injustificáveis aos condutores e outros usuários da via que venham em sentido contrário.",
+        "CICLOMOTOR: veículo de 2 (duas) ou 3 (três) rodas, provido de motor de combustão interna, cuja cilindrada não exceda a 50 cm3 (cinquenta centímetros cúbicos), equivalente a 3,05 pol 3 (três polegadas cúbicas e cinco centésimos), ou de motor de propulsão elétrica com potência máxima de 4 kW (quatro quilowatts), e cuja velocidade máxima de fabricação não exceda a 50 Km/h (cinquenta quilômetros por hora.",
+        "MOTOCICLETA: veículo automotor de duas rodas, com ou sem sidecar, dirigido por condutor em posição montada.",
+        "MOTONETA: veículo automotor de duas rodas, dirigido por condutor em posição sentada.",
+        "NOITE: período do dia compreendido entre o pôr-do- sol e o nascer do sol.",
+        "As luzes de posição acesas, o DRL, o farol de luz alta ou de neblinas acesos NÃO substituem o farol de luz baixa para fins desta infração."
+      ]
+    },
+    "725-00": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: § 1º Os veículos de transporte coletivo de passageiros, quando circularem em faixas ou pistas a eles destinadas, e as motocicletas, motonetas e ciclomotores deverão utilizar- se de farol de luz baixa durante o dia e à noite."
+      ]
+    },
+    "726-90": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: § 1º Os veículos de transporte coletivo de passageiros, quando circularem em faixas ou pistas a eles destinadas, e as motocicletas, motonetas e ciclomotores deverão utilizar- se de farol de luz baixa durante o dia e à noite."
+      ]
+    },
+    "729-30": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: [...] V - O condutor utilizará o pisca- alerta nas seguintes situações: a) em imobilizações ou situações de emergência; b) quando a regulamentação da via assim o determinar.",
+        "PISCA-ALERTA - luz intermitente do veículo, utilizada em caráter de advertência, destinada a indicar aos demais usuários da via que o veículo está imobilizado ou em situação de emergência.",
+        "Lanterna de Advertência (pisca-alerta): operação simultânea de todas as lanternas indicadoras de direção para mostrar que o veículo encontra-se imobilizado ou, temporariamente está em situação de emergência ou representa perigo especial aos demais usuários da via.",
+        "IMOBILIZAÇÃO - interrupção de marcha do veículo para atender circunstância momentânea do trânsito.",
+        "Veículo imobilizado no leito viário, em situação de emergência, além de acionar de imediato as luzes de advertência (pisca-alerta), deverá providenciar a colocação do triângulo de sinalização, ou similar, à distância mínima de 30 metros da parte traseira do veículo, de modo visível.",
+        "Área de estacionamento de curta duração é a parte da via sinalizada para estacionamento não pago, com uso obrigatório do pisca-alerta ativado, em período de tempo determinado e regulamentado de até 30 minutos.",
+        "A utilização do pisca-alerta não autoriza o veículo a estacionar ou parar em local proibido ou fora da regulamentação da via, devendo ser aplicada a infração correspondente à situação encontrada, além daquela prevista nesta ficha."
+      ]
+    },
+    "730-70": {
+      "procedures": [
+        "Art. 40. O uso de luzes em veículo obedecerá às seguintes determinações: [...] III - a troca de luz baixa e alta, de forma intermitente e por curto período de tempo, com o objetivo de advertir outros motoristas, só poderá ser utilizada para indicar a intenção de ultrapassar o veículo que segue à frente ou para indicar a existência de risco à segurança para os veículos que circulam no sentido contrário.",
+        "LUZ ALTA - facho de luz do veículo destinado a iluminar a via até uma grande distância do veículo.",
+        "LUZ BAIXA - facho de luz do veículo destinada a iluminar a via diante do veículo, sem ocasionar ofuscamento ou incômodo injustificáveis aos condutores e outros usuários da via que venham em sentido contrário.",
+        "FISCALIZAÇÃO - ato de controlar o cumprimento das normas estabelecidas na legislação de trânsito, por meio do poder de polícia administrativa de trânsito, no âmbito de circunscrição dos órgãos e entidades executivos de trânsito e de acordo com as competências definidas neste Código."
+      ]
+    }
+  },
+  "held": [
+    {
+      "code": "516-92",
+      "reason": "Manter parcial durante a transição normativa: a Resolução CONTRAN nº 1031/2026 altera o Anexo do MBFT com vigência diferida de 60 dias após 18/08/2026."
+    },
+    {
+      "code": "574-61",
+      "reason": "Ficha substituída pela Resolução CONTRAN nº 1023/2026; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "658-00",
+      "reason": "Ficha substituída pela Resolução CONTRAN nº 1023/2026; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "659-91",
+      "reason": "Ficha substituída pela Resolução CONTRAN nº 1023/2026; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "694-73",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1003/2023; anexo oficial não possui camada textual confiável para completar os campos operacionais automaticamente."
+    },
+    {
+      "code": "707-22",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1022/2026; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "757-90",
+      "reason": "Manter parcial durante a transição normativa: a Resolução CONTRAN nº 1031/2026 altera o Anexo do MBFT com vigência diferida de 60 dias após 18/08/2026."
+    },
+    {
+      "code": "762-51",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1012/2024; patch vigente ainda não contém todos os campos operacionais."
+    },
+    {
+      "code": "762-52",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1012/2024; patch vigente ainda não contém todos os campos operacionais."
+    },
+    {
+      "code": "773-02",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1013/2024; patch vigente ainda não contém todos os campos operacionais."
+    },
+    {
+      "code": "779-00",
+      "reason": "Ficha criada pela Resolução CONTRAN nº 1009/2024; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "780-30",
+      "reason": "Ficha criada pela Resolução CONTRAN nº 1009/2024; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "781-10",
+      "reason": "Ficha criada pela Resolução CONTRAN nº 1009/2024; patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "782-00",
+      "reason": "Ficha criada pela Resolução CONTRAN nº 1009/2024; patch vigente ainda não contém os campos operacionais completos."
+    }
+  ],
+  "sourceCheck": {
+    "base": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+    "officialIndex": "Resoluções CONTRAN — Ministério dos Transportes",
+    "method": "Revisão individual do staging extraído da fonte oficial, correção somente de campos confirmados no MBFT e cruzamento com alterações posteriores vigentes."
+  },
+  "removalCheck": {
+    "codes": [
+      "764-10",
+      "765-00"
+    ],
+    "reason": "Os enquadramentos 764-10 e 765-00 pertencem à estrutura anterior do art. 165-B e foram substituídos pelas fichas introduzidas pela Resolução CONTRAN nº 1009/2024."
+  },
+  "amendmentCheck": {
+    "applied": [
+      "Resolução CONTRAN nº 1003/2023",
+      "Resolução CONTRAN nº 1009/2024",
+      "Resolução CONTRAN nº 1012/2024",
+      "Resolução CONTRAN nº 1013/2024",
+      "Resolução CONTRAN nº 1022/2026",
+      "Resolução CONTRAN nº 1023/2026"
+    ],
+    "deferred": [
+      "Resolução CONTRAN nº 1031/2026 — alteração do Anexo da Resolução 985/2022 com vigência 60 dias após a publicação de 18/08/2026."
+    ],
+    "note": "Fichas alteradas por resoluções posteriores permanecem PARTIAL_VALIDATION quando o patch oficial disponível ainda não contém conteúdo operacional integralmente conferido."
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "resolution": "Resolução CONTRAN nº 1003/2023",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "694-73",
+      "status": "VERIFIED",
+      "article": "Art. 235",
+      "shortDescription": "Conduzir carga nas partes externas do veículo.",
+      "description": "Conduzir pessoas, animais ou carga nas partes externas do veículo, salvo nos casos devidamente autorizados.",
+      "severity": "Grave",
+      "points": 5,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal, Estadual e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": "Retenção do veículo para transbordo (Vide a Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Carga total ou parcialmente nas partes externas do veículo, sem autorização, desde que as dimensões do conjunto não excedam os limites da Resolução CONTRAN nº 882/2021 ou sucedânea.",
+        "Carga nas partes externas em desacordo com a autorização concedida, desde que não excedidos os limites dimensionais da Resolução CONTRAN nº 882/2021 ou sucedânea.",
+        "Carga ultrapassando os limites dianteiro, laterais ou traseiro do compartimento de carga, sem que o conjunto veículo/carga exceda os limites da Resolução CONTRAN nº 882/2021 ou sucedânea.",
+        "Combinação veicular transportando carga que exceda o limite dianteiro das unidades rebocadas, como semirreboques ou reboques.",
+        "CTV ou CTVP transportando carga além dos limites laterais, posterior ou anterior previstos para essas combinações, sem ultrapassar os limites legais gerais.",
+        "Carga a granel ultrapassando os limites da carroceria, sem exceder os limites da Resolução CONTRAN nº 882/2021 ou sucedânea.",
+        "Toras ou madeira bruta com a carga ultrapassando a menor altura do painel dianteiro ou traseiro.",
+        "Material siderúrgico transportado em desacordo com as regras específicas, inclusive tubos, perfis, carvão a granel ou ensacado, barras/vergalhões e sucata que ultrapassem painéis/guardas, apresentem risco de derramamento ou não usem sistema de contenção adequado.",
+        "Carga com risco de deslizamento longitudinal, com altura superior ao painel dianteiro e sem meio de contenção adequado.",
+        "Cargas, bagagens ou bicicletas projetando-se para a frente ou além dos limites laterais do veículo, quando as dimensões do conjunto ainda estejam dentro dos limites gerais da Resolução CONTRAN nº 882/2021 ou sucedânea.",
+        "Automóvel, caminhonete, camioneta ou utilitário transportando carga ou bicicleta em suporte/bagageiro sem a sinalização exigida pela regulamentação.",
+        "Bicicleta transportada em desacordo com a Resolução CONTRAN nº 955/2022, inclusive por excesso de carga no suporte, prejuízo à visibilidade/estabilidade, excesso lateral, projeção dianteira, uso indevido de extensor ou excesso de altura/largura do bagageiro.",
+        "Caminhonete ou utilitário transportando carga indivisível além do compartimento em situação vedada, inclusive projeção excessiva sobre o teto, projeção traseira sem visibilidade/sinalização ou balanço traseiro superior ao permitido.",
+        "Bicicleta transportada na parte traseira ou sobre o teto em dispositivo impróprio, instalado em desacordo com o fabricante ou utilizado para transportar carga que não seja bicicleta.",
+        "Motocicleta ou motoneta destinada ao transporte remunerado ou não remunerado de mercadorias com dispositivo de carga fora das dimensões regulamentares.",
+        "Veículo circulando com dispositivo para transporte de cargas nas partes externas sem a devida regulamentação."
+      ],
+      "whenNotToCite": [
+        "Quando as dimensões do veículo ou da carga excederem os limites da Resolução CONTRAN nº 882/2021 ou sucedânea: utilizar 682-31, art. 231, IV.",
+        "Quando houver autorização do órgão com circunscrição sobre a via e o transporte estiver sendo realizado nas condições previstas na autorização.",
+        "Bicicleta transportada em suporte apropriado fixado ao veículo sobre o teto, ainda que sua altura ultrapasse 50 cm.",
+        "Barras ou vergalhões agrupados transportados sobre a cabine com dispositivo apropriado ou com extremidades traseiras dobradas em U ou sem característica perfurante, conforme a regulamentação específica.",
+        "Automóvel, caminhonete, camioneta ou utilitário com bagageiro ou suporte cuja instalação seja proibida ou não recomendada pelo fabricante: utilizar 666-10, art. 230, XII.",
+        "CTV ou CTVP transportando carga dentro dos limites laterais, posterior e/ou anterior da combinação, ressalvado o limite dianteiro das unidades rebocadas."
+      ],
+      "procedures": [
+        "Para esta fiscalização, o bagageiro equipara-se ao compartimento de carga.",
+        "Partes externas do veículo são os locais que não sejam interior do habitáculo nem compartimento de carga original ou posteriormente agregado.",
+        "São exemplos de partes externas: capô, para-choque, vidro traseiro, janelas, estribos, teto, portas e baú fechado de veículos de carga.",
+        "Para a configuração desta infração, em veículo de carga em geral considera-se compartimento de carga aquele originalmente previsto pelo fabricante, encarroçador ou implementador.",
+        "CTV é a combinação construída ou adaptada especialmente para o transporte de veículos e chassis.",
+        "CTVP é a combinação concebida e construída especialmente para transporte de veículos acabados e cargas unitizadas sobre paletes ou racks."
+      ],
+      "aitObservations": [
+        "Veículo carregando material de construção excedendo o limite da carroceria.",
+        "Caçamba transportando areia ultrapassando os limites da carroceria.",
+        "Caminhonete transportando carga sobre o teto em desacordo com a regulamentação do CONTRAN.",
+        "Veículo transportando toras com a carga em altura superior ao limite do painel dianteiro.",
+        "Veículo transportando embarcação sobre o teto ultrapassando as dimensões do veículo, sem autorização.",
+        "Caminhão-trator transportando sacos de cimento apoiados sobre as longarinas, entre a cabine e a quinta roda.",
+        "Veículo transportando carga em suporte/bagageiro sobre o teto, com altura da carga, incluído o suporte, superior a 50 cm.",
+        "Veículo transportando barras ou vergalhões agrupados sobre a cabine, com a carga ultrapassando o limite dianteiro do veículo."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1003-694-73",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1003/2023",
+          "section": "Ficha de fiscalização - código 694-73",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/RESOLUCAO_CONTRAN_N_1.003__ANEXO.pdf",
+          "effectiveFrom": "2024-01-02",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 235 do CTB"
+      ]
+    }
+  ]
+}

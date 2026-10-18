@@ -1,0 +1,174 @@
+{
+  "batchId": "2026-10-11-batch-03",
+  "reviewedAt": "2026-10-11",
+  "candidateCount": 100,
+  "promotedCount": 86,
+  "heldCount": 14,
+  "promotedCodes": [
+    "577-05",
+    "578-90",
+    "579-70",
+    "580-00",
+    "581-91",
+    "581-93",
+    "581-94",
+    "581-95",
+    "581-96",
+    "581-97",
+    "581-98",
+    "583-50",
+    "584-31",
+    "584-32",
+    "584-33",
+    "584-34",
+    "585-11",
+    "585-12",
+    "586-00",
+    "587-80",
+    "588-60",
+    "589-40",
+    "590-80",
+    "591-61",
+    "591-62",
+    "592-41",
+    "592-42",
+    "593-20",
+    "594-02",
+    "594-03",
+    "595-91",
+    "595-92",
+    "595-93",
+    "595-94",
+    "596-70",
+    "597-50",
+    "598-30",
+    "599-10",
+    "600-91",
+    "600-92",
+    "600-93",
+    "600-94",
+    "600-95",
+    "601-71",
+    "601-72",
+    "601-73",
+    "601-74",
+    "601-75",
+    "601-76",
+    "602-50",
+    "603-30",
+    "604-11",
+    "604-12",
+    "605-02",
+    "606-81",
+    "606-85",
+    "607-60",
+    "608-42",
+    "608-43",
+    "608-44",
+    "609-20",
+    "610-60",
+    "611-40",
+    "612-20",
+    "613-00",
+    "614-90",
+    "615-70",
+    "616-50",
+    "617-31",
+    "617-32",
+    "617-33",
+    "618-10",
+    "625-40",
+    "626-20",
+    "627-00",
+    "628-91",
+    "628-92",
+    "629-70",
+    "630-00",
+    "631-90",
+    "632-70",
+    "633-50",
+    "634-30",
+    "635-10",
+    "636-00",
+    "637-80"
+  ],
+  "held": [
+    {
+      "code": "502-92",
+      "reason": "Layout da ficha ainda mistura colunas operacionais; quando autuar/não autuar e observação do AIT não estão recuperados de forma íntegra."
+    },
+    {
+      "code": "506-10",
+      "reason": "Há vazamento de cabeçalho e perda do rótulo de referência de campo na extração."
+    },
+    {
+      "code": "511-80",
+      "reason": "Há vazamento de cabeçalho e perda do rótulo de referência de campo na extração."
+    },
+    {
+      "code": "516-92",
+      "reason": "Além de colunas operacionais incompletas, a ficha está em transição normativa pela Resolução CONTRAN nº 1031/2026, cuja alteração do Anexo do MBFT tem vigência diferida."
+    },
+    {
+      "code": "554-12",
+      "reason": "Layout oficial ainda mistura as colunas de quando autuar, não autuar, procedimentos e observações."
+    },
+    {
+      "code": "554-14",
+      "reason": "Layout oficial ainda mistura as colunas de quando autuar, não autuar, procedimentos e observações."
+    },
+    {
+      "code": "554-17",
+      "reason": "Layout oficial ainda mistura as colunas de quando autuar, não autuar, procedimentos e observações."
+    },
+    {
+      "code": "555-00",
+      "reason": "Layout oficial ainda mistura as colunas de quando autuar, não autuar, procedimentos e observações."
+    },
+    {
+      "code": "574-61",
+      "reason": "Ficha alterada pela Resolução CONTRAN nº 1023/2026; o patch vigente ainda não contém os campos operacionais completos."
+    },
+    {
+      "code": "581-92",
+      "reason": "Artigo extraído sem prefixo e colunas de quando autuar/não autuar não recuperadas."
+    },
+    {
+      "code": "582-70",
+      "reason": "Conteúdo operacional contém vazamento de cabeçalho para procedimentos."
+    },
+    {
+      "code": "606-82",
+      "reason": "Campo quando não autuar não foi recuperado e há vazamento de cabeçalho."
+    },
+    {
+      "code": "619-00",
+      "reason": "Campo quando não autuar não foi recuperado integralmente; procedimentos incluem fragmento isolado."
+    },
+    {
+      "code": "620-30",
+      "reason": "Conteúdo operacional contém vazamento de cabeçalho para procedimentos."
+    }
+  ],
+  "sourceCheck": {
+    "base": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+    "officialIndex": "Resoluções CONTRAN — Ministério dos Transportes",
+    "officialIndexCheckedAt": "2026-10-11",
+    "officialIndexLastUpdated": "2026-10-06",
+    "method": "Conferência do staging extraído da fonte oficial, validação individual dos campos obrigatórios e cruzamento com alterações posteriores vigentes do MBFT."
+  },
+  "amendmentCheck": {
+    "knownApplicable": [
+      "Resolução CONTRAN nº 1003/2023",
+      "Resolução CONTRAN nº 1009/2024",
+      "Resolução CONTRAN nº 1012/2024",
+      "Resolução CONTRAN nº 1013/2024",
+      "Resolução CONTRAN nº 1022/2026",
+      "Resolução CONTRAN nº 1023/2026"
+    ],
+    "deferred": [
+      "Resolução CONTRAN nº 1031/2026 — alteração do Anexo da Resolução 985/2022 entra em vigor 60 dias após a publicação de 18/08/2026."
+    ],
+    "note": "As fichas promovidas neste lote não são substituídas por alteração posterior vigente identificada no índice oficial."
+  }
+}

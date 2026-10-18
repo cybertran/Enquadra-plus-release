@@ -1,0 +1,59 @@
+{
+  "resolution": "Resolução CONTRAN nº 1013/2024",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "773-02",
+      "status": "VERIFIED",
+      "article": "Art. 209-A",
+      "shortDescription": "Deixar de efetuar pagamento pelo uso de rodovias e vias urbanas, na forma estabelecida.",
+      "description": "Evadir-se da cobrança pelo uso de rodovias e vias urbanas para não efetuar o seu pagamento, ou deixar de efetuá-lo na forma estabelecida.",
+      "severity": "Grave",
+      "points": 5,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal, Estadual e Rodoviário.",
+      "verificationMethod": "Possível sem abordagem.",
+      "penalty": "Multa",
+      "administrativeMeasure": null,
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Veículo que deixar de efetuar o pagamento por passagem em pedágio eletrônico pelo sistema de livre passagem (free flow), após vencido o prazo de pagamento, na forma regulamentada pelo CONTRAN."
+      ],
+      "whenNotToCite": [
+        "Veículo que se evade da praça de pedágio sem efetuar o pagamento da tarifa: utilizar 773-01, art. 209-A.",
+        "Veículo elencado no inciso VII do art. 29 do CTB.",
+        "Veículo isento da tarifa de pedágio, conforme regras estabelecidas pelo órgão ou entidade executivo com circunscrição sobre a via.",
+        "Veículo que deixar de efetuar pagamento por passagem em pedágio eletrônico de sistema de livre passagem não homologado pelo órgão máximo executivo de trânsito da União ou que não atenda aos requisitos estabelecidos pelo CONTRAN."
+      ],
+      "procedures": [
+        "A data do cometimento da infração corresponde ao 31º dia após o vencimento do prazo de pagamento da tarifa de pedágio em sistema de livre passagem.",
+        "A hora do cometimento corresponde a zero hora do 31º dia após o vencimento do prazo de pagamento.",
+        "O local do cometimento corresponde ao local de instalação do pedágio eletrônico em que não houve o pagamento da tarifa.",
+        "O campo de observações do AIT deve conter a data e a hora da passagem pelo pedágio eletrônico em que não houve o pagamento da tarifa."
+      ],
+      "aitObservations": [
+        "Dados da passagem do veículo: data de passagem 08/10/2025; hora de passagem 19:52."
+      ],
+      "related": [
+        {
+          "code": "773-01",
+          "reason": "Evasão da cobrança em praça de pedágio."
+        }
+      ],
+      "sources": [
+        {
+          "id": "mbft-1013-773-02",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1013/2024",
+          "section": "Ficha de fiscalização - código 773-02",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao10132024.pdf",
+          "effectiveFrom": "2024-10-16",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 209-A do CTB"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "resolution": "Resolução CONTRAN nº 1022/2026",
+  "removeCodes": [],
+  "upserts": [
+    {
+      "code": "707-22",
+      "status": "VERIFIED",
+      "article": "Art. 244, V",
+      "shortDescription": "Conduzir motocicleta, motoneta ou ciclomotor transportando criança sem condição de cuidar da própria segurança.",
+      "description": "Conduzir motocicleta, motoneta e ciclomotor transportando criança menor de 10 anos ou que não tenha, nas circunstâncias, condições de cuidar da própria segurança.",
+      "severity": "Gravíssima",
+      "points": 7,
+      "offenderResponsibility": "Condutor",
+      "authority": "Órgão ou Entidade de Trânsito Municipal e Rodoviário.",
+      "verificationMethod": "Mediante abordagem.",
+      "penalty": "Multa e suspensão do direito de dirigir",
+      "administrativeMeasure": "Retenção do veículo até regularização e recolhimento do documento de habilitação (Vide a Parte Geral deste Manual).",
+      "canConfigureTrafficCrime": false,
+      "whenToCite": [
+        "Condutor de motocicleta, motoneta, ciclomotor, triciclo motorizado ou quadriciclo motorizado transportando criança menor de 10 anos ou que, nas circunstâncias, não tenha condições de cuidar da própria segurança."
+      ],
+      "whenNotToCite": [
+        "Condutor de motocicleta, motoneta ou ciclomotor transportando criança menor de 10 anos em carro lateral acoplado (sidecar), fora do assento suplementar ou como passageiro excedente: utilizar 707-21, art. 244, V."
+      ],
+      "procedures": [],
+      "aitObservations": [
+        "Criança com braço engessado.",
+        "Criança não alcança o apoio dos pés (estribo).",
+        "Criança com incapacidade temporária.",
+        "Criança com deficiência ou mobilidade reduzida."
+      ],
+      "related": [],
+      "sources": [
+        {
+          "id": "mbft-1022-707-22",
+          "agency": "Conselho Nacional de Trânsito (CONTRAN)",
+          "document": "Resolução CONTRAN nº 1022/2026",
+          "section": "Ficha de fiscalização - código 707-22",
+          "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10222026c.pdf",
+          "effectiveFrom": "2026-07-01",
+          "lastCheckedAt": "2026-10-13"
+        }
+      ],
+      "legalBasis": [
+        "Art. 244, V do CTB"
+      ]
+    }
+  ]
+}
