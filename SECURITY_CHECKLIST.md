@@ -15,6 +15,7 @@ Este checklist registra o estado de segurança do repositório público. Itens e
 - [x] Security policy gate configurado.
 - [x] Secret scan especializado configurado.
 - [x] Dependency Review configurado.
+- [ ] Dependency graph do GitHub habilitado para tornar o Dependency Review operacional.
 - [x] Dependabot configurado para Gradle e GitHub Actions.
 - [x] CodeQL configurado para Java/Kotlin.
 - [x] Workflows públicos usam runners hospedados pelo GitHub.
