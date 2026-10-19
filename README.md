@@ -4,7 +4,7 @@ Repositório público e open source do Enquadra+, aplicativo Android para consul
 
 ## Estado
 
-O código-fonte da versão **v0.2.0-alpha.8** foi importado para revisão pública com histórico Git limpo, após sanitização do snapshot de desenvolvimento.
+O código-fonte público está sincronizado com a versão canônica **v0.2.0-alpha.9** (`versionCode = 10`), mantendo histórico Git público limpo e o fluxo de segurança/release próprio deste repositório.
 
 O projeto usa fontes públicas e oficiais, como CTB, MBFT, Resoluções CONTRAN, atos da Senatran e demais normas aplicáveis. O Enquadra+ é independente e não incorpora análises jurídicas, comentários, resumos de jurisprudência ou outros conteúdos autorais de produtos de terceiros.
 
@@ -23,7 +23,7 @@ O código-fonte pode ser compilado por qualquer pessoa. Isso não transforma uma
 A identidade criptográfica oficial do aplicativo é verificada pelo certificado de assinatura. Fingerprint SHA-256 oficial:
 
 ```text
-BE:58:EA:ED:F7:AD:76:B6:5F:75:FC:08:6A:DC:71:89:F4:91:A7:25:67:B5:8F:E7:BB:F3:EA:DA:3A:2C:93:A9
+50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18
 ```
 
 A chave privada de assinatura e sua senha não fazem parte deste repositório e não devem ser enviadas em issues, pull requests, workflows ou commits.
