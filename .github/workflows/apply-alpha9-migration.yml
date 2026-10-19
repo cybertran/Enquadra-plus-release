@@ -1,0 +1,89 @@
+name: Apply canonical alpha9 migration
+
+on:
+  push:
+    branches:
+      - "fix/sync-canonical-alpha9"
+    paths:
+      - ".github/workflows/apply-alpha9-migration.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Verify and apply sanitized patch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path(".migration/alpha9")
+          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          parts = sorted(root.glob("part-*"))
+          assert len(parts) == manifest["partCount"], (len(parts), manifest["partCount"])
+          payload = b"".join(p.read_bytes() for p in parts)
+          digest = hashlib.sha256(payload).hexdigest()
+          assert digest == manifest["patchSha256"], (digest, manifest["patchSha256"])
+          Path("/tmp/enquadra-alpha9.patch").write_bytes(payload)
+          print("Patch SHA-256:", digest)
+          PY
+
+          git apply --check --binary /tmp/enquadra-alpha9.patch
+          git apply --binary /tmp/enquadra-alpha9.patch
+
+      - name: Set public release version
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path("app/build.gradle.kts")
+          text = path.read_text(encoding="utf-8")
+          text = re.sub(r"// Release candidate v[^\n]+", "// Release candidate v0.2.0-alpha.9", text)
+          text = re.sub(r"versionCode\s*=\s*\d+", "versionCode = 10", text, count=1)
+          text = re.sub(r'versionName\s*=\s*"[^"]+"', 'versionName = "0.2.0-alpha.9"', text, count=1)
+          path.write_text(text, encoding="utf-8")
+          PY
+
+          cat > RELEASE_STATE.yml <<'EOF'
+          versionName: "0.2.0-alpha.9"
+          versionCode: 10
+          sourceCommit: "6d3c288e255b50e7f2b5865c63ef3d8b55c6f05f"
+          sourceState: "canonical-private-main"
+          EOF
+
+          grep -Eq 'versionCode\s*=\s*10' app/build.gradle.kts
+          grep -Eq 'versionName\s*=\s*"0\.2\.0-alpha\.9"' app/build.gradle.kts
+
+      - name: Remove migration transport files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .migration/alpha9
+          rm -f .github/workflows/apply-alpha9-migration.yml
+
+      - name: Commit canonical alpha9 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "fix: sync public source to canonical v0.2.0-alpha.9"
+          git push origin HEAD:fix/sync-canonical-alpha9
