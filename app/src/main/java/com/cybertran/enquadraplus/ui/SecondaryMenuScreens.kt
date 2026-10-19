@@ -43,7 +43,7 @@ import androidx.core.content.ContextCompat
 import com.cybertran.enquadraplus.R
 import com.cybertran.enquadraplus.data.update.UpdateNotificationManager
 
-private const val PROJECT_URL = "https://github.com/cybertran/Enquadra-plus-releaseplus-release"
+private const val PROJECT_URL = "https://github.com/cybertran/Enquadra-plus-release"
 private const val DEVELOPER_EMAIL = "cybertran@proton.me"
 private const val DEVELOPER_NAME = "Wanderson Maike Campos Pinto"
 
