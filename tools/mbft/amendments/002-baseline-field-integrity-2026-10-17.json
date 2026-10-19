@@ -1,0 +1,62 @@
+{
+  "resolution": "BASELINE",
+  "removeCodes": [],
+  "recordPatches": {
+    "606-85": {
+      "fields": {
+        "penalty": "Multa"
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-field-integrity-2026-10-17:606-85",
+        "reviewedFields": [
+          "penalty"
+        ],
+        "reviewReason": "Corrige o campo Penalidade contaminado pela extração tabular; os demais campos permanecem derivados da extração oficial fresca.",
+        "reviewEvidence": "Ficha oficial 606-85, campo Penalidade."
+      }
+    },
+    "641-60": {
+      "fields": {
+        "penalty": "Multa"
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-field-integrity-2026-10-17:641-60",
+        "reviewedFields": [
+          "penalty",
+          "procedures"
+        ],
+        "reviewReason": "Corrige o campo Penalidade contaminado pela ocorrência da palavra penalidade dentro da tipificação; preserva os demais campos da extração oficial fresca. O campo procedures foi comparado com a extração tabular fresca e aceito a partir da fonte oficial, sem reutilizar o conteúdo legado contaminado.",
+        "reviewEvidence": "Ficha oficial 641-60, campo Penalidade. Também revisado o campo Definições e Procedimentos da mesma ficha na extração tabular oficial."
+      }
+    },
+    "776-50": {
+      "fields": {
+        "penalty": "Multa e suspensão do direito de dirigir."
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-field-integrity-2026-10-17:776-50",
+        "reviewedFields": [
+          "penalty",
+          "procedures"
+        ],
+        "reviewReason": "Corrige o campo Penalidade contaminado pela ocorrência da palavra penalidade dentro da tipificação; preserva os demais campos da extração oficial fresca. O campo procedures foi comparado com a extração tabular fresca e aceito a partir da fonte oficial, sem reutilizar o conteúdo legado contaminado.",
+        "reviewEvidence": "Ficha oficial 776-50, campo Penalidade. Também revisado o campo Definições e Procedimentos da mesma ficha na extração tabular oficial."
+      }
+    }
+  }
+}

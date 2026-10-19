@@ -25,6 +25,7 @@ PREREQUISITE_RE = re.compile(
 
 OFFICIAL_TYPES = {"ALTERNATIVE", "CONCOMITANT", "PREREQUISITE"}
 ALL_TYPES = OFFICIAL_TYPES | {"RELATED"}
+SOURCE_VERIFIED_STATUSES = {"VERIFIED", "SOURCE_CONFLICT"}
 
 
 def classify(field: str, text: str) -> str | None:
@@ -72,7 +73,7 @@ def collect_unresolved_references(
     unresolved: list[dict[str, Any]] = []
 
     for record in records:
-        if record.get("status") != "VERIFIED":
+        if record.get("status") not in SOURCE_VERIFIED_STATUSES:
             continue
         source = record.get("code")
 
@@ -139,7 +140,7 @@ def build_dataset(mbft: dict[str, Any]) -> dict[str, Any]:
     relation_map: dict[tuple[str, str, str], dict[str, Any]] = {}
 
     for record in records:
-        if record.get("status") != "VERIFIED":
+        if record.get("status") not in SOURCE_VERIFIED_STATUSES:
             continue
         source = record["code"]
 
@@ -183,7 +184,7 @@ def build_dataset(mbft: dict[str, Any]) -> dict[str, Any]:
     }
 
     for record in records:
-        if record.get("status") != "VERIFIED":
+        if record.get("status") not in SOURCE_VERIFIED_STATUSES:
             continue
         source = record["code"]
         for related in record.get("related", []) or []:
@@ -257,7 +258,7 @@ def validate_dataset(
     verified_codes = {
         record.get("code")
         for record in mbft_records
-        if record.get("status") == "VERIFIED"
+        if record.get("status") in SOURCE_VERIFIED_STATUSES
     }
 
     keys: list[tuple[str, str, str]] = []
@@ -280,7 +281,7 @@ def validate_dataset(
             errors.append(f"{key}: invalid relation type.")
         if relation_type in OFFICIAL_TYPES:
             if source not in verified_codes:
-                errors.append(f"{key}: official-derived source is not VERIFIED.")
+                errors.append(f"{key}: official-derived source is not source-verified.")
             if origin != "MBFT_OFFICIAL_FIELD":
                 errors.append(f"{key}: official relation has invalid origin.")
             if source_field not in {"whenNotToCite", "procedures"}:

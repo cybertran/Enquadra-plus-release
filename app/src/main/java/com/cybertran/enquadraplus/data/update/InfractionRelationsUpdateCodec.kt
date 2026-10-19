@@ -87,7 +87,7 @@ object InfractionRelationsUpdateCodec {
             linkedMapOf<Triple<String, String, String>, InfractionRelationUpdateRecord>()
 
         mbft.records.forEach { record ->
-            if (record.status != "VERIFIED") return@forEach
+            if (record.status !in SOURCE_VERIFIED_STATUSES) return@forEach
             collectOfficialRelations(
                 record = record,
                 field = "whenNotToCite",
@@ -109,7 +109,7 @@ object InfractionRelationsUpdateCodec {
             .mapTo(mutableSetOf()) { it.sourceCode to it.targetCode }
 
         mbft.records.forEach { record ->
-            if (record.status != "VERIFIED") return@forEach
+            if (record.status !in SOURCE_VERIFIED_STATUSES) return@forEach
             record.related.forEach relatedLoop@{ related ->
                 if (
                     related.code !in validCodes ||
@@ -167,7 +167,7 @@ object InfractionRelationsUpdateCodec {
         val issues = mutableListOf<ValidationIssue>()
         val codes = mbft.records.mapTo(mutableSetOf(), MbftUpdateRecord::code)
         val verified = mbft.records
-            .filter { it.status == "VERIFIED" }
+            .filter { it.status in SOURCE_VERIFIED_STATUSES }
             .mapTo(mutableSetOf(), MbftUpdateRecord::code)
 
         if (payload.mbftVersion != mbft.version) {
@@ -281,7 +281,7 @@ object InfractionRelationsUpdateCodec {
         val validCodes = mbft.records.mapTo(mutableSetOf(), MbftUpdateRecord::code)
         var count = 0
         mbft.records.forEach { record ->
-            if (record.status != "VERIFIED") return@forEach
+            if (record.status !in SOURCE_VERIFIED_STATUSES) return@forEach
             listOf(
                 "whenNotToCite" to record.whenNotToCite,
                 "procedures" to record.procedures,
@@ -379,6 +379,7 @@ object InfractionRelationsUpdateCodec {
         "(precedid[ao]|preceder|deve ser precedida)",
         RegexOption.IGNORE_CASE,
     )
+    private val SOURCE_VERIFIED_STATUSES = setOf("VERIFIED", "SOURCE_CONFLICT")
     private val OFFICIAL_TYPES = setOf("ALTERNATIVE", "CONCOMITANT", "PREREQUISITE")
     private val ALL_TYPES = OFFICIAL_TYPES + "RELATED"
 }

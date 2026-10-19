@@ -82,6 +82,64 @@ class NormativeUpdateCodecTest {
     }
 
     @Test
+    fun mismatchedSenatranPortariaLinkFallsBackToOfficialIndex() {
+        val page = "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026"
+        val html = """
+            <table>
+              <tr>
+                <td><a href="/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria8582026.pdf">862</a></td>
+                <td>16/10/2026</td>
+                <td>Integra município ao Sistema Nacional de Trânsito.</td>
+                <td>--</td>
+              </tr>
+            </table>
+        """.trimIndent()
+
+        val record = NormativeHtmlParser.parseSenatran(
+            pageUrl = page,
+            sourceHtml = html,
+            checkedAt = "2026-10-17",
+            year = 2026,
+        ).single()
+
+        assertEquals(862, record.number)
+        assertEquals(page, record.officialUrl)
+        assertEquals(page, record.sourcePageUrl)
+    }
+
+    @Test
+    fun validationRejectsMismatchedSenatranPortariaDocument() {
+        val record = NormativeUpdateRecord(
+            id = "senatran-portaria-2026-862",
+            agency = "SENATRAN",
+            actType = "PORTARIA",
+            number = 862,
+            numberLabel = "862",
+            year = 2026,
+            actDate = null,
+            publicationDate = "16/10/2026",
+            subject = "Integra município ao Sistema Nacional de Trânsito.",
+            status = null,
+            officialUrl = "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria8582026.pdf",
+            sourcePageUrl = "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026",
+            lastCheckedAt = "2026-10-17",
+        )
+        val payload = NormativeDatasetPayload(
+            version = "invalid",
+            generatedAt = "2026-10-17",
+            verifiedAt = "2026-10-17",
+            sourceDocument = "teste",
+            contentSha256 = "A".repeat(64),
+            sources = emptyList(),
+            records = listOf(record),
+        )
+
+        val report = NormativeUpdateCodec.validate(payload)
+
+        assertTrue(report.issues.any { it.code == "norms.portaria_url_mismatch" })
+    }
+
+    @Test
     fun transitionBlocksMissingKnownActsAndSources() {
         val source = NormativeUpdateSource(
             agency = "CONTRAN",

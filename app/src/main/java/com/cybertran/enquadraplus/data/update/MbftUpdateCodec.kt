@@ -24,6 +24,31 @@ data class MbftSourceRecord(
         )
 }
 
+data class MbftVerificationEvidence(
+    val state: String,
+    val verifiedAt: String,
+    val verifiedAgainstSourceSha256: String,
+    val verifiedSourceDocument: String,
+    val verificationMethod: String,
+    val reviewRecordId: String,
+    val reviewedFields: List<String>,
+    val reviewReason: String,
+    val reviewEvidence: String,
+) {
+    fun toMap(): Map<String, Any?> =
+        mapOf(
+            "state" to state,
+            "verifiedAt" to verifiedAt,
+            "verifiedAgainstSourceSha256" to verifiedAgainstSourceSha256,
+            "verifiedSourceDocument" to verifiedSourceDocument,
+            "verificationMethod" to verificationMethod,
+            "reviewRecordId" to reviewRecordId,
+            "reviewedFields" to reviewedFields,
+            "reviewReason" to reviewReason,
+            "reviewEvidence" to reviewEvidence,
+        )
+}
+
 data class MbftRelatedRecord(
     val code: String,
     val reason: String?,
@@ -50,6 +75,8 @@ data class MbftUpdateRecord(
     val whenNotToCite: List<String>,
     val procedures: List<String>,
     val aitObservations: List<String>,
+    val sourceConflicts: List<String> = emptyList(),
+    val verification: MbftVerificationEvidence? = null,
     val related: List<MbftRelatedRecord>,
     val sources: List<MbftSourceRecord>,
     val legalBasis: List<String>,
@@ -73,6 +100,8 @@ data class MbftUpdateRecord(
             "whenNotToCite" to whenNotToCite,
             "procedures" to procedures,
             "aitObservations" to aitObservations,
+            "sourceConflicts" to sourceConflicts,
+            "verification" to verification?.toMap(),
             "related" to related.map(MbftRelatedRecord::toMap),
             "sources" to sources.map(MbftSourceRecord::toMap),
             "legalBasis" to legalBasis,
@@ -286,6 +315,66 @@ object MbftUpdateCodec {
                 )
             }
 
+            if (record.status in setOf("VERIFIED", "SOURCE_CONFLICT")) {
+                val verification = record.verification
+                if (verification == null) {
+                    issues += ValidationIssue(
+                        "mbft.verification_evidence",
+                        "Ficha ${record.code} verificada sem prova de fonte.",
+                    )
+                } else {
+                    if (verification.state !in VALID_VERIFICATION_STATES) {
+                        issues += ValidationIssue(
+                            "mbft.verification_state",
+                            "Ficha ${record.code} possui estado final de verificação inválido: ${verification.state}.",
+                        )
+                    }
+                    if (
+                        record.status == "SOURCE_CONFLICT" &&
+                        verification.state != "SOURCE_CONFLICT"
+                    ) {
+                        issues += ValidationIssue(
+                            "mbft.source_conflict_state",
+                            "Ficha ${record.code} marcada SOURCE_CONFLICT sem prova SOURCE_CONFLICT.",
+                        )
+                    }
+                    if (
+                        record.status != "SOURCE_CONFLICT" &&
+                        verification.state == "SOURCE_CONFLICT"
+                    ) {
+                        issues += ValidationIssue(
+                            "mbft.source_conflict_status",
+                            "Ficha ${record.code} possui prova SOURCE_CONFLICT sem status correspondente.",
+                        )
+                    }
+                    if (
+                        record.status == "SOURCE_CONFLICT" &&
+                        record.sourceConflicts.isEmpty()
+                    ) {
+                        issues += ValidationIssue(
+                            "mbft.source_conflict_evidence",
+                            "Ficha ${record.code} não descreve a divergência entre fontes.",
+                        )
+                    }
+                    if (!verification.verifiedAgainstSourceSha256.isSha256()) {
+                        issues += ValidationIssue(
+                            "mbft.verification_hash",
+                            "Ficha ${record.code} possui hash de verificação inválido.",
+                        )
+                    }
+                    if (verification.reviewedFields.isEmpty()) {
+                        issues += ValidationIssue(
+                            "mbft.verification_fields",
+                            "Ficha ${record.code} não registra campos revisados.",
+                        )
+                    }
+                }
+            }
+
+            record.operationalIntegrityIssues().forEach { message ->
+                issues += ValidationIssue("mbft.semantic_integrity", message)
+            }
+
             record.related.forEach { relation ->
                 if (!CODE_REGEX.matches(relation.code) || relation.code == record.code) {
                     issues += ValidationIssue(
@@ -418,6 +507,17 @@ object MbftUpdateCodec {
                 sources = record.sources.map { source ->
                     source.copy(lastCheckedAt = checkedAt)
                 },
+                verification = MbftVerificationEvidence(
+                    state = "EXPLICIT_OVERRIDE",
+                    verifiedAt = checkedAt,
+                    verifiedAgainstSourceSha256 = resolutionFetch.sha256,
+                    verifiedSourceDocument = patch.resolution,
+                    verificationMethod = "AUDITED_AMENDMENT_PATCH",
+                    reviewRecordId = "patch-${patch.number}-${patch.year}:${record.code}",
+                    reviewedFields = VERIFICATION_FIELDS,
+                    reviewReason = "Ficha promovida a partir de emenda MBFT previamente auditada.",
+                    reviewEvidence = "${patch.resolution}; SHA-256 ${resolutionFetch.sha256}.",
+                ),
             )
         }
 
@@ -526,6 +626,20 @@ object MbftUpdateCodec {
             whenNotToCite = json.optJSONArray("whenNotToCite")?.strings().orEmpty(),
             procedures = json.optJSONArray("procedures")?.strings().orEmpty(),
             aitObservations = json.optJSONArray("aitObservations")?.strings().orEmpty(),
+            sourceConflicts = json.optJSONArray("sourceConflicts")?.strings().orEmpty(),
+            verification = json.optJSONObject("verification")?.let { item ->
+                MbftVerificationEvidence(
+                    state = item.getString("state"),
+                    verifiedAt = item.getString("verifiedAt"),
+                    verifiedAgainstSourceSha256 = item.getString("verifiedAgainstSourceSha256"),
+                    verifiedSourceDocument = item.getString("verifiedSourceDocument"),
+                    verificationMethod = item.getString("verificationMethod"),
+                    reviewRecordId = item.getString("reviewRecordId"),
+                    reviewedFields = item.getJSONArray("reviewedFields").strings(),
+                    reviewReason = item.getString("reviewReason"),
+                    reviewEvidence = item.getString("reviewEvidence"),
+                )
+            },
             related = json.optJSONArray("related")?.objects()?.map { item ->
                 MbftRelatedRecord(
                     code = item.getString("code"),
@@ -548,6 +662,38 @@ object MbftUpdateCodec {
                 .ifEmpty { listOf(json.getString("article")) },
         )
 
+    private fun MbftUpdateRecord.operationalIntegrityIssues(): List<String> {
+        val issues = mutableListOf<String>()
+        val fields = listOf(
+            "whenToCite" to whenToCite,
+            "whenNotToCite" to whenNotToCite,
+            "procedures" to procedures,
+            "aitObservations" to aitObservations,
+        )
+        fields.forEach { (field, values) ->
+            values.forEachIndexed { index, raw ->
+                val value = raw.trim()
+                val location = "$code:$field[${index + 1}]"
+                if ('\uFFFD' in value) {
+                    issues += "$location contém caractere Unicode de substituição."
+                }
+                if (ORPHAN_ART.matches(value)) {
+                    issues += "$location contém token órfão Art."
+                }
+                if (TRUNCATED_USE.containsMatchIn(value)) {
+                    issues += "$location termina em utilizar sem enquadramento."
+                }
+                if (
+                    field == "procedures" &&
+                    AIT_HEADER.matches(value)
+                ) {
+                    issues += "$location contém cabeçalho de Observações do AIT."
+                }
+            }
+        }
+        return issues
+    }
+
     private fun JSONObject.nullableString(key: String): String? =
         if (!has(key) || isNull(key)) null else getString(key).takeIf(String::isNotBlank)
 
@@ -564,8 +710,34 @@ object MbftUpdateCodec {
     private val ISO_DATE = Regex("\\d{4}-\\d{2}-\\d{2}")
     private val AMENDMENT_KEY =
         Regex("""(\d{1,4}|\d{1,3}(?:\.\d{3})+)/(\d{4})""")
-    private val VALID_STATUSES = setOf("VERIFIED", "PARTIAL_VALIDATION")
+    private val VALID_STATUSES = setOf("VERIFIED", "PARTIAL_VALIDATION", "MANUAL_REVIEW_REQUIRED", "SOURCE_CONFLICT")
+    private val VALID_VERIFICATION_STATES = setOf(
+        "MATCH",
+        "CORRECTED",
+        "EXPLICIT_OVERRIDE",
+        "SOURCE_CONFLICT",
+    )
+    private val VERIFICATION_FIELDS = listOf(
+        "article",
+        "shortDescription",
+        "description",
+        "severity",
+        "points",
+        "offenderResponsibility",
+        "authority",
+        "verificationMethod",
+        "penalty",
+        "administrativeMeasure",
+        "canConfigureTrafficCrime",
+        "whenToCite",
+        "whenNotToCite",
+        "procedures",
+        "aitObservations",
+    )
     private val VALID_POINTS = setOf(2, 3, 4, 5, 7)
+    private val ORPHAN_ART = Regex("""(?i)^Art\.?$""")
+    private val TRUNCATED_USE = Regex("""(?i)\butilizar\s*$""")
+    private val AIT_HEADER = Regex("""(?i)^Observa(?:ç|c)(?:ões|oes)\s+do\s+AIT\s*:?$""")
 }
 
 private val AUDITED_PARTICIPA_MBFT_FICHE_PATHS = setOf(

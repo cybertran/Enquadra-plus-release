@@ -93,6 +93,8 @@ normative_codec = (UPDATE / "NormativeUpdateCodec.kt").read_text(encoding="utf-8
 assert 'PARSER_VERSION = "normative-html-v2"' in normative_codec
 assert '"DELIBERAÇÃO"' in normative_codec
 assert "parseContranDeliberations" in normative_codec
+assert "hasMismatchedSenatranPortariaDocument" in normative_codec
+assert '"norms.portaria_url_mismatch"' in normative_codec
 
 for importer_name in (
     "CtbAssetImporter.kt",
@@ -194,6 +196,137 @@ relations_path = ROOT / "app/src/main/assets/relations/relations.json"
 mbft = json.loads(mbft_path.read_text(encoding="utf-8"))
 relations = json.loads(relations_path.read_text(encoding="utf-8"))
 
+# Current production proof: the bundled MBFT must exactly match the
+# independently extracted official code set for 17/10/2026.
+code_set_path = ROOT / ".mbft-staging/code-set-report.json"
+assert code_set_path.is_file(), "Missing MBFT official code-set report"
+code_set = json.loads(code_set_path.read_text(encoding="utf-8"))
+assert code_set["matches"] is True
+assert code_set["expectedCodeCount"] == 415
+assert code_set["generatedCodeCount"] == 415
+assert code_set["missingFromGenerated"] == []
+assert code_set["unexpectedInGenerated"] == []
+assert code_set["duplicateGeneratedCodes"] == []
+
+mbft_records = mbft["records"]
+assert len(mbft_records) == 415
+production_source_conflicts = {
+    "516-91",
+    "516-92",
+    "611-40",
+    "757-91",
+    "757-92",
+}
+assert not any(
+    item["status"] in {"PARTIAL_VALIDATION", "MANUAL_REVIEW_REQUIRED"}
+    for item in mbft_records
+), "Production MBFT contains unresolved review states"
+assert {
+    item["code"]
+    for item in mbft_records
+    if item["status"] == "SOURCE_CONFLICT"
+} == production_source_conflicts
+assert all(
+    item["status"] == "SOURCE_CONFLICT"
+    if item["code"] in production_source_conflicts
+    else item["status"] == "VERIFIED"
+    for item in mbft_records
+)
+for item in mbft_records:
+    verification = item.get("verification")
+    assert isinstance(verification, dict), (
+        f"MBFT {item['code']} lacks verification evidence"
+    )
+    assert re.fullmatch(
+        r"[A-F0-9]{64}",
+        str(verification.get("verifiedAgainstSourceSha256") or ""),
+    ), f"MBFT {item['code']} has invalid verification source hash"
+    assert verification.get("reviewedFields"), (
+        f"MBFT {item['code']} lacks reviewed field evidence"
+    )
+mbft_by_code = {item["code"]: item for item in mbft_records}
+assert len(mbft_by_code) == 415
+assert "757-90" not in mbft_by_code
+for required_code in (
+    "516-91",
+    "516-92",
+    "594-01",
+    "608-41",
+    "640-80",
+    "721-80",
+    "757-91",
+    "757-92",
+):
+    assert required_code in mbft_by_code
+
+assert mbft_by_code["501-00"]["points"] is None
+assert not any(
+    str(item).rstrip().endswith(" possuir")
+    for item in mbft_by_code["501-00"].get("aitObservations", [])
+), "MBFT 501-00 retains the historical corrupted AIT tail"
+
+baseline_501_patch = json.loads(
+    (ROOT / "tools/mbft/amendments/004-baseline-501-review-2026-10-17.json")
+    .read_text(encoding="utf-8")
+)
+assert "recordApprovals" not in baseline_501_patch, (
+    "501-00 correction must not rely on approval-only evidence"
+)
+patch_501 = baseline_501_patch["recordPatches"]["501-00"]
+assert patch_501["fields"]["points"] is None
+assert patch_501["fields"]["aitObservations"][-1] == (
+    "Aprendiz conduzindo veículo não destinado à aprendizagem."
+)
+assert set(patch_501["fields"]).issubset(
+    set(patch_501["verification"]["reviewedFields"])
+)
+
+assert mbft_by_code["606-85"]["penalty"] == "Multa"
+assert mbft_by_code["641-60"]["penalty"] == "Multa"
+assert mbft_by_code["776-50"]["penalty"] == (
+    "Multa e suspensão do direito de dirigir."
+)
+assert mbft_by_code["640-80"]["points"] is None
+assert mbft_by_code["640-80"]["verificationMethod"] == (
+    "Vide Definições e Procedimentos."
+)
+assert mbft_by_code["640-80"]["administrativeMeasure"] == (
+    "Retenção do veículo para regularização e apreensão das placas irregulares."
+)
+
+coverage_tool = ROOT / "tools/mbft/official_code_set.py"
+assert coverage_tool.is_file()
+coverage_source = coverage_tool.read_text(encoding="utf-8")
+assert "OFFICIAL_EXPECTED_CODES - GENERATED_CODES" in coverage_source
+assert "GENERATED_CODES - OFFICIAL_EXPECTED_CODES" in coverage_source
+mbft_workflow = (
+    ROOT / ".github/workflows/mbft-pipeline.yml"
+).read_text(encoding="utf-8")
+assert "tools/mbft/official_code_set.py" in mbft_workflow
+assert ".mbft-staging/code-set-report.json" in mbft_workflow
+assert "Apply reviewed MBFT batch" not in mbft_workflow
+assert "apply_review.py" not in mbft_workflow
+
+# A normative act marked inactive in the official catalog must not be
+# presented through the audited infraction-link dataset.
+norms = json.loads(
+    (ROOT / "app/src/main/assets/norms/acts.json").read_text(encoding="utf-8")
+)
+norm_links = json.loads(
+    (ROOT / "app/src/main/assets/infraction_norm_links.json").read_text(
+        encoding="utf-8"
+    )
+)
+acts_by_id = {item["id"]: item for item in norms["records"]}
+inactive_status = re.compile(
+    r"(?i)\b(revogad[ao]|sem\s+efeito|cancelad[ao]|suspens[ao])\b"
+)
+for link in norm_links["records"]:
+    status = str(acts_by_id[link["actId"]].get("status") or "")
+    assert not inactive_status.search(status), (
+        f"Inactive normative act linked to infraction: {link['actId']}"
+    )
+
 sys.path.insert(0, str(ROOT / "tools/relations"))
 import relations_pipeline  # noqa: E402
 
@@ -250,6 +383,7 @@ assert len(tests) >= 5, "Safe updater must have JVM unit tests"
 print(
     "Safe updater static validation passed: "
     f"{len(required_files)} required files / {len(tests)} test files / "
-    f"MBFT 1031 candidate {len(candidate['records'])} records / "
+    f"MBFT production {len(mbft_records)} source-verified records / "
+    f"official-code-set {code_set['expectedCodeCount']} / "
     f"relations {rebuilt_candidate['recordCount']} records"
 )

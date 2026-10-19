@@ -133,6 +133,7 @@ private object MbftDatasetParser {
             whenNotToCite = json.optJSONArray("whenNotToCite")?.strings().orEmpty(),
             procedures = json.optJSONArray("procedures")?.strings().orEmpty(),
             aitObservations = json.optJSONArray("aitObservations")?.strings().orEmpty(),
+            sourceConflicts = json.optJSONArray("sourceConflicts")?.strings().orEmpty(),
             related = json.optJSONArray("related")
                 ?.objects()
                 ?.map {
@@ -194,7 +195,7 @@ private data class MbftDataset(
             require(record.code.isNotBlank()) { "Ficha sem código de enquadramento." }
             require(record.article.isNotBlank()) { "Ficha ${record.code} sem artigo." }
             require(record.description.isNotBlank()) { "Ficha ${record.code} sem tipificação." }
-            require(record.contentStatus in setOf("VERIFIED", "PARTIAL_VALIDATION")) {
+            require(record.contentStatus in setOf("VERIFIED", "PARTIAL_VALIDATION", "MANUAL_REVIEW_REQUIRED", "SOURCE_CONFLICT")) {
                 "Status inválido na ficha ${record.code}: ${record.contentStatus}"
             }
             require(record.sources.isNotEmpty()) { "Ficha ${record.code} sem fonte oficial." }
@@ -232,6 +233,7 @@ private data class MbftRecord(
     val whenNotToCite: List<String>,
     val procedures: List<String>,
     val aitObservations: List<String>,
+    val sourceConflicts: List<String>,
     val related: List<RelatedRecord>,
     val sources: List<SourceRecord>,
 ) {
@@ -284,6 +286,7 @@ private data class MbftRecord(
             addNotes(NoteKind.WHEN_NOT_TO_CITE, whenNotToCite)
             addNotes(NoteKind.PROCEDURE, procedures)
             addNotes(NoteKind.AIT_OBSERVATION, aitObservations)
+            addNotes(NoteKind.SOURCE_CONFLICT, sourceConflicts)
         }
 
     private fun MutableList<InfractionNoteEntity>.addNotes(

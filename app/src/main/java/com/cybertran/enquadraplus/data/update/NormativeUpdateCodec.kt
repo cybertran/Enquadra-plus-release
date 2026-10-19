@@ -51,6 +51,23 @@ data class NormativeUpdateSource(
         )
 }
 
+private val SENATRAN_PORTARIA_PDF_RE =
+    Regex("""(?i)portaria[_-]?(\d+)[_-]?(\d{4})\.pdf$""")
+
+private fun hasMismatchedSenatranPortariaDocument(
+    url: String,
+    number: Int,
+    year: Int,
+): Boolean {
+    val filename = runCatching { URI(url).path.substringAfterLast('/') }
+        .getOrNull()
+        .orEmpty()
+    val match = SENATRAN_PORTARIA_PDF_RE.find(filename) ?: return false
+    val linkedNumber = match.groupValues[1].toIntOrNull() ?: return false
+    val linkedYear = match.groupValues[2].toIntOrNull() ?: return false
+    return linkedNumber != number || linkedYear != year
+}
+
 data class NormativeUpdateRecord(
     val id: String,
     val agency: String,
@@ -310,6 +327,20 @@ object NormativeUpdateCodec {
             }
             if (!isOfficialTransportDocumentUrl(record.officialUrl)) {
                 issues += ValidationIssue("norms.official_url", "URL inválida em ${record.id}.")
+            }
+            if (
+                record.agency == "SENATRAN" &&
+                record.actType == "PORTARIA" &&
+                hasMismatchedSenatranPortariaDocument(
+                    record.officialUrl,
+                    record.number,
+                    record.year,
+                )
+            ) {
+                issues += ValidationIssue(
+                    "norms.portaria_url_mismatch",
+                    "Documento da Portaria não corresponde ao número/ano em ${record.id}.",
+                )
             }
             runCatching {
                 OfficialSourcePolicy.validate(
@@ -591,7 +622,12 @@ internal object NormativeHtmlParser {
                         publicationDate = publicationDate.text.ifBlank { null },
                         subject = subject.text,
                         status = observation?.text?.takeUnless { it.isBlank() || it == "--" },
-                        officialUrl = normalizeHref(pageUrl, numberLabel.href),
+                        officialUrl = normalizePortariaHref(
+                            pageUrl = pageUrl,
+                            href = numberLabel.href,
+                            number = number,
+                            year = year,
+                        ),
                         sourcePageUrl = pageUrl,
                         lastCheckedAt = checkedAt,
                     ),
@@ -647,6 +683,19 @@ internal object NormativeHtmlParser {
         val target = runCatching { URI(pageUrl).resolve(href).toString() }.getOrNull()
             ?: return pageUrl
         return target.takeIf(::isOfficialTransportDocumentUrl) ?: pageUrl
+    }
+
+    private fun normalizePortariaHref(
+        pageUrl: String,
+        href: String?,
+        number: Int,
+        year: Int,
+    ): String {
+        val target = normalizeHref(pageUrl, href)
+        if (target == pageUrl) return pageUrl
+        return target.takeUnless {
+            hasMismatchedSenatranPortariaDocument(it, number, year)
+        } ?: pageUrl
     }
 
     private fun uniqueId(

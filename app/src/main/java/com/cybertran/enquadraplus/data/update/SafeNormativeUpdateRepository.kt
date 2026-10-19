@@ -280,7 +280,7 @@ class SafeNormativeUpdateRepository(
                 dataset = dataset,
                 status = UpdateStatus.SOURCE_UNAVAILABLE,
                 checkedAt = checkedAt,
-                message = "Fonte oficial indisponível; a base ativa foi preservada.",
+                message = "A consulta à fonte oficial do CTB não foi concluída: ${safeMessage(error.cause ?: error)}. A base ativa foi preservada.",
             )
         } catch (error: IllegalArgumentException) {
             store.mark(
@@ -433,7 +433,7 @@ class SafeNormativeUpdateRepository(
                 dataset = dataset,
                 status = UpdateStatus.SOURCE_UNAVAILABLE,
                 checkedAt = checkedAt,
-                message = "Uma ou mais fontes oficiais estão indisponíveis; a base ativa foi preservada.",
+                message = "A consulta a uma ou mais fontes oficiais não foi concluída: ${safeMessage(error.cause ?: error)}. A base ativa foi preservada.",
             )
         } catch (error: IllegalArgumentException) {
             store.mark(
@@ -689,7 +689,7 @@ class SafeNormativeUpdateRepository(
                 dataset = dataset,
                 status = UpdateStatus.SOURCE_UNAVAILABLE,
                 checkedAt = checkedAt,
-                message = "Fonte oficial MBFT indisponível; a base ativa foi preservada.",
+                message = "A consulta à fonte oficial do MBFT não foi concluída: ${safeMessage(error.cause ?: error)}. A base ativa foi preservada.",
             )
         } catch (error: IllegalArgumentException) {
             store.mark(

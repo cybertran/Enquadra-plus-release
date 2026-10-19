@@ -13,9 +13,9 @@ android {
         applicationId = "com.cybertran.enquadraplus"
         minSdk = 24
         targetSdk = 37
-        // Release candidate v0.2.0-alpha.8
-        versionCode = 9
-        versionName = "0.2.0-alpha.8"
+        // Release candidate v0.2.0-alpha.9
+        versionCode = 10
+        versionName = "0.2.0-alpha.9"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

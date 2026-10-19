@@ -1,0 +1,97 @@
+{
+  "resolution": "BASELINE",
+  "removeCodes": [],
+  "sourceConflicts": {
+    "611-40": {
+      "conflicts": [
+        "MBFT × CTB: a ficha oficial 611-40 publica Gravidade: Grave e Pontuação: 7. O art. 259, II, do CTB estabelece 5 pontos para infração grave. O Enquadra+ preserva o conteúdo publicado no MBFT e sinaliza a divergência; a pontuação deve ser conferida nas fontes oficiais antes de uso operacional. Referências: MBFT/Resolução CONTRAN nº 985/2022, ficha 611-40; CTB, art. 259, II."
+      ],
+      "verification": {
+        "state": "SOURCE_CONFLICT",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_SOURCE_CONFLICT_REVIEW",
+        "reviewRecordId": "source-conflict-2026-10-17:611-40",
+        "reviewedFields": [
+          "severity",
+          "points"
+        ],
+        "reviewReason": "Divergência material entre a pontuação publicada na ficha MBFT e a regra de pontuação do CTB.",
+        "reviewEvidence": "MBFT ficha 611-40: Grave / 7 pontos; CTB art. 259, II: grave = 5 pontos. CTB asset source SHA-256 1EF56773EEF5787277101ACC57B0497E4BCF6272FF14652731098396BC1B6B6F."
+      }
+    },
+    "516-91": {
+      "conflicts": [
+        "Resolução CONTRAN nº 1.031/2026: o campo Medida Administrativa da ficha do Anexo III registra recolhimento do documento de habilitação, enquanto o art. 12 do corpo da própria resolução determina que o agente não promoverá esse recolhimento. O Enquadra+ preserva a redação da ficha e sinaliza a divergência; consulte o art. 12 antes de adotar a medida."
+      ],
+      "verification": {
+        "state": "SOURCE_CONFLICT",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "9F6D8D8C6E7B7996FCE21326A229C9B262D45178907FFF7BD9DD159CA5BA9B5A",
+        "verifiedSourceDocument": "Resolução CONTRAN nº 1.031/2026 — corpo e Anexo III (MBFT)",
+        "verificationMethod": "MANUAL_SOURCE_CONFLICT_REVIEW",
+        "reviewRecordId": "source-conflict-2026-10-17:516-91",
+        "reviewedFields": [
+          "administrativeMeasure"
+        ],
+        "reviewReason": "Divergência interna entre o campo de medida administrativa do Anexo III e o art. 12 da Resolução CONTRAN nº 1.031/2026.",
+        "reviewEvidence": "Resolução CONTRAN nº 1.031/2026, art. 12 e ficha 516-91 do Anexo III."
+      }
+    },
+    "516-92": {
+      "conflicts": [
+        "Resolução CONTRAN nº 1.031/2026: o campo Medida Administrativa da ficha do Anexo III registra recolhimento do documento de habilitação, enquanto o art. 12 do corpo da própria resolução determina que o agente não promoverá esse recolhimento. O Enquadra+ preserva a redação da ficha e sinaliza a divergência; consulte o art. 12 antes de adotar a medida."
+      ],
+      "verification": {
+        "state": "SOURCE_CONFLICT",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "9F6D8D8C6E7B7996FCE21326A229C9B262D45178907FFF7BD9DD159CA5BA9B5A",
+        "verifiedSourceDocument": "Resolução CONTRAN nº 1.031/2026 — corpo e Anexo III (MBFT)",
+        "verificationMethod": "MANUAL_SOURCE_CONFLICT_REVIEW",
+        "reviewRecordId": "source-conflict-2026-10-17:516-92",
+        "reviewedFields": [
+          "administrativeMeasure"
+        ],
+        "reviewReason": "Divergência interna entre o campo de medida administrativa do Anexo III e o art. 12 da Resolução CONTRAN nº 1.031/2026.",
+        "reviewEvidence": "Resolução CONTRAN nº 1.031/2026, art. 12 e ficha 516-92 do Anexo III."
+      }
+    },
+    "757-91": {
+      "conflicts": [
+        "Resolução CONTRAN nº 1.031/2026: o campo Medida Administrativa da ficha do Anexo III registra recolhimento do documento de habilitação, enquanto o art. 12 do corpo da própria resolução determina que o agente não promoverá esse recolhimento. O Enquadra+ preserva a redação da ficha e sinaliza a divergência; consulte o art. 12 antes de adotar a medida."
+      ],
+      "verification": {
+        "state": "SOURCE_CONFLICT",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "9F6D8D8C6E7B7996FCE21326A229C9B262D45178907FFF7BD9DD159CA5BA9B5A",
+        "verifiedSourceDocument": "Resolução CONTRAN nº 1.031/2026 — corpo e Anexo III (MBFT)",
+        "verificationMethod": "MANUAL_SOURCE_CONFLICT_REVIEW",
+        "reviewRecordId": "source-conflict-2026-10-17:757-91",
+        "reviewedFields": [
+          "administrativeMeasure"
+        ],
+        "reviewReason": "Divergência interna entre o campo de medida administrativa do Anexo III e o art. 12 da Resolução CONTRAN nº 1.031/2026.",
+        "reviewEvidence": "Resolução CONTRAN nº 1.031/2026, art. 12 e ficha 757-91 do Anexo III."
+      }
+    },
+    "757-92": {
+      "conflicts": [
+        "Resolução CONTRAN nº 1.031/2026: o campo Medida Administrativa da ficha do Anexo III registra recolhimento do documento de habilitação, enquanto o art. 12 do corpo da própria resolução determina que o agente não promoverá esse recolhimento. O Enquadra+ preserva a redação da ficha e sinaliza a divergência; consulte o art. 12 antes de adotar a medida."
+      ],
+      "verification": {
+        "state": "SOURCE_CONFLICT",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "9F6D8D8C6E7B7996FCE21326A229C9B262D45178907FFF7BD9DD159CA5BA9B5A",
+        "verifiedSourceDocument": "Resolução CONTRAN nº 1.031/2026 — corpo e Anexo III (MBFT)",
+        "verificationMethod": "MANUAL_SOURCE_CONFLICT_REVIEW",
+        "reviewRecordId": "source-conflict-2026-10-17:757-92",
+        "reviewedFields": [
+          "administrativeMeasure"
+        ],
+        "reviewReason": "Divergência interna entre o campo de medida administrativa do Anexo III e o art. 12 da Resolução CONTRAN nº 1.031/2026.",
+        "reviewEvidence": "Resolução CONTRAN nº 1.031/2026, art. 12 e ficha 757-92 do Anexo III."
+      }
+    }
+  }
+}

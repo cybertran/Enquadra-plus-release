@@ -126,6 +126,7 @@ private fun InfractionEntity.toDomainSummary(): TrafficInfraction =
         whenNotToCite = emptyList(),
         definitionsAndProcedures = emptyList(),
         aitOfficialObservations = emptyList(),
+        sourceConflicts = emptyList(),
         relatedCodes = emptyList(),
         relatedInfractions = emptyList(),
         sources = emptyList(),
@@ -161,6 +162,7 @@ private fun InfractionWithDetails.toDomain(): TrafficInfraction {
         whenNotToCite = notesOf(NoteKind.WHEN_NOT_TO_CITE),
         definitionsAndProcedures = notesOf(NoteKind.PROCEDURE),
         aitOfficialObservations = notesOf(NoteKind.AIT_OBSERVATION),
+        sourceConflicts = notesOf(NoteKind.SOURCE_CONFLICT),
         relatedCodes = relations.map { it.relatedCode }.distinct(),
         relatedInfractions = relations
             .sortedWith(
@@ -198,6 +200,8 @@ private fun InfractionWithDetails.toDomain(): TrafficInfraction {
 private fun String.toContentStatus(): InfractionContentStatus =
     when (uppercase()) {
         "VERIFIED" -> InfractionContentStatus.VERIFIED
+        "SOURCE_CONFLICT" -> InfractionContentStatus.SOURCE_CONFLICT
+        "MANUAL_REVIEW_REQUIRED" -> InfractionContentStatus.MANUAL_REVIEW_REQUIRED
         else -> InfractionContentStatus.PARTIAL_VALIDATION
     }
 

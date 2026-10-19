@@ -1,0 +1,49 @@
+{
+  "resolution": "BASELINE",
+  "removeCodes": [],
+  "recordPatches": {
+    "594-01": {
+      "fields": {
+        "whenToCite": [
+          "Veículo que ultrapassa, pela contramão, em ponte, inclusive nas suas alças."
+        ],
+        "aitObservations": [
+          "Ultrapassou outro veículo na ponte.",
+          "Ultrapassou pela contramão outro veículo, pela alça da ponte."
+        ]
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-four-fiches-review-2026-10-17:594-01",
+        "reviewedFields": [
+          "whenToCite",
+          "aitObservations"
+        ],
+        "reviewReason": "Remove contaminação de coluna identificada na extração fresca da ficha 594-01.",
+        "reviewEvidence": "Ficha oficial 594-01, campos Quando Autuar e Exemplos do Campo de Observações do AIT."
+      }
+    },
+    "640-80": {
+      "fields": {
+        "administrativeMeasure": "Retenção do veículo para regularização e apreensão das placas irregulares."
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-four-fiches-review-2026-10-17:640-80",
+        "reviewedFields": [
+          "administrativeMeasure"
+        ],
+        "reviewReason": "Corrige a medida administrativa que o parser confundia com conteúdo de Definições e Procedimentos.",
+        "reviewEvidence": "Ficha oficial 640-80, campo Medidas Administrativas."
+      }
+    }
+  }
+}

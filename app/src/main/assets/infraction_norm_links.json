@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-10-15",
-  "catalogVersion": "2026-10-15-norms-a6ec9aa715ac",
-  "mbftVersion": "2026-10-15-generated",
-  "recordCount": 1316,
+  "generatedAt": "2026-10-17",
+  "catalogVersion": "2026-10-17-norms-3d52f7eb192e",
+  "mbftVersion": "2026-10-17-generated",
+  "recordCount": 1352,
   "records": [
     {
       "infractionCode": "501-00",
@@ -1419,6 +1419,76 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
+      "infractionCode": "516-91",
+      "actId": "contran-deliberacao-2017-163",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 3º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no\ninciso III do Art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB;\nIII - quando condenado judicialmente por delito de trânsito, observado o disposto\nno art. 160.\nArt. 4º As penalidades de que trata esta Delibe ração serão aplicadas pela\nautoridade de trânsito do órgão de registro do documento de habilitação, em processo\nadministrativo, assegurados a ampla defesa, o contraditório e o devido processo legal.\n\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\n\nSEÇÃO I – POR PONTUAÇÃO\n\nArt. 5º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de\nprocesso administrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 6º Par",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1632017.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-deliberacao-2021-222",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "iódico é caracterizada pela coleta da\namostra, nos termos do § 3º.\" (NR)\n\"Art. 26-A. Até o dia 31 de dezembro de 2021, o prazo máximo previsto no caput do art. 14 para\ninserção da informação do resultado no RENACH será de 25 (vinte e cinco) dias contados a partir da\ncoleta.\" (NR)\n\"Art. 26-B. Para ﬁns de aplicação da penalidade prevista no caput do art. 165-B do CTB, o prazo\nlimite para a realização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB (COLUNA 4)\nserá estabelecido em função do mês da data de validade indicada na CNH do condutor (COLUNA 3),\nconforme disposto no Anexo VII desta Resolução.\n§ 1º Independentemente de o prazo para renovação da CNH ter sido ou venha a ser prorrogado,\no prazo limite para realização do exame toxicológico ﬁca mantido conforme o disposto na COLUNA 4 do\nAnexo VII desta Resolução.\n§ 2º Não se aplica a penalidade prevista no parágrafo único do art. 165-B do CTB pela não\nrealização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB ao condutor da categoria\nC, D ou E que exerc",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2222021.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-resolucao-2018-723",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 4º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no inciso\nIII do art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB.\nArt. 5º As penalidades de que trata esta Resolução serão aplicadas pela autoridade de\ntrânsito do órgão de registro do documento de habilitação, em processo administrativo,\nassegurados a ampla defesa, o contraditório e o devido processo legal.\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\nSEÇÃO I – POR PONTUAÇÃO\nArt. 6º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de processo\nadministrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 7º Para fins de cump rimento do disposto no inciso I do art. 3º serão consideradas as\ndatas do cometimento",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7232018.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-resolucao-2022-923-compilada-integral",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "eitado o prazo de validade previsto na referida lei.\nArt. 22. A direção de veículo para o qual seja exigida habilitação nas categorias C, D ou E por\ncondutor com idade inferior a 70 (setenta) anos, sem realizar o exame toxicológico após 30 (trinta) dias do\nvencimento do prazo estabelecido no § 2º do art. 148-A do CTB, conﬁgura infração prevista no art. 165-B\ndo CTB.\n§ 1º Incorre na mesma penalidade descrita no caput o condutor que exerce atividade\nremunerada ao veículo e não comprova a realização do exame toxicológico periódico exigido pelo § 2º do\nart. 148-A do CTB, após 30 (trinta) dias do vencimento do prazo estabelecido, por ocasião da renovação do\n\n01/04/2022 08:37 RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - DOU - Imprensa Nacional\nhttps://www.in.gov.br/web/dou/-/resolucao-contran-n-923-de-28-de-marco-de-2022-390343520 6/31\ndocumento de habilitação nas categorias C, D ou E, conforme previsto no parágrafo único do art. 165-B do\nCTB.\n§ 2º A mudança de categoria dos condutores das ca",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9232022.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-resolucao-2022-926",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "(NP) por infrações de responsabilidade de pessoas físicas ou jurídicas, sem a\nutilização de veículos, expressamente mencionadas no Código de Trânsito Brasileiro (CTB).\nParágrafo único. As infrações de responsabilidade de pessoas físicas ou jurídicas\nexpressamente mencionadas no CTB estão previstas nos art. 93, art. 94, art. 95, parágrafo único do art. 165-\nB, primeira parte do § 1º do art. 174, parágrafo único do art. 221, art. 243, art. 245, art. 246 e caput e § 5º do\nart. 330.\nArt. 2º Constatada a infração pela autoridade de trânsito ou por seu agente, ou ainda\ncomprovada sua ocorrência por aparelho eletrônico, equipamento audiovisual ou qualquer outro meio\ntecnologicamente disponível, previamente regulamentado pelo CONTRAN, será lavrado o AIT na forma\ndeﬁnida nesta Resolução.\n§ 1º O AIT de que trata o caput será lavrado pela autoridade de trânsito ou por seu agente:\nI - por anotação em documento próprio;\nII - por registro em talão eletrônico, atendido o procedimento deﬁnido pelo órgão máximo\nexecutivo de trânsito da União; ou\nIII - por re",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9262022.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-resolucao-2026-1031",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "ais que, em conjunto, comprovem a situação do condutor.\n§ 2º Os sinais de alteração da capacidade psicomotora deverão ser descritos no auto de\ninfração ou em termo especíﬁco que contenha as informações mínimas indicadas no Anexo II, o qual\ndeverá acompanhar o auto de infração.\n\nCAPÍTULO VII\nDA INFRAÇÃO ADMINISTRATIVA\nArt. 8º A infração prevista no art. 165 do CTB será caracterizada por:\nI - teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por\nlitro de ar alveolar expirado (0,05 mg/L), da qual deve ser descontado o erro máximo admissível nos\ntermos da \"Tabela de Valores Referenciais para Etilômetro\" constante no Anexo I;\nII - teste em aparelho destinado à veriﬁcação da presença de outras substâncias psicoativas que\napresente resultado qualitativo positivo; e\nIII - sinais de alteração da capacidade psicomotora obtidos na forma do art. 7º.\n§ 1º Serão aplicadas as penalidades e medidas administrativas previstas no art. 165-A do CTB ao\ncondutor que recusar a se submeter a qualquer um dos procedimentos previsto",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "senatran-portaria-2024-423",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "rmações mínimas que\ndevem compor o Auto de Infração de Trânsito (AIT).\nArt. 2º O Anexo IV - Tabela de Códigos de Enquadramentos das Infrações, da Portaria\nSENATRAN nº 354, de 2022, passa a vigorar com as alterações constantes no Anexo.\nArt. 3º Ficam criados os códigos referentes às seguintes infrações previstas no Código de\nTrânsito Brasileiro:\nI- art. 165-B, caput: 7790-0;\nII- art. 165-B combinado com o parágrafo único:7803-0;\nIII- art. 165-C: 7811-0; e\nIV- art. 165-D: 7820-0.\nArt. 4º Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nANEXO\nCÓDIGODESDOB.DESCRIÇÃO DA INFRAÇÃO(RESUMIDA) AMPAROCTB INFRATORGRAVIDADEÓRGÃOCOMPETENTE\n7790 0 Dirigir veículo sem realizar oexame toxicológico previstono art. 148-A do CTB.\nArt. 165-B,caput. Condutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7803 0 Dirigir veículo sem realizar oexame toxicológico previsto§ 2º do art. 148-A do CTB.\nArt. 165-Bc/c oparágrafoúnico.\nCondutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7811 0\nDirigir veículo tendo obtidoresultado positivo no exametoxicológico previst",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4232024.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "senatran-portaria-2024-433",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": ", com o dístico \"Veículo em Teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 11. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 244, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro\nArt. 12. Os veículos de que trata esta Portaria estarão proibidos de prosseguir transitando caso o\nProjeto BEV não seja aprovado ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 13. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4332024.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "senatran-portaria-2026-571",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": ", com o dístico \"Veículo em teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 13. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro.\nArt. 14. As CEVCs de que trata esta Portaria estarão proibidas de prosseguir transitando caso não\nseja aprovada ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 15. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria5712026.pdf"
+    },
+    {
+      "infractionCode": "516-91",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
       "infractionCode": "516-92",
       "actId": "contran-deliberacao-2017-163",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
@@ -2281,6 +2351,13 @@
     },
     {
       "infractionCode": "554-12",
+      "actId": "contran-resolucao-2022-965",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 965/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9652022.pdf"
+    },
+    {
+      "infractionCode": "554-12",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -2855,20 +2932,6 @@
     },
     {
       "infractionCode": "581-92",
-      "actId": "contran-resolucao-2023-996",
-      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
-      "evidence": "ção de pessoas com deﬁciência ou com\ncomprometimento de mobilidade.\nArt. 19. O descumprimento do disposto nesta Resolução sujeita o infrator, conforme o caso,\nindependentemente de outras penalidades, às seguintes sanções previstas no CTB:\nI - art. 187, inciso I, quando transitar em local não permitido pelo órgão com circunscrição sobre\na via;\nII - art. 193, quando transitar em calçadas, passeios, ciclovias, exceto nos casos autorizados pela\nautoridade de trânsito com circunscrição sobre a via;\nIII - art. 230, inciso IV, quando o veículo for conduzido sem placa de identiﬁcação;\nIV - art. 230, inciso V, quando conduzir veículo que não esteja registrado e licenciado;\nV - art. 244, quando conduzir ciclomotor sem o uso de capacete ou transportar passageiro sem\no uso do capacete;\nVI - art. 244, § 1º, quando transitar com bicicleta elétrica em vias de trânsito rápido ou rodovias,\nsalvo onde houver acostamento ou faixas de rolamento próprias; e\nVII - art. 244, § 2º, quando transitar com ciclomotores nas vias de trânsito rápido ou rodovias,\nsalvo onde",
-      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9962023.pdf"
-    },
-    {
-      "infractionCode": "581-92",
-      "actId": "contran-resolucao-2026-1023",
-      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
-      "evidence": "RAÇÕES\nArt. 11. O descumprimento do disposto nesta Resolução sujeita o infrator, conforme o caso,\nindependentemente de outras penalidades, às seguintes sanções previstas no CTB:\nI - art. 162, inciso I, quando o condutor não possuir CNH;\nII - art. 187, inciso I, quando transitar em local não permitido pelo órgão com circunscrição sobre\na via;\nIII - art. 193, quando transitar em calçadas, passeios, ciclovias, exceto nos casos autorizados pela\nautoridade de trânsito com circunscrição sobre a via;\nIV - art. 219, se o veículo estiver transitando em velocidade inferior à metade da velocidade\nmáxima estabelecida para a via, retardando ou obstruindo o trânsito, a menos que as condições de tráfego\ne meteorológicas não o permitam, salvo se estiver na faixa da direita;\nV - art. 230, inciso IV, quando o veículo for conduzido sem placa de identiﬁcação;\nVI - art. 230, inciso V, quando conduzir veículo em via pública que não esteja registrado ou\ndevidamente licenciado;\nVII - art. 244, incisos I ou II, quando conduzir o veículo sem o uso de capacete ou trans",
-      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10232026c.pdf"
-    },
-    {
-      "infractionCode": "581-92",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -3121,6 +3184,13 @@
     },
     {
       "infractionCode": "593-20",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
+      "infractionCode": "594-01",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -3897,6 +3967,13 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
+      "infractionCode": "608-41",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
       "infractionCode": "608-42",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
@@ -4156,6 +4233,41 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
+      "infractionCode": "640-80",
+      "actId": "contran-deliberacao-2021-222",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "regulamenta o processo de autuação, notiﬁcação e aplicação da\npenalidade de multa referente às infrações de responsabilidade de pessoas físicas ou jurídicas\nexpressamente mencionadas no CTB, nos casos previstos nos art. 93, art. 94, caput e §§ 1º e 2º do art. 95,\nparágrafo único do art. 165-B, primeira parte do § 1º do art. 174, parágrafo único do art. 221, art. 243, art. 245,\nart. 246, e caput e § 5º do art. 330 do CTB.\" (NR)\nArt. 4º Ficam revogados os §§ 1º e 3º do art. 21 da Resolução CONTRAN nº 691, de 2017.\nArt. 5º Esta Deliberação entra em vigor na data de sua publicação.\nTARCÍSIO GOMES DE FREITAS\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2222021.pdf"
+    },
+    {
+      "infractionCode": "640-80",
+      "actId": "contran-resolucao-2022-926",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "cas, sem a\nutilização de veículos, expressamente mencionadas no Código de Trânsito Brasileiro (CTB).\nParágrafo único. As infrações de responsabilidade de pessoas físicas ou jurídicas\nexpressamente mencionadas no CTB estão previstas nos art. 93, art. 94, art. 95, parágrafo único do art. 165-\nB, primeira parte do § 1º do art. 174, parágrafo único do art. 221, art. 243, art. 245, art. 246 e caput e § 5º do\nart. 330.\nArt. 2º Constatada a infração pela autoridade de trânsito ou por seu agente, ou ainda\ncomprovada sua ocorrência por aparelho eletrônico, equipamento audiovisual ou qualquer outro meio\ntecnologicamente disponível, previamente regulamentado pelo CONTRAN, será lavrado o AIT na forma\ndeﬁnida nesta Resolução.\n§ 1º O AIT de que trata o caput será lavrado pela autoridade de trânsito ou por seu agente:\nI - por anotação em documento próprio;\nII - por registro em talão eletrônico, atendido o procedimento deﬁnido pelo órgão máximo\nexecutivo de trânsito da União; ou\nIII - por registro em sistema eletrônico de processamento de dados, quando a inf",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9262022.pdf"
+    },
+    {
+      "infractionCode": "640-80",
+      "actId": "contran-resolucao-2022-969",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "o registro das infrações que venham a ser cometidas quando da\ncirculação dos veículos com prerrogativa de utilização dessas PIV, nos termos de regulamentação\nespecíﬁca.\nArt. 60. O descumprimento do disposto nesta Resolução implicará, conforme o caso, na\naplicação ao infrator das seguintes penalidades e medidas administrativas previstas no CTB:\nI - art. 221:\na) veículo utilizando PIV com seus elementos, material, caracteres, cores, dimensões ou\nqualquer outra especiﬁcação técnica em desacordo com o estabelecido nesta Resolução ou, ainda, com\ncores de fundo ou dos caracteres diversos dos especiﬁcados para a categoria e/ou espécie do veículo;\nb) veículo utilizando PIV com QR Code arranhado, desgastado ou com outro defeito que\nimpossibilite a sua leitura correta por aplicativo disponibilizado pelo órgão máximo executivo de trânsito\nda União;\nc) veículo utilizando PIV-Fab, PIV-Exp, placa de representação ou de coleção indevidamente, ou\nem desacordo com as especiﬁcações de uso descritas nesta Resolução;\nd) veículo utilizando PNU sem lacre, com o la",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf"
+    },
+    {
+      "infractionCode": "640-80",
+      "actId": "contran-resolucao-2022-969",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 969/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf"
+    },
+    {
+      "infractionCode": "640-80",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
       "infractionCode": "641-60",
       "actId": "contran-deliberacao-2021-222",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
@@ -4174,6 +4286,13 @@
       "actId": "contran-resolucao-2022-969",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "o registro das infrações que venham a ser cometidas quando da\ncirculação dos veículos com prerrogativa de utilização dessas PIV, nos termos de regulamentação\nespecíﬁca.\nArt. 60. O descumprimento do disposto nesta Resolução implicará, conforme o caso, na\naplicação ao infrator das seguintes penalidades e medidas administrativas previstas no CTB:\nI - art. 221:\na) veículo utilizando PIV com seus elementos, material, caracteres, cores, dimensões ou\nqualquer outra especiﬁcação técnica em desacordo com o estabelecido nesta Resolução ou, ainda, com\ncores de fundo ou dos caracteres diversos dos especiﬁcados para a categoria e/ou espécie do veículo;\nb) veículo utilizando PIV com QR Code arranhado, desgastado ou com outro defeito que\nimpossibilite a sua leitura correta por aplicativo disponibilizado pelo órgão máximo executivo de trânsito\nda União;\nc) veículo utilizando PIV-Fab, PIV-Exp, placa de representação ou de coleção indevidamente, ou\nem desacordo com as especiﬁcações de uso descritas nesta Resolução;\nd) veículo utilizando PNU sem lacre, com o la",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf"
+    },
+    {
+      "infractionCode": "641-60",
+      "actId": "contran-resolucao-2022-969",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 969/2022.",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9692022.pdf"
     },
     {
@@ -4469,6 +4588,13 @@
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "tos obrigatórios dispensados por\nconvenções e acordos internacionais ratiﬁcados pelo Brasil.\nArt. 7º Esta Resolução não se aplica aos veículos destinados à exportação.\nArt. 8º Os proprietários ou condutores cujos veículos circularem em vias públicas desprovidos\ndos requisitos estabelecidos nesta Resolução ﬁcam sujeitos às penalidades constantes no art. 230 do CTB,\nno que couber, respeitadas as exceções e situações particulares previstas nesta Resolução.\nArt. 9º Os Anexos desta Resolução encontram-se disponíveis no sítio eletrônico do órgão\nmáximo executivo de trânsito da União.\nArt. 10. Fica revogada a Resolução CONTRAN nº 912, de 28 de março de 2022.\nArt. 11. Esta Resolução entra em vigor em 3 de julho de 2023.\nADRUALDO DE LIMA CATÃO\nPresidente do Conselho Em exercício\n\nFERNANDA MARA DE OLIVEIRA MACEDO CARNEIROPACOBAHYBA\np/ Ministério da Educação\nJOSÉ LOPES FERNANDES\np/ Ministério da Defesa\nADALBERTO FELICIO MALUF FILHO\np/ Ministério do Meio Ambiente e Mudança do Clima\nETHEL LEONOR NOIA MACIEL\np/ Ministério da Saúde\nANTÔNIO FERNANDO SOUZA OL",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023.pdf"
+    },
+    {
+      "infractionCode": "655-65",
+      "actId": "contran-resolucao-2022-944",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 944/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9442022.pdf"
     },
     {
       "infractionCode": "655-65",
@@ -4899,13 +5025,6 @@
     },
     {
       "infractionCode": "662-90",
-      "actId": "contran-resolucao-2017-716",
-      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
-      "evidence": "propriedade dos\nórgãos executivos de trânsito dos estados ou do Distrito Federal, devendo disponibilizá -las ao\nórgão máximo executivo de trânsito da União por meio de sistema eletrônico\nespecífico, mantido pelo DENATRAN.\nArt. 20. O descumprimento das disposições contidas nesta Resolução sujeitará o infrator\nàs sanções previstas no inciso VIII do art. 230 do Código de Trânsito Brasileiro.\nArt. 21 . Ficam revogadas as Resoluções do CONTRAN nº 84/98, de 19/11/1998, nº\n101/99, de 31/08/1999 e a nº 107/99, de 21/12/1999.\nArt. 22. Esta Resolução entra em vigor na data de sua publicação.\n\nElmer Coelho Vicenzi\nPresidente\n\nAdilson Antonio Paulus\nMinistério da Justiça e Segurança Pública\n\nRenato Eickhoff\nMinistério da Defesa\n\nRone Evaldo Barbosa\nMinistério dos Transportes, Portos e Aviação Civil\n\nDjailson Dantas de Medeiros\nMinistério da Educação\n\nRomeu Scheibe Neto\nMinistério da Ciência, Tecnologia, Inovações e Comunicações\n\nPaulo Cesar de Macedo\nMinistério do Meio Ambiente\n\nNoboru Ofugi\nAgência Nacional de Transportes Terrestres\n\nThomas Paris Calde",
-      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7162017.pdf"
-    },
-    {
-      "infractionCode": "662-90",
       "actId": "contran-resolucao-2020-810",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "esponsável pela inclusão\ne, se for o caso, número do BAT e o órgão ﬁscalizador responsável pela ocorrência.\n§ 2º Enquanto perdurar a restrição administrativa imposta pelo órgão ou entidade executiva de\ntrânsito do Estado ou do Distrito Federal, é proibida a circulação do veículo nas vias públicas, sob pena de\ninfringir o disposto no inciso VIII do art. 230 do CTB.\n§ 3º Os órgãos e entidades pertencentes ao Sistema Nacional de Trânsito (SNT) poderão\ncelebrar acordo de cooperação, ou outros tipos de ajustes, que possibilite o registro da monta diretamente\npelo responsável pelo atendimento do acidente.\n\n24/12/2020 RESOLUÇÃO CONTRAN Nº 810, DE 15 DE DEZEMBRO DE 2020 - RESOLUÇÃO CONTRAN Nº 810, DE 15 DE DEZEMBRO DE 2020 - DOU - Imprensa Nacional\nhttps://www.in.gov.br/web/dou/-/resolucao-contran-n-810-de-15-de-dezembro-de-2020-296167311 3/20\nArt. 6º Imediatamente após o lançamento da restrição administrativa à circulação do veículo, o\nórgão executivo de trânsito do Estado ou do Distrito Federal deve notiﬁcar o proprietário, conforme\nmodelo previsto",
@@ -5092,6 +5211,13 @@
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "tos obrigatórios dispensados por\nconvenções e acordos internacionais ratiﬁcados pelo Brasil.\nArt. 7º Esta Resolução não se aplica aos veículos destinados à exportação.\nArt. 8º Os proprietários ou condutores cujos veículos circularem em vias públicas desprovidos\ndos requisitos estabelecidos nesta Resolução ﬁcam sujeitos às penalidades constantes no art. 230 do CTB,\nno que couber, respeitadas as exceções e situações particulares previstas nesta Resolução.\nArt. 9º Os Anexos desta Resolução encontram-se disponíveis no sítio eletrônico do órgão\nmáximo executivo de trânsito da União.\nArt. 10. Fica revogada a Resolução CONTRAN nº 912, de 28 de março de 2022.\nArt. 11. Esta Resolução entra em vigor em 3 de julho de 2023.\nADRUALDO DE LIMA CATÃO\nPresidente do Conselho Em exercício\n\nFERNANDA MARA DE OLIVEIRA MACEDO CARNEIROPACOBAHYBA\np/ Ministério da Educação\nJOSÉ LOPES FERNANDES\np/ Ministério da Defesa\nADALBERTO FELICIO MALUF FILHO\np/ Ministério do Meio Ambiente e Mudança do Clima\nETHEL LEONOR NOIA MACIEL\np/ Ministério da Saúde\nANTÔNIO FERNANDO SOUZA OL",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9932023.pdf"
+    },
+    {
+      "infractionCode": "663-71",
+      "actId": "contran-resolucao-2022-911",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 911/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9112022.pdf"
     },
     {
       "infractionCode": "663-71",
@@ -6019,6 +6145,27 @@
     },
     {
       "infractionCode": "682-31",
+      "actId": "contran-resolucao-2018-735",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 735/2018.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7352018.pdf"
+    },
+    {
+      "infractionCode": "682-31",
+      "actId": "contran-resolucao-2020-791",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 791/2020.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao791-2020.pdf"
+    },
+    {
+      "infractionCode": "682-31",
+      "actId": "contran-resolucao-2021-882",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 882/2021.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao8822021.pdf"
+    },
+    {
+      "infractionCode": "682-31",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -6040,6 +6187,13 @@
     },
     {
       "infractionCode": "682-32",
+      "actId": "contran-resolucao-2021-882",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 882/2021.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao8822021.pdf"
+    },
+    {
+      "infractionCode": "682-32",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -6102,6 +6256,13 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
+      "infractionCode": "683-12",
+      "actId": "senatran-portaria-2022-268",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: PORTARIA 268/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2022/Portaria2682022n2.pdf"
+    },
+    {
       "infractionCode": "683-13",
       "actId": "contran-deliberacao-2021-246",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
@@ -6128,6 +6289,13 @@
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
+      "infractionCode": "683-13",
+      "actId": "senatran-portaria-2022-268",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: PORTARIA 268/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2022/Portaria2682022n2.pdf"
     },
     {
       "infractionCode": "684-01",
@@ -6674,6 +6842,13 @@
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "Art. 48. O descumprimento do disposto nesta Resolução sujeita o infrator, conforme o caso,\nindependentemente de outras penalidades, às seguintes sanções previstas no CTB:\nI - art. 230, inciso I: quando o veículo tiver qualquer sinal identiﬁcador não inserido, suprimido ou\nadulterado de forma intencional pelo proprietário ou possuidor legal; e\nII - art. 237: quando o veículo tiver qualquer sinal identiﬁcador não inserido suprimido ou\ndaniﬁcado de forma não intencional pelo proprietário ou possuidor legal, em virtude de manutenção,\nsubstituição de peças ou qualquer outra intervenção mecânica ou estética no veículo; ou quando o\nproprietário ou possuidor legal deixar de informar o órgão ou entidade executivo de trânsito dos Estados\nou do Distrito Federal acerca da substituição de qualquer agregado do veículo, em desacordo com o art.\n14 desta Resolução.\nArt. 49. Os requisitos constantes desta Resolução aplicam-se aos veículos produzidos ou\nimportados a partir de 1º de janeiro de 2025, facultada sua antecipação total ou parcial.\nParágrafo único. Os",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao9682022.pdf"
+    },
+    {
+      "infractionCode": "696-30",
+      "actId": "contran-resolucao-2006-215",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 215/2006.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao_215.doc"
     },
     {
       "infractionCode": "696-30",
@@ -7369,6 +7544,13 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
+      "infractionCode": "721-80",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
       "infractionCode": "722-61",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
@@ -7985,70 +8167,140 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-deliberacao-2017-163",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 3º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no\ninciso III do Art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB;\nIII - quando condenado judicialmente por delito de trânsito, observado o disposto\nno art. 160.\nArt. 4º As penalidades de que trata esta Delibe ração serão aplicadas pela\nautoridade de trânsito do órgão de registro do documento de habilitação, em processo\nadministrativo, assegurados a ampla defesa, o contraditório e o devido processo legal.\n\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\n\nSEÇÃO I – POR PONTUAÇÃO\n\nArt. 5º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de\nprocesso administrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 6º Par",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1632017.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-deliberacao-2021-222",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "iódico é caracterizada pela coleta da\namostra, nos termos do § 3º.\" (NR)\n\"Art. 26-A. Até o dia 31 de dezembro de 2021, o prazo máximo previsto no caput do art. 14 para\ninserção da informação do resultado no RENACH será de 25 (vinte e cinco) dias contados a partir da\ncoleta.\" (NR)\n\"Art. 26-B. Para ﬁns de aplicação da penalidade prevista no caput do art. 165-B do CTB, o prazo\nlimite para a realização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB (COLUNA 4)\nserá estabelecido em função do mês da data de validade indicada na CNH do condutor (COLUNA 3),\nconforme disposto no Anexo VII desta Resolução.\n§ 1º Independentemente de o prazo para renovação da CNH ter sido ou venha a ser prorrogado,\no prazo limite para realização do exame toxicológico ﬁca mantido conforme o disposto na COLUNA 4 do\nAnexo VII desta Resolução.\n§ 2º Não se aplica a penalidade prevista no parágrafo único do art. 165-B do CTB pela não\nrealização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB ao condutor da categoria\nC, D ou E que exerc",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2222021.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-resolucao-2018-723",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 4º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no inciso\nIII do art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB.\nArt. 5º As penalidades de que trata esta Resolução serão aplicadas pela autoridade de\ntrânsito do órgão de registro do documento de habilitação, em processo administrativo,\nassegurados a ampla defesa, o contraditório e o devido processo legal.\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\nSEÇÃO I – POR PONTUAÇÃO\nArt. 6º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de processo\nadministrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 7º Para fins de cump rimento do disposto no inciso I do art. 3º serão consideradas as\ndatas do cometimento",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7232018.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-resolucao-2022-923-compilada-integral",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "eitado o prazo de validade previsto na referida lei.\nArt. 22. A direção de veículo para o qual seja exigida habilitação nas categorias C, D ou E por\ncondutor com idade inferior a 70 (setenta) anos, sem realizar o exame toxicológico após 30 (trinta) dias do\nvencimento do prazo estabelecido no § 2º do art. 148-A do CTB, conﬁgura infração prevista no art. 165-B\ndo CTB.\n§ 1º Incorre na mesma penalidade descrita no caput o condutor que exerce atividade\nremunerada ao veículo e não comprova a realização do exame toxicológico periódico exigido pelo § 2º do\nart. 148-A do CTB, após 30 (trinta) dias do vencimento do prazo estabelecido, por ocasião da renovação do\n\n01/04/2022 08:37 RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - DOU - Imprensa Nacional\nhttps://www.in.gov.br/web/dou/-/resolucao-contran-n-923-de-28-de-marco-de-2022-390343520 6/31\ndocumento de habilitação nas categorias C, D ou E, conforme previsto no parágrafo único do art. 165-B do\nCTB.\n§ 2º A mudança de categoria dos condutores das ca",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9232022.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-resolucao-2022-926",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "(NP) por infrações de responsabilidade de pessoas físicas ou jurídicas, sem a\nutilização de veículos, expressamente mencionadas no Código de Trânsito Brasileiro (CTB).\nParágrafo único. As infrações de responsabilidade de pessoas físicas ou jurídicas\nexpressamente mencionadas no CTB estão previstas nos art. 93, art. 94, art. 95, parágrafo único do art. 165-\nB, primeira parte do § 1º do art. 174, parágrafo único do art. 221, art. 243, art. 245, art. 246 e caput e § 5º do\nart. 330.\nArt. 2º Constatada a infração pela autoridade de trânsito ou por seu agente, ou ainda\ncomprovada sua ocorrência por aparelho eletrônico, equipamento audiovisual ou qualquer outro meio\ntecnologicamente disponível, previamente regulamentado pelo CONTRAN, será lavrado o AIT na forma\ndeﬁnida nesta Resolução.\n§ 1º O AIT de que trata o caput será lavrado pela autoridade de trânsito ou por seu agente:\nI - por anotação em documento próprio;\nII - por registro em talão eletrônico, atendido o procedimento deﬁnido pelo órgão máximo\nexecutivo de trânsito da União; ou\nIII - por re",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9262022.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "contran-resolucao-2026-1031",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "ais que, em conjunto, comprovem a situação do condutor.\n§ 2º Os sinais de alteração da capacidade psicomotora deverão ser descritos no auto de\ninfração ou em termo especíﬁco que contenha as informações mínimas indicadas no Anexo II, o qual\ndeverá acompanhar o auto de infração.\n\nCAPÍTULO VII\nDA INFRAÇÃO ADMINISTRATIVA\nArt. 8º A infração prevista no art. 165 do CTB será caracterizada por:\nI - teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por\nlitro de ar alveolar expirado (0,05 mg/L), da qual deve ser descontado o erro máximo admissível nos\ntermos da \"Tabela de Valores Referenciais para Etilômetro\" constante no Anexo I;\nII - teste em aparelho destinado à veriﬁcação da presença de outras substâncias psicoativas que\napresente resultado qualitativo positivo; e\nIII - sinais de alteração da capacidade psicomotora obtidos na forma do art. 7º.\n§ 1º Serão aplicadas as penalidades e medidas administrativas previstas no art. 165-A do CTB ao\ncondutor que recusar a se submeter a qualquer um dos procedimentos previsto",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "senatran-portaria-2024-423",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": "rmações mínimas que\ndevem compor o Auto de Infração de Trânsito (AIT).\nArt. 2º O Anexo IV - Tabela de Códigos de Enquadramentos das Infrações, da Portaria\nSENATRAN nº 354, de 2022, passa a vigorar com as alterações constantes no Anexo.\nArt. 3º Ficam criados os códigos referentes às seguintes infrações previstas no Código de\nTrânsito Brasileiro:\nI- art. 165-B, caput: 7790-0;\nII- art. 165-B combinado com o parágrafo único:7803-0;\nIII- art. 165-C: 7811-0; e\nIV- art. 165-D: 7820-0.\nArt. 4º Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nANEXO\nCÓDIGODESDOB.DESCRIÇÃO DA INFRAÇÃO(RESUMIDA) AMPAROCTB INFRATORGRAVIDADEÓRGÃOCOMPETENTE\n7790 0 Dirigir veículo sem realizar oexame toxicológico previstono art. 148-A do CTB.\nArt. 165-B,caput. Condutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7803 0 Dirigir veículo sem realizar oexame toxicológico previsto§ 2º do art. 148-A do CTB.\nArt. 165-Bc/c oparágrafoúnico.\nCondutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7811 0\nDirigir veículo tendo obtidoresultado positivo no exametoxicológico previst",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4232024.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "senatran-portaria-2024-433",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": ", com o dístico \"Veículo em Teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 11. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 244, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro\nArt. 12. Os veículos de que trata esta Portaria estarão proibidos de prosseguir transitando caso o\nProjeto BEV não seja aprovado ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 13. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4332024.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
       "actId": "senatran-portaria-2026-571",
       "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
       "evidence": ", com o dístico \"Veículo em teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 13. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro.\nArt. 14. As CEVCs de que trata esta Portaria estarão proibidas de prosseguir transitando caso não\nseja aprovada ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 15. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria5712026.pdf"
     },
     {
-      "infractionCode": "757-90",
+      "infractionCode": "757-91",
+      "actId": "contran-resolucao-2022-985",
+      "relationKind": "EXPLICIT_MBFT_REFERENCE",
+      "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-deliberacao-2017-163",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 3º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no\ninciso III do Art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB;\nIII - quando condenado judicialmente por delito de trânsito, observado o disposto\nno art. 160.\nArt. 4º As penalidades de que trata esta Delibe ração serão aplicadas pela\nautoridade de trânsito do órgão de registro do documento de habilitação, em processo\nadministrativo, assegurados a ampla defesa, o contraditório e o devido processo legal.\n\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\n\nSEÇÃO I – POR PONTUAÇÃO\n\nArt. 5º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de\nprocesso administrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 6º Par",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/deliberacao1632017.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-deliberacao-2021-222",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "iódico é caracterizada pela coleta da\namostra, nos termos do § 3º.\" (NR)\n\"Art. 26-A. Até o dia 31 de dezembro de 2021, o prazo máximo previsto no caput do art. 14 para\ninserção da informação do resultado no RENACH será de 25 (vinte e cinco) dias contados a partir da\ncoleta.\" (NR)\n\"Art. 26-B. Para ﬁns de aplicação da penalidade prevista no caput do art. 165-B do CTB, o prazo\nlimite para a realização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB (COLUNA 4)\nserá estabelecido em função do mês da data de validade indicada na CNH do condutor (COLUNA 3),\nconforme disposto no Anexo VII desta Resolução.\n§ 1º Independentemente de o prazo para renovação da CNH ter sido ou venha a ser prorrogado,\no prazo limite para realização do exame toxicológico ﬁca mantido conforme o disposto na COLUNA 4 do\nAnexo VII desta Resolução.\n§ 2º Não se aplica a penalidade prevista no parágrafo único do art. 165-B do CTB pela não\nrealização do exame toxicológico periódico exigido no § 2º do art. 148-A do CTB ao condutor da categoria\nC, D ou E que exerc",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/deliberacoes/Deliberacao2222021.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-resolucao-2018-723",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "reveem, de\nforma específica, a penalidade de suspensão do direito de dirigir.\nArt. 4º A cassação do documento de habilitação será imposta nos seguintes casos:\nI - quando, suspenso o direito de dirigir, o infrator conduzir qualquer veículo;\nII - no caso de reincidência, no prazo de doze meses, das infrações previstas no inciso\nIII do art. 162 e nos arts. 163, 164, 165, 173, 174 e 175, todos do CTB.\nArt. 5º As penalidades de que trata esta Resolução serão aplicadas pela autoridade de\ntrânsito do órgão de registro do documento de habilitação, em processo administrativo,\nassegurados a ampla defesa, o contraditório e o devido processo legal.\nCAPÍTULO II – DA SUSPENSÃO DO DIREITO DE DIRIGIR\nSEÇÃO I – POR PONTUAÇÃO\nArt. 6º Esgotados todos os meios de defesa da infração na esfera administrativa, a\npontuação prevista no art. 259 do CTB será considerada para fins de instauração de processo\nadministrativo para aplicação da penalidade de suspensão do direito de dirigir.\nArt. 7º Para fins de cump rimento do disposto no inciso I do art. 3º serão consideradas as\ndatas do cometimento",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao7232018.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-resolucao-2022-923-compilada-integral",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "eitado o prazo de validade previsto na referida lei.\nArt. 22. A direção de veículo para o qual seja exigida habilitação nas categorias C, D ou E por\ncondutor com idade inferior a 70 (setenta) anos, sem realizar o exame toxicológico após 30 (trinta) dias do\nvencimento do prazo estabelecido no § 2º do art. 148-A do CTB, conﬁgura infração prevista no art. 165-B\ndo CTB.\n§ 1º Incorre na mesma penalidade descrita no caput o condutor que exerce atividade\nremunerada ao veículo e não comprova a realização do exame toxicológico periódico exigido pelo § 2º do\nart. 148-A do CTB, após 30 (trinta) dias do vencimento do prazo estabelecido, por ocasião da renovação do\n\n01/04/2022 08:37 RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - RESOLUÇÃO CONTRAN Nº 923, DE 28 DE MARÇO DE 2022 - DOU - Imprensa Nacional\nhttps://www.in.gov.br/web/dou/-/resolucao-contran-n-923-de-28-de-marco-de-2022-390343520 6/31\ndocumento de habilitação nas categorias C, D ou E, conforme previsto no parágrafo único do art. 165-B do\nCTB.\n§ 2º A mudança de categoria dos condutores das ca",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9232022.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-resolucao-2022-926",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "(NP) por infrações de responsabilidade de pessoas físicas ou jurídicas, sem a\nutilização de veículos, expressamente mencionadas no Código de Trânsito Brasileiro (CTB).\nParágrafo único. As infrações de responsabilidade de pessoas físicas ou jurídicas\nexpressamente mencionadas no CTB estão previstas nos art. 93, art. 94, art. 95, parágrafo único do art. 165-\nB, primeira parte do § 1º do art. 174, parágrafo único do art. 221, art. 243, art. 245, art. 246 e caput e § 5º do\nart. 330.\nArt. 2º Constatada a infração pela autoridade de trânsito ou por seu agente, ou ainda\ncomprovada sua ocorrência por aparelho eletrônico, equipamento audiovisual ou qualquer outro meio\ntecnologicamente disponível, previamente regulamentado pelo CONTRAN, será lavrado o AIT na forma\ndeﬁnida nesta Resolução.\n§ 1º O AIT de que trata o caput será lavrado pela autoridade de trânsito ou por seu agente:\nI - por anotação em documento próprio;\nII - por registro em talão eletrônico, atendido o procedimento deﬁnido pelo órgão máximo\nexecutivo de trânsito da União; ou\nIII - por re",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9262022.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "contran-resolucao-2026-1031",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "ais que, em conjunto, comprovem a situação do condutor.\n§ 2º Os sinais de alteração da capacidade psicomotora deverão ser descritos no auto de\ninfração ou em termo especíﬁco que contenha as informações mínimas indicadas no Anexo II, o qual\ndeverá acompanhar o auto de infração.\n\nCAPÍTULO VII\nDA INFRAÇÃO ADMINISTRATIVA\nArt. 8º A infração prevista no art. 165 do CTB será caracterizada por:\nI - teste de etilômetro com medição realizada igual ou superior a 0,05 miligrama de álcool por\nlitro de ar alveolar expirado (0,05 mg/L), da qual deve ser descontado o erro máximo admissível nos\ntermos da \"Tabela de Valores Referenciais para Etilômetro\" constante no Anexo I;\nII - teste em aparelho destinado à veriﬁcação da presença de outras substâncias psicoativas que\napresente resultado qualitativo positivo; e\nIII - sinais de alteração da capacidade psicomotora obtidos na forma do art. 7º.\n§ 1º Serão aplicadas as penalidades e medidas administrativas previstas no art. 165-A do CTB ao\ncondutor que recusar a se submeter a qualquer um dos procedimentos previsto",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "senatran-portaria-2024-423",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": "rmações mínimas que\ndevem compor o Auto de Infração de Trânsito (AIT).\nArt. 2º O Anexo IV - Tabela de Códigos de Enquadramentos das Infrações, da Portaria\nSENATRAN nº 354, de 2022, passa a vigorar com as alterações constantes no Anexo.\nArt. 3º Ficam criados os códigos referentes às seguintes infrações previstas no Código de\nTrânsito Brasileiro:\nI- art. 165-B, caput: 7790-0;\nII- art. 165-B combinado com o parágrafo único:7803-0;\nIII- art. 165-C: 7811-0; e\nIV- art. 165-D: 7820-0.\nArt. 4º Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nANEXO\nCÓDIGODESDOB.DESCRIÇÃO DA INFRAÇÃO(RESUMIDA) AMPAROCTB INFRATORGRAVIDADEÓRGÃOCOMPETENTE\n7790 0 Dirigir veículo sem realizar oexame toxicológico previstono art. 148-A do CTB.\nArt. 165-B,caput. Condutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7803 0 Dirigir veículo sem realizar oexame toxicológico previsto§ 2º do art. 148-A do CTB.\nArt. 165-Bc/c oparágrafoúnico.\nCondutor 7 - Gravíss\n5x\nESTAD/MUNIC\n/RODOV\n7811 0\nDirigir veículo tendo obtidoresultado positivo no exametoxicológico previst",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4232024.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "senatran-portaria-2024-433",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": ", com o dístico \"Veículo em Teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 11. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 244, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro\nArt. 12. Os veículos de que trata esta Portaria estarão proibidos de prosseguir transitando caso o\nProjeto BEV não seja aprovado ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 13. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2024/Portaria4332024.pdf"
+    },
+    {
+      "infractionCode": "757-92",
+      "actId": "senatran-portaria-2026-571",
+      "relationKind": "DIRECT_CTB_ARTICLE_REFERENCE",
+      "evidence": ", com o dístico \"Veículo em teste\", em preto,\nsendo que, em caso de veículo de carroçaria pintada na cor branca, as cores aqui indicadas devem ser\ninvertidas.\nArt. 13. Esta Portaria poderá ser revogada a qualquer tempo se identiﬁcado o não cumprimento\ndos requisitos que geraram essa autorização ou caso seja cometida uma das infrações previstas nos arts.\n162, 165, 165-A, 165-B, 165-C, 166, 173, 174, 175, 176, 177, 187, 191, 195, 202, 203, 209, 209-A, 210, 218, 230,\nincisos II, III, V e XXIII, 231, incisos IV, V, VI, VII, VIII, X, 235, 237, 252, inciso III, 253 ou 253-A, do Código de\nTrânsito Brasileiro.\nArt. 14. As CEVCs de que trata esta Portaria estarão proibidas de prosseguir transitando caso não\nseja aprovada ou indique a inviabilidade de sua circulação em vias públicas.\nArt. 15. Esta Portaria entra em vigor na data de sua publicação.\nADRUALDO DE LIMA CATÃO\nEste conteúdo não substitui o publicado na versão certiﬁcada.",
+      "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria5712026.pdf"
+    },
+    {
+      "infractionCode": "757-92",
       "actId": "contran-resolucao-2022-985",
       "relationKind": "EXPLICIT_MBFT_REFERENCE",
       "evidence": "Referência normativa explícita localizada na ficha MBFT ou em sua fonte: RESOLUÇÃO 985/2022.",
@@ -9217,6 +9469,6 @@
       "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/Resolucao9852022.pdf"
     }
   ],
-  "contentSha256": "FECEB4F609F89AD866CC652CBAE34D78477ACBD9A8AE3D7A1B997DE378080F13",
-  "version": "2026-10-15-infraction-norm-links-feceb4f609f8"
+  "contentSha256": "09BF49AC24C278036599AB5B905E7E9A9969E8D804F5121ED2707F5159564E03",
+  "version": "2026-10-17-infraction-norm-links-09bf49ac24c2"
 }

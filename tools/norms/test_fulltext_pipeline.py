@@ -3,6 +3,9 @@ import unittest
 from fulltext_pipeline import (
     direct_ctb_article_evidence,
     evidence_matches_infraction_subdivision,
+    inactive,
+    extraction_failure_category,
+    unaccepted_extraction_failures,
 )
 
 
@@ -13,6 +16,20 @@ class DirectCtbEvidenceTest(unittest.TestCase):
         for articles, _ in direct_ctb_article_evidence(text):
             result.update(articles)
         return result
+
+    def test_suspended_act_is_inactive(self) -> None:
+        self.assertTrue(
+            inactive(
+                {
+                    "status": (
+                        "Suspensa por Tempo Indeterminado pela Deliberação 170"
+                    )
+                }
+            )
+        )
+
+    def test_active_act_is_not_inactive(self) -> None:
+        self.assertFalse(inactive({"status": "Em vigor"}))
 
     def test_accepts_direct_ctb_article(self) -> None:
         self.assertEqual(
@@ -63,6 +80,44 @@ class DirectCtbEvidenceTest(unittest.TestCase):
             evidence_matches_infraction_subdivision(record, evidence)
         )
 
+
+    def test_index_only_failure_is_distinguished_from_extraction_error(self) -> None:
+        act = {
+            "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026",
+            "sourcePageUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026",
+        }
+        self.assertEqual(
+            "INDEX_ONLY_NO_DOCUMENT_URL",
+            extraction_failure_category(
+                act,
+                "unsupported document type: unknown",
+            ),
+        )
+
+    def test_legacy_doc_failure_is_classified_separately(self) -> None:
+        act = {
+            "officialUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/arquivo.doc",
+            "sourcePageUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/resolucoes",
+        }
+        self.assertEqual(
+            "LEGACY_DOC_EXTRACTION_FAILURE",
+            extraction_failure_category(
+                act,
+                "antiword returned non-zero exit status 1",
+            ),
+        )
+
+    def test_only_documented_fulltext_failure_categories_are_accepted(self) -> None:
+        failures = [
+            {"actId": "legacy", "category": "LEGACY_DOC_EXTRACTION_FAILURE"},
+            {"actId": "index-only", "category": "INDEX_ONLY_NO_DOCUMENT_URL"},
+            {"actId": "unexpected", "category": "EXTRACTION_FAILURE"},
+        ]
+
+        self.assertEqual(
+            [{"actId": "unexpected", "category": "EXTRACTION_FAILURE"}],
+            unaccepted_extraction_failures(failures),
+        )
 
     def test_common_word_after_comma_is_not_parsed_as_inciso(self) -> None:
         record = {"article": "Art. 162, I."}

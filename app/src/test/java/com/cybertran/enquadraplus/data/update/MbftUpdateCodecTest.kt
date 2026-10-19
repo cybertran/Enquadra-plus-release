@@ -76,52 +76,61 @@ class MbftUpdateCodecTest {
     }
 
     @Test
-    fun resolution1031ProducesExpectedFourAuditedSheetsAndRemovesLegacyRefusalCode() {
+    fun productionDatasetAlreadyContainsResolution1031AndRejectsReapplication() {
         val active = MbftUpdateCodec.parse(readAsset("mbft/infractions.json"))
+        MbftUpdateCodec.validate(active).requireValid("fixture MBFT")
         val registry = MbftUpdateCodec.parseRegistry(
             readAsset(MbftUpdateCodec.REGISTRY_ASSET_PATH),
         )
         val patch = requireNotNull(MbftUpdateCodec.findPatch(registry, 1031, 2026))
-        val candidate = MbftUpdateCodec.applyPatch(
-            active = active,
-            patch = patch,
-            checkedAt = "2026-10-17",
-            legalDate = "2026-10-17",
-            resolutionFetch = fakeFetch(
-                patch.officialUrl,
-                patch.expectedSha256,
-            ),
-        )
 
-        val byCode = candidate.records.associateBy(MbftUpdateRecord::code)
-        val activeCodes = active.records.map(MbftUpdateRecord::code).toSet()
-        val expectedCandidateCodes =
-            (activeCodes - patch.removeCodes.toSet()) + patch.upserts.map(MbftUpdateRecord::code)
-        assertEquals(expectedCandidateCodes, byCode.keys)
-        assertEquals(expectedCandidateCodes.size, candidate.recordCount)
+        val byCode = active.records.associateBy(MbftUpdateRecord::code)
         assertFalse("757-90" in byCode)
         listOf("516-91", "516-92", "757-91", "757-92").forEach { code ->
-            assertEquals("VERIFIED", byCode.getValue(code).status)
+            val record = byCode.getValue(code)
+            assertEquals("SOURCE_CONFLICT", record.status)
+            assertTrue(record.sourceConflicts.isNotEmpty())
+            assertEquals("SOURCE_CONFLICT", record.verification?.state)
+        }
+        assertTrue(
+            active.appliedAmendments
+                .mapNotNull(MbftUpdateCodec::amendmentKey)
+                .contains(1031 to 2026),
+        )
+
+        patch.upserts.forEach { expected ->
+            val actual = byCode.getValue(expected.code)
+            val actualSourcesById = actual.sources.associateBy(MbftSourceRecord::id)
+            val normalizedExpected = expected.copy(
+                sources = expected.sources.map { source ->
+                    source.copy(
+                        lastCheckedAt = actualSourcesById
+                            .getValue(source.id)
+                            .lastCheckedAt,
+                    )
+                },
+            )
+            val normalizedActual = actual.copy(
+                status = "VERIFIED",
+                sourceConflicts = emptyList(),
+                verification = null,
+            )
+            assertEquals(normalizedExpected.toMap(), normalizedActual.toMap())
+            assertTrue(actual.sources.all { it.lastCheckedAt == active.verifiedAt })
         }
 
-        val diff = MbftUpdateCodec.diff(active, candidate)
-        val upsertCodes = patch.upserts.map(MbftUpdateRecord::code).toSet()
-        assertEquals(upsertCodes.count { it !in activeCodes }, diff.added)
-        assertEquals(
-            patch.removeCodes.count { it in activeCodes && it !in upsertCodes },
-            diff.removed,
-        )
-        assertTrue(diff.changed <= patch.upserts.size)
-        assertTrue(candidate.appliedAmendments.contains(patch.resolution))
-
-        val relations = InfractionRelationsUpdateCodec.build(candidate)
-        InfractionRelationsUpdateCodec.validate(relations, candidate)
-            .requireValid("relações 1031")
-        assertEquals(candidate.version, relations.mbftVersion)
-        assertTrue(
-            InfractionRelationsUpdateCodec.unresolvedReferenceCount(candidate) <=
-                InfractionRelationsUpdateCodec.unresolvedReferenceCount(active),
-        )
+        assertThrows(IllegalArgumentException::class.java) {
+            MbftUpdateCodec.applyPatch(
+                active = active,
+                patch = patch,
+                checkedAt = "2026-10-17",
+                legalDate = "2026-10-17",
+                resolutionFetch = fakeFetch(
+                    patch.officialUrl,
+                    patch.expectedSha256,
+                ),
+            )
+        }
     }
 
     @Test

@@ -58,6 +58,19 @@ class InfractionsViewModel(
                 initialValue = emptyList(),
             )
 
+    val recentInfractions =
+        combine(
+            repository.observeAll(),
+            recentViews,
+        ) { allInfractions, history ->
+            val byCode = allInfractions.associateBy { it.code }
+            history.mapNotNull { entry -> byCode[entry.code] }
+        }.stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = emptyList(),
+        )
+
     private val listContext =
         combine(
             baseResults,
