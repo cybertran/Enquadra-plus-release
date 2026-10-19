@@ -19,7 +19,7 @@ A chave privada oficial de assinatura do Enquadra+ e sua senha nunca são armaze
 Fingerprint SHA-256 do certificado oficial:
 
 ```text
-BE:58:EA:ED:F7:AD:76:B6:5F:75:FC:08:6A:DC:71:89:E4:91:A7:25:67:B5:8E:E7:BB:E3:EA:DA:3A:2C:93:A9
+50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18
 ```
 
 Esse fingerprint é público e serve para verificar a identidade de uma build. Ele não permite reconstruir a chave privada.
