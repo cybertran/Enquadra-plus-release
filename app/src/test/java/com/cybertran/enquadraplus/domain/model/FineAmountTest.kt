@@ -19,6 +19,25 @@ class FineAmountTest {
     }
 
     @Test
+    fun auditedNumericMultiplierFormatsAreRecognized() {
+        val cases = listOf(
+            "Multa (3X)" to "R$ 880,41 (3x)",
+            "Multa (3x)" to "R$ 880,41 (3x)",
+            "Multa (10 vezes)" to "R$ 2.934,70 (10x)",
+            "Multa (20X)" to "R$ 5.869,40 (20x)",
+            "Multa (60X)" to "R$ 17.608,20 (60x)",
+        )
+
+        cases.forEach { (penalty, expected) ->
+            val display = infraction(
+                InfractionClassification.VERY_SERIOUS,
+                penalty,
+            ).fineAmountDisplay()
+            assertEquals(expected, display?.value)
+        }
+    }
+
+    @Test
     fun wordMultiplierIsRecognized() {
         val display = infraction(
             InfractionClassification.VERY_SERIOUS,

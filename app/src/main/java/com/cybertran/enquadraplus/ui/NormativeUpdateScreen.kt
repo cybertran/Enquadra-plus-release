@@ -135,7 +135,7 @@ private fun DatasetUpdateCard(
 
             state.lastCheckedAt?.let {
                 Text(
-                    text = "Última verificação: $it",
+                    text = "${checkTimestampLabel(state.status)}: ${formatUpdateDate(it)}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -226,7 +226,7 @@ private fun statusLabel(status: UpdateStatus): String =
         UpdateStatus.ROLLING_BACK -> "Restaurando versão anterior…"
         UpdateStatus.ROLLED_BACK -> "Versão anterior restaurada"
         UpdateStatus.PROTECTED -> "Base atual preservada"
-        UpdateStatus.SOURCE_UNAVAILABLE -> "Não foi possível verificar"
+        UpdateStatus.SOURCE_UNAVAILABLE -> "Não foi possível concluir a verificação"
         UpdateStatus.ERROR -> "Erro durante a verificação"
     }
 
@@ -249,8 +249,31 @@ private fun userFacingMessage(status: UpdateStatus): String? =
         UpdateStatus.PROTECTED ->
             "A base atual foi mantida por segurança."
         UpdateStatus.SOURCE_UNAVAILABLE ->
-            "A fonte oficial não pôde ser consultada. Não é possível saber se existe atualização neste momento; a base atual foi preservada."
+            "A consulta à fonte oficial não foi concluída. Por isso, não é possível determinar se há atualização disponível neste momento. A base instalada foi mantida sem alterações."
         UpdateStatus.ERROR ->
             "O processo de verificação falhou antes de terminar. A base atual foi preservada."
         else -> null
     }
+
+private fun checkTimestampLabel(status: UpdateStatus): String =
+    when (status) {
+        UpdateStatus.SOURCE_UNAVAILABLE,
+        UpdateStatus.ERROR -> "Última tentativa"
+
+        else -> "Última verificação"
+    }
+
+private fun formatUpdateDate(value: String): String {
+    val date = value.take(10)
+    val parts = date.split("-")
+    return if (
+        parts.size == 3 &&
+        parts[0].length == 4 &&
+        parts[1].length == 2 &&
+        parts[2].length == 2
+    ) {
+        "${parts[2]}/${parts[1]}/${parts[0]}"
+    } else {
+        value
+    }
+}

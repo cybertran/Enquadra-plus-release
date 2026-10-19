@@ -20,6 +20,7 @@ data class TrafficInfraction(
     val whenNotToCite: List<String>,
     val definitionsAndProcedures: List<String>,
     val aitOfficialObservations: List<String>,
+    val sourceConflicts: List<String> = emptyList(),
     val relatedCodes: List<String>,
     val relatedInfractions: List<RelatedInfractionReference>,
     val sources: List<OfficialSourceReference>,
@@ -28,6 +29,8 @@ data class TrafficInfraction(
 enum class InfractionContentStatus {
     VERIFIED,
     PARTIAL_VALIDATION,
+    MANUAL_REVIEW_REQUIRED,
+    SOURCE_CONFLICT,
 }
 
 enum class InfractionClassification {

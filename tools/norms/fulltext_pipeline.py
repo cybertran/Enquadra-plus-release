@@ -14,6 +14,7 @@ import subprocess
 import tempfile
 import time
 import zipfile
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -26,6 +27,21 @@ from striprtf.striprtf import rtf_to_text
 ALLOWED_HOSTS = {"gov.br", "www.gov.br"}
 ALLOWED_PATH_PREFIX = "/transportes/pt-br/assuntos/transito/"
 MAX_DOCUMENT_BYTES = 40 * 1024 * 1024
+
+ACCEPTED_EXTRACTION_FAILURE_CATEGORIES = {
+    "LEGACY_DOC_EXTRACTION_FAILURE",
+    "INDEX_ONLY_NO_DOCUMENT_URL",
+}
+
+
+def unaccepted_extraction_failures(
+    failures: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    return [
+        item
+        for item in failures
+        if item.get("category") not in ACCEPTED_EXTRACTION_FAILURE_CATEGORIES
+    ]
 REQUEST_TIMEOUT = 45
 MAX_RETRIES = 3
 CHUNK_SIZE = 250
@@ -43,7 +59,7 @@ ARTICLE_LIST_RE = re.compile(
     r"((?:\d{1,3}\s*(?:,|e|a|até)\s*)+\d{1,3})"
 )
 INACTIVE_STATUS_RE = re.compile(
-    r"(?i)\b(revogad[ao]|sem\s+efeito|cancelad[ao])\b"
+    r"(?i)\b(revogad[ao]|sem\s+efeito|cancelad[ao]|suspens[ao])\b"
 )
 CTB_CONTEXT_RE = re.compile(
     r"(?i)(CTB|C[oó]digo\s+de\s+Tr[aâ]nsito\s+Brasileiro|Lei\s+n[ºo.]?\s*9[.]503)"
@@ -208,6 +224,27 @@ def extract_zip(data: bytes) -> tuple[str, int | None]:
             except Exception:
                 continue
     return normalize_text("\n\n".join(texts)), page_count or None
+
+
+def extraction_failure_category(
+    record: dict[str, Any],
+    error: str,
+) -> str:
+    url = str(record.get("officialUrl") or "")
+    source_page = str(record.get("sourcePageUrl") or "")
+    suffix = Path(urlparse(url).path).suffix.lower()
+
+    if (
+        "unsupported document type" in error
+        and url
+        and source_page
+        and url == source_page
+        and not suffix
+    ):
+        return "INDEX_ONLY_NO_DOCUMENT_URL"
+    if suffix == ".doc":
+        return "LEGACY_DOC_EXTRACTION_FAILURE"
+    return "EXTRACTION_FAILURE"
 
 
 def extract_act(record: dict[str, Any]) -> ExtractedAct:
@@ -648,11 +685,22 @@ def build(args: argparse.Namespace) -> int:
         encoding="utf-8",
     )
 
+    acts_by_id = {str(act["id"]): act for act in acts}
     failures = [
-        {"actId": item.act_id, "error": item.error}
+        {
+            "actId": item.act_id,
+            "category": extraction_failure_category(
+                acts_by_id[item.act_id],
+                str(item.error),
+            ),
+            "error": item.error,
+        }
         for item in extracted
         if item.error
     ]
+    failure_category_counts = dict(sorted(Counter(
+        item["category"] for item in failures
+    ).items()))
     pdf_act_ids = {
         str(act["id"])
         for act in acts
@@ -677,6 +725,7 @@ def build(args: argparse.Namespace) -> int:
         "actCount": len(acts),
         "extractedCount": manifest["recordCount"],
         "failureCount": len(failures),
+        "failureCategoryCounts": failure_category_counts,
         "coverage": round(manifest["recordCount"] / max(len(acts), 1), 6),
         "pdfActCount": len(pdf_act_ids),
         "pdfExtractedCount": pdf_extracted_count,
@@ -715,6 +764,17 @@ def validate(args: argparse.Namespace) -> int:
         errors.append("not every official PDF has extractable full text")
     if report.get("pdfCoverage") != 1.0:
         errors.append("official PDF full-text coverage must be 100%")
+    unaccepted_failures = unaccepted_extraction_failures(
+        report.get("failures", [])
+    )
+    if unaccepted_failures:
+        errors.append(
+            "unclassified full-text extraction failures: "
+            + ", ".join(
+                str(item.get("actId") or "UNKNOWN")
+                for item in unaccepted_failures[:10]
+            )
+        )
     if manifest["recordCount"] != report["extractedCount"]:
         errors.append("manifest/report record count mismatch")
     if links["recordCount"] != len(links["records"]):

@@ -1,6 +1,6 @@
 {
   "document": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
-  "lastCheckedAt": "2026-10-13",
+  "lastCheckedAt": "2026-10-17",
   "officialIndexUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-Senatran/resolucoes-contran",
   "base": {
     "resolution": "Resolução CONTRAN nº 985/2022",
@@ -57,9 +57,12 @@
       "extractionMode": "MANUAL_PATCH"
     },
     {
-      "resolution": "Resolução CONTRAN nº 1031/2026",
-      "status": "FUTURE_PATCH",
-      "effectiveRule": "Alteração do Anexo da Resolução 985/2022 entra em vigor 60 dias após a publicação de 18/08/2026."
+      "resolution": "Resolução CONTRAN nº 1.031/2026",
+      "status": "PATCH_REQUIRED",
+      "fileKey": "1031",
+      "effectiveFrom": "2026-10-17",
+      "sourceUrl": "https://www.gov.br/transportes/pt-br/assuntos/transito/conteudo-contran/resolucoes/resolucao10312026.pdf",
+      "extractionMode": "MANUAL_PATCH"
     }
   ]
 }

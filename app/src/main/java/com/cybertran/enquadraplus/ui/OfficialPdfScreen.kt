@@ -278,12 +278,10 @@ private fun loadOfficialPdfPage(
         val safeIndex = requestedPageIndex.coerceIn(0, renderer.pageCount - 1)
         val page = renderer.openPage(safeIndex)
         try {
-            val targetWidth = minOf(PDF_RENDER_WIDTH, page.width.coerceAtLeast(1) * 2)
-            val targetHeight = (
-                page.height.toDouble() *
-                    targetWidth.toDouble() /
-                    page.width.coerceAtLeast(1).toDouble()
-                ).toInt().coerceAtLeast(1)
+            val (targetWidth, targetHeight) = calculatePdfRenderSize(
+                pageWidth = page.width,
+                pageHeight = page.height,
+            )
             val bitmap = Bitmap.createBitmap(
                 targetWidth,
                 targetHeight,
@@ -308,6 +306,35 @@ private fun loadOfficialPdfPage(
         renderer.close()
         descriptor.close()
     }
+}
+
+internal fun calculatePdfRenderSize(
+    pageWidth: Int,
+    pageHeight: Int,
+): Pair<Int, Int> {
+    require(pageWidth > 0 && pageHeight > 0) {
+        "Dimensões inválidas no PDF oficial."
+    }
+
+    val targetWidth = minOf(
+        PDF_RENDER_WIDTH.toLong(),
+        pageWidth.toLong() * 2L,
+    ).toInt()
+    val targetHeight = (
+        pageHeight.toDouble() *
+            targetWidth.toDouble() /
+            pageWidth.toDouble()
+        ).toInt().coerceAtLeast(1)
+
+    require(
+        targetWidth <= MAX_PDF_RENDER_DIMENSION &&
+            targetHeight <= MAX_PDF_RENDER_DIMENSION &&
+            targetWidth.toLong() * targetHeight.toLong() <= MAX_PDF_RENDER_PIXELS,
+    ) {
+        "Página do PDF oficial excede o limite seguro de renderização."
+    }
+
+    return targetWidth to targetHeight
 }
 
 private fun cachedOfficialPdf(
@@ -349,6 +376,12 @@ private fun cachedOfficialPdf(
 
             require(status in 200..299) {
                 "Fonte oficial respondeu HTTP $status."
+            }
+
+            val contentType = connection.contentType.orEmpty()
+            val mediaType = contentType.substringBefore(';').trim().lowercase()
+            require(mediaType == "application/pdf") {
+                "Fonte oficial retornou tipo de conteúdo inesperado: $contentType"
             }
 
             val declaredLength = connection.contentLengthLong
@@ -442,6 +475,8 @@ private fun sha256(value: String): String =
 
 private const val OFFICIAL_PDF_CACHE_DIR = "official-pdfs"
 private const val PDF_RENDER_WIDTH = 1200
+private const val MAX_PDF_RENDER_DIMENSION = 10_000
+private const val MAX_PDF_RENDER_PIXELS = 16_000_000L
 private const val MAX_PDF_BYTES = 50L * 1024L * 1024L
 private const val MAX_REDIRECTS = 3
 private const val CONNECT_TIMEOUT_MS = 15_000

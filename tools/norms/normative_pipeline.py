@@ -186,6 +186,39 @@ def normalize_href(page_url: str, href: str | None) -> str:
     return target
 
 
+def has_mismatched_portaria_document(
+    url: str,
+    number: int,
+    year: int,
+) -> bool:
+    filename = urllib.parse.urlparse(url).path.rsplit("/", 1)[-1]
+    match = re.search(
+        r"portaria[_-]?(\d+)[_-]?(\d{4})\.pdf$",
+        filename,
+        re.IGNORECASE,
+    )
+    return bool(
+        match
+        and (int(match.group(1)), int(match.group(2))) != (number, year)
+    )
+
+
+def normalize_portaria_href(
+    page_url: str,
+    href: str | None,
+    number: int,
+    year: int,
+) -> str:
+    """Reject an index link that points to a different Portaria document."""
+    target = normalize_href(page_url, href)
+    if target == page_url:
+        return page_url
+
+    if has_mismatched_portaria_document(target, number, year):
+        return page_url
+    return target
+
+
 def unique_id(
     agency: str,
     act_type: str,
@@ -332,7 +365,12 @@ def parse_senatran(page: SourcePage, source_html: str, checked_at: str) -> list[
                 "publicationDate": publication_date.text or None,
                 "subject": subject.text,
                 "status": observation.text if observation.text not in {"", "--"} else None,
-                "officialUrl": normalize_href(page.url, number_label.href),
+                "officialUrl": normalize_portaria_href(
+                    page.url,
+                    number_label.href,
+                    number,
+                    page.year,
+                ),
                 "sourcePageUrl": page.url,
                 "lastCheckedAt": checked_at,
             }
@@ -448,6 +486,19 @@ def validate_dataset(dataset: dict[str, Any]) -> list[str]:
             validate_source_url(str(record.get("officialUrl") or ""))
         except ValueError as exc:
             errors.append(f"{record.get('id')}: {exc}")
+        if (
+            record.get("agency") == "SENATRAN"
+            and record.get("actType") == "PORTARIA"
+            and has_mismatched_portaria_document(
+                str(record.get("officialUrl") or ""),
+                int(record.get("number") or 0),
+                int(record.get("year") or 0),
+            )
+        ):
+            errors.append(
+                f"{record.get('id')}: documento da Portaria não corresponde "
+                "ao número/ano do ato."
+            )
 
     content_digest = canonical_hash(records)
     declared_digest = str(dataset.get("contentSha256") or "")

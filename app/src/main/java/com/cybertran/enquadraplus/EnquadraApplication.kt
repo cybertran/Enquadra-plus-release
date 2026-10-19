@@ -30,8 +30,8 @@ class EnquadraApplication : Application() {
                 onError = { phase, error ->
                     Log.e(
                         TAG,
-                        "Startup phase failed without terminating the app: $phase",
-                        error,
+                        "Startup phase failed without terminating the app: " +
+                            "$phase (${error::class.java.simpleName})",
                     )
                 },
             )

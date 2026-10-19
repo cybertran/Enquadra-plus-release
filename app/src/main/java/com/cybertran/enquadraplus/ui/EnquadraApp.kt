@@ -2,6 +2,7 @@ package com.cybertran.enquadraplus.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.PaddingValues
@@ -10,8 +11,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.Button
@@ -32,6 +35,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -42,12 +46,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.cybertran.enquadraplus.data.update.DatasetUpdateState
+import com.cybertran.enquadraplus.data.update.UpdateStatus
 import com.cybertran.enquadraplus.domain.model.InfractionClassification
 import com.cybertran.enquadraplus.domain.model.InfractionFilters
 import com.cybertran.enquadraplus.domain.model.InfractionListMode
@@ -57,6 +64,7 @@ import com.cybertran.enquadraplus.domain.model.InfractionNormativeLink
 import com.cybertran.enquadraplus.domain.model.TrafficInfraction
 import com.cybertran.enquadraplus.domain.model.fineAmountDisplay
 import com.cybertran.enquadraplus.ui.infractions.InfractionsViewModel
+import com.cybertran.enquadraplus.ui.update.UpdateViewModel
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlinx.coroutines.launch
@@ -329,9 +337,17 @@ fun EnquadraApp(
                     when (destination) {
                         TopDestination.HOME -> HomeScreen(
                             contentPadding = innerPadding,
-                            onOpenInfractions = { destination = TopDestination.INFRACTIONS },
+                            viewModel = infractionsViewModel,
+                            onOpenInfractions = { mode ->
+                                infractionsViewModel.updateQuery("")
+                                infractionsViewModel.setListMode(mode)
+                                destination = TopDestination.INFRACTIONS
+                            },
+                            onOpenInfraction = infractionsViewModel::open,
                             onOpenNorms = { destination = TopDestination.NORMS },
-                            onOpenTools = { destination = TopDestination.TOOLS },
+                            onOpenUpdates = {
+                                toolDestination = ToolDestination.NORMATIVE_UPDATES
+                            },
                         )
                         TopDestination.INFRACTIONS -> InfractionsScreen(
                             contentPadding = innerPadding,
@@ -363,10 +379,18 @@ fun EnquadraApp(
 @Composable
 private fun HomeScreen(
     contentPadding: PaddingValues,
-    onOpenInfractions: () -> Unit,
+    viewModel: InfractionsViewModel,
+    onOpenInfractions: (InfractionListMode) -> Unit,
+    onOpenInfraction: (String) -> Unit,
     onOpenNorms: () -> Unit,
-    onOpenTools: () -> Unit,
+    onOpenUpdates: () -> Unit,
+    updateViewModel: UpdateViewModel = viewModel(),
 ) {
+    val favoriteCodes by viewModel.favoriteCodes.collectAsStateWithLifecycle()
+    val recentInfractions by viewModel.recentInfractions.collectAsStateWithLifecycle()
+    val updateStates by updateViewModel.states.collectAsStateWithLifecycle()
+    val legalStatus = homeLegalStatus(updateStates)
+
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -374,57 +398,72 @@ private fun HomeScreen(
         contentPadding = PaddingValues(bottom = 24.dp),
         verticalArrangement = Arrangement.spacedBy(0.dp),
     ) {
-        item { HomeHero() }
+        item {
+            HomeSection(title = "Consulta rápida") {
+                HomeSearchCard(
+                    onClick = {
+                        onOpenInfractions(InfractionListMode.ALL)
+                    },
+                )
+            }
+        }
 
         item {
-            HomeSection(title = "Acesso rápido") {
-                FlowRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
-                ) {
-                    HomeShortcutCard(
-                        modifier = Modifier.fillMaxWidth(),
-                        symbol = "⌕",
-                        title = "Infrações",
-                        description = "Buscar por código, artigo ou palavra-chave",
-                        onClick = onOpenInfractions,
+            HomeSection(
+                title = "Consultas recentes",
+                actionLabel = if (recentInfractions.isNotEmpty()) "Ver todas" else null,
+                onAction = {
+                    onOpenInfractions(InfractionListMode.RECENT)
+                },
+            ) {
+                if (recentInfractions.isEmpty()) {
+                    HomeEmptyState(
+                        text = "As infrações consultadas recentemente aparecerão aqui.",
                     )
-                    HomeShortcutCard(
-                        modifier = Modifier.fillMaxWidth(0.48f),
-                        symbol = "§",
-                        title = "Normas",
-                        description = "CTB, atos e sinalização",
-                        onClick = onOpenNorms,
-                    )
-                    HomeShortcutCard(
-                        modifier = Modifier.fillMaxWidth(0.48f),
-                        symbol = "⚒",
-                        title = "Ferramentas",
-                        description = "Fiscalização e consultas rápidas",
-                        onClick = onOpenTools,
+                } else {
+                    RecentInfractionsCard(
+                        infractions = recentInfractions.take(HOME_RECENT_LIMIT),
+                        onOpenInfraction = onOpenInfraction,
                     )
                 }
             }
         }
 
         item {
-            Button(
-                onClick = onOpenInfractions,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
-                    .heightIn(min = 54.dp),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = MaterialTheme.colorScheme.onPrimary,
-                ),
-                shape = RoundedCornerShape(12.dp),
-            ) {
-                Text(
-                    text = "Buscar infração",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
+            HomeSection(title = "Favoritos") {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                ) {
+                    HomeCompactCard(
+                        modifier = Modifier.weight(1f),
+                        symbol = "★",
+                        title = "Infrações",
+                        detail = if (favoriteCodes.size == 1) {
+                            "1 salva"
+                        } else {
+                            "${favoriteCodes.size} salvas"
+                        },
+                        onClick = {
+                            onOpenInfractions(InfractionListMode.FAVORITES)
+                        },
+                    )
+                    HomeCompactCard(
+                        modifier = Modifier.weight(1f),
+                        symbol = "§",
+                        title = "Normas",
+                        detail = "Consultar",
+                        onClick = onOpenNorms,
+                    )
+                }
+            }
+        }
+
+        item {
+            HomeSection(title = "Base jurídica") {
+                HomeLegalStatusCard(
+                    status = legalStatus,
+                    onClick = onOpenUpdates,
                 )
             }
         }
@@ -432,90 +471,399 @@ private fun HomeScreen(
 }
 
 @Composable
-private fun HomeHero() {
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        color = MaterialTheme.colorScheme.primary,
-    ) {
-        Column(
-            modifier = Modifier.padding(horizontal = 24.dp, vertical = 26.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
-        ) {
-            Text(
-                text = "Enquadra+",
-                style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onPrimary,
-            )
-            Text(
-                text = "Consulta prática de trânsito.",
-                style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.92f),
-            )
-        }
-    }
-}
-
-@Composable
 private fun HomeSection(
     title: String,
+    actionLabel: String? = null,
+    onAction: (() -> Unit)? = null,
     content: @Composable () -> Unit,
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 18.dp),
+            .padding(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary,
-        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = title,
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary,
+            )
+            if (actionLabel != null && onAction != null) {
+                TextButton(onClick = onAction) {
+                    Text(actionLabel)
+                }
+            }
+        }
         content()
     }
 }
 
 @Composable
-private fun HomeShortcutCard(
-    modifier: Modifier = Modifier,
-    symbol: String,
-    title: String,
-    description: String,
+private fun HomeSearchCard(
     onClick: () -> Unit,
 ) {
     Card(
-        modifier = modifier
-            .heightIn(min = 116.dp)
+        modifier = Modifier
+            .fillMaxWidth()
             .clickable(onClick = onClick),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surface,
         ),
+        shape = RoundedCornerShape(18.dp),
     ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp),
+        Row(
+            modifier = Modifier.padding(horizontal = 18.dp, vertical = 20.dp),
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                text = symbol,
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.secondary,
+                text = "⌕",
+                style = MaterialTheme.typography.headlineSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
-            )
-            Text(
-                text = description,
-                style = MaterialTheme.typography.bodySmall,
+                text = "Código, artigo ou palavra-chave",
+                style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         }
     }
 }
+
+@Composable
+private fun RecentInfractionsCard(
+    infractions: List<TrafficInfraction>,
+    onOpenInfraction: (String) -> Unit,
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
+        shape = RoundedCornerShape(18.dp),
+    ) {
+        infractions.forEachIndexed { index, infraction ->
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onOpenInfraction(infraction.code) }
+                    .padding(horizontal = 18.dp, vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Column(
+                    modifier = Modifier.weight(1f),
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text(
+                        text = "${infraction.code} • ${infraction.shortDescription}",
+                        style = MaterialTheme.typography.titleSmall,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurface,
+                    )
+                    Text(
+                        text = infraction.article,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+                Text(
+                    text = "›",
+                    style = MaterialTheme.typography.headlineSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+
+            if (index < infractions.lastIndex) {
+                HorizontalDivider(
+                    modifier = Modifier.padding(horizontal = 18.dp),
+                    color = MaterialTheme.colorScheme.outlineVariant,
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun HomeCompactCard(
+    modifier: Modifier = Modifier,
+    symbol: String,
+    title: String,
+    detail: String,
+    onClick: () -> Unit,
+) {
+    Card(
+        modifier = modifier.clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
+        shape = RoundedCornerShape(18.dp),
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 12.dp, vertical = 16.dp),
+            horizontalArrangement = Arrangement.spacedBy(9.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Surface(
+                shape = CircleShape,
+                color = MaterialTheme.colorScheme.surfaceVariant,
+            ) {
+                Box(
+                    modifier = Modifier.size(42.dp),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = symbol,
+                        style = MaterialTheme.typography.titleLarge,
+                        color = MaterialTheme.colorScheme.primary,
+                    )
+                }
+            }
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(2.dp),
+            ) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    maxLines = 1,
+                )
+                Text(
+                    text = detail,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                )
+            }
+            Text(
+                text = "›",
+                style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeLegalStatusCard(
+    status: HomeLegalStatus,
+    onClick: () -> Unit,
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
+        shape = RoundedCornerShape(18.dp),
+    ) {
+        Row(
+            modifier = Modifier.padding(horizontal = 18.dp, vertical = 18.dp),
+            horizontalArrangement = Arrangement.spacedBy(14.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Surface(
+                shape = CircleShape,
+                color = status.symbolContainerColor(),
+            ) {
+                Box(
+                    modifier = Modifier.size(46.dp),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(
+                        text = status.symbol,
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = status.symbolColor(),
+                    )
+                }
+            }
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(3.dp),
+            ) {
+                Text(
+                    text = status.title,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MaterialTheme.colorScheme.onSurface,
+                )
+                Text(
+                    text = status.detail,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            Text(
+                text = "›",
+                style = MaterialTheme.typography.headlineSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        }
+    }
+}
+
+@Composable
+private fun HomeLegalStatus.symbolColor() =
+    when (tone) {
+        HomeLegalTone.OK -> MaterialTheme.colorScheme.onTertiaryContainer
+        HomeLegalTone.WARNING -> MaterialTheme.colorScheme.onErrorContainer
+        HomeLegalTone.NEUTRAL -> MaterialTheme.colorScheme.onSecondaryContainer
+    }
+
+@Composable
+private fun HomeLegalStatus.symbolContainerColor() =
+    when (tone) {
+        HomeLegalTone.OK -> MaterialTheme.colorScheme.tertiaryContainer
+        HomeLegalTone.WARNING -> MaterialTheme.colorScheme.errorContainer
+        HomeLegalTone.NEUTRAL -> MaterialTheme.colorScheme.secondaryContainer
+    }
+
+@Composable
+private fun HomeEmptyState(
+    text: String,
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
+        shape = RoundedCornerShape(18.dp),
+    ) {
+        Text(
+            text = text,
+            modifier = Modifier.padding(18.dp),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+private data class HomeLegalStatus(
+    val symbol: String,
+    val title: String,
+    val detail: String,
+    val tone: HomeLegalTone,
+)
+
+private enum class HomeLegalTone {
+    OK,
+    WARNING,
+    NEUTRAL,
+}
+
+private fun homeLegalStatus(
+    states: List<DatasetUpdateState>,
+): HomeLegalStatus {
+    val statusSet = states.map { it.status }.toSet()
+    val activeBase = latestActiveBaseDate(states)?.let { "Base ativa: $it" }
+
+    return when {
+        UpdateStatus.CHECKING in statusSet ||
+            UpdateStatus.APPLYING in statusSet ||
+            UpdateStatus.ROLLING_BACK in statusSet ->
+            HomeLegalStatus(
+                symbol = "…",
+                title = "Verificando bases oficiais",
+                detail = activeBase ?: "Aguarde a conclusão da verificação.",
+                tone = HomeLegalTone.NEUTRAL,
+            )
+
+        UpdateStatus.CANDIDATE_APPROVED in statusSet ->
+            HomeLegalStatus(
+                symbol = "!",
+                title = "Atualização disponível",
+                detail = activeBase ?: "Há uma atualização validada pronta para revisão.",
+                tone = HomeLegalTone.NEUTRAL,
+            )
+
+        statusSet.any {
+            it in setOf(
+                UpdateStatus.CANDIDATE_BLOCKED,
+                UpdateStatus.PROTECTED,
+                UpdateStatus.ERROR,
+            )
+        } ->
+            HomeLegalStatus(
+                symbol = "!",
+                title = "Base jurídica requer atenção",
+                detail = activeBase ?: "Abra os detalhes da base jurídica.",
+                tone = HomeLegalTone.WARNING,
+            )
+
+        UpdateStatus.SOURCE_UNAVAILABLE in statusSet ->
+            HomeLegalStatus(
+                symbol = "✓",
+                title = "Base jurídica instalada",
+                detail = activeBase ?: "A base local foi preservada.",
+                tone = HomeLegalTone.OK,
+            )
+
+        states.isNotEmpty() &&
+            states.all {
+                it.status in setOf(
+                    UpdateStatus.UP_TO_DATE,
+                    UpdateStatus.APPLIED,
+                    UpdateStatus.ROLLED_BACK,
+                )
+            } ->
+            HomeLegalStatus(
+                symbol = "✓",
+                title = "Conteúdo atualizado",
+                detail = activeBase ?: "Bases oficiais validadas localmente.",
+                tone = HomeLegalTone.OK,
+            )
+
+        else ->
+            HomeLegalStatus(
+                symbol = "✓",
+                title = "Base jurídica instalada",
+                detail = activeBase ?: "Toque para verificar atualizações e fontes.",
+                tone = HomeLegalTone.OK,
+            )
+    }
+}
+
+private fun latestActiveBaseDate(
+    states: List<DatasetUpdateState>,
+): String? =
+    states
+        .mapNotNull { state ->
+            Regex("""^(\d{4}-\d{2}-\d{2})""")
+                .find(state.activeVersion.orEmpty())
+                ?.groupValues
+                ?.getOrNull(1)
+        }
+        .maxOrNull()
+        ?.let(::formatHomeDate)
+
+private fun formatHomeDate(
+    value: String,
+): String {
+    val date = value.take(10)
+    val parts = date.split("-")
+    return if (
+        parts.size == 3 &&
+        parts[0].length == 4 &&
+        parts[1].length == 2 &&
+        parts[2].length == 2
+    ) {
+        "${parts[2]}/${parts[1]}/${parts[0]}"
+    } else {
+        value
+    }
+}
+
+private const val HOME_RECENT_LIMIT = 3
 
 @Composable
 private fun InfractionsScreen(
@@ -816,6 +1164,39 @@ private fun InfractionDetailScreen(
                     }
                 }
 
+                if (infraction.contentStatus == InfractionContentStatus.MANUAL_REVIEW_REQUIRED) {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Text(
+                            modifier = Modifier.padding(16.dp),
+                            text = "Revisão manual obrigatória: o layout oficial desta ficha não pôde ser interpretado com confiança suficiente. Não use os campos operacionais sem conferir a fonte oficial.",
+                            style = MaterialTheme.typography.bodyMedium,
+                        )
+                    }
+                }
+
+                if (infraction.contentStatus == InfractionContentStatus.SOURCE_CONFLICT) {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(6.dp),
+                        ) {
+                            Text(
+                                text = "Conflito entre fontes oficiais",
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Bold,
+                            )
+                            Text(
+                                text = "A informação abaixo possui divergência documentada entre fontes oficiais. Confira as referências antes de adotar providência operacional.",
+                                style = MaterialTheme.typography.bodyMedium,
+                            )
+                        }
+                    }
+                }
+
                 Text(
                     text = infraction.article,
                     style = MaterialTheme.typography.titleLarge,
@@ -857,6 +1238,15 @@ private fun InfractionDetailScreen(
                 TextSection(
                     "Exemplos oficiais do campo de observações do AIT",
                     infraction.aitOfficialObservations,
+                )
+            }
+        }
+
+        if (infraction.sourceConflicts.isNotEmpty()) {
+            item {
+                TextSection(
+                    "Conflito entre fontes oficiais",
+                    infraction.sourceConflicts,
                 )
             }
         }

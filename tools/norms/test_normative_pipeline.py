@@ -9,6 +9,7 @@ from tools.norms.normative_pipeline import (
     parse_contran_deliberations,
     parse_senatran,
     parse_year,
+    validate_dataset,
     validate_source_url,
 )
 
@@ -92,6 +93,68 @@ class NormativePipelineTest(unittest.TestCase):
         self.assertEqual(records[0]["id"], "senatran-portaria-2022-354")
         self.assertEqual(records[0]["year"], 2022)
         self.assertEqual(records[0]["status"], "Em vigor")
+
+    def test_rejects_mismatched_senatran_document_link(self) -> None:
+        source = """
+        <table>
+          <tr><th>Portaria</th><th>Publicação</th><th>Assunto</th><th>Observação</th></tr>
+          <tr>
+            <td><a href="/transportes/pt-br/assuntos/transito/arquivos-senatran/portarias/2026/portaria8582026.pdf">862</a></td>
+            <td>16/10/2026</td>
+            <td>Integra município ao Sistema Nacional de Trânsito.</td>
+            <td>--</td>
+          </tr>
+        </table>
+        """
+        page = SourcePage(
+            agency="SENATRAN",
+            act_type="PORTARIA",
+            url="https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/portarias-2026",
+            year=2026,
+        )
+
+        records = parse_senatran(page, source, "2026-10-17")
+
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["number"], 862)
+        self.assertEqual(records[0]["officialUrl"], page.url)
+        self.assertEqual(records[0]["sourcePageUrl"], page.url)
+
+    def test_validation_rejects_mismatched_senatran_document_link(self) -> None:
+        dataset = {
+            "verifiedAt": "2026-10-17",
+            "contentSha256": "0" * 64,
+            "records": [
+                {
+                    "id": "senatran-portaria-2026-862",
+                    "agency": "SENATRAN",
+                    "actType": "PORTARIA",
+                    "number": 862,
+                    "numberLabel": "862",
+                    "year": 2026,
+                    "actDate": None,
+                    "publicationDate": "16/10/2026",
+                    "subject": "Integra município ao Sistema Nacional de Trânsito.",
+                    "status": None,
+                    "officialUrl": (
+                        "https://www.gov.br/transportes/pt-br/assuntos/transito/"
+                        "arquivos-senatran/portarias/2026/portaria8582026.pdf"
+                    ),
+                    "sourcePageUrl": (
+                        "https://www.gov.br/transportes/pt-br/assuntos/transito/"
+                        "senatran/portarias-2026"
+                    ),
+                    "lastCheckedAt": "2026-10-17",
+                }
+            ],
+        }
+
+        errors = validate_dataset(dataset)
+
+        self.assertTrue(
+            any("documento da Portaria não corresponde" in error for error in errors),
+            errors,
+        )
 
     def test_rejects_non_official_source(self) -> None:
         with self.assertRaisesRegex(ValueError, "Unsupported official source URL"):

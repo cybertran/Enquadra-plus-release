@@ -1,0 +1,70 @@
+{
+  "resolution": "BASELINE",
+  "removeCodes": [],
+  "recordPatches": {
+    "501-00": {
+      "fields": {
+        "points": null,
+        "administrativeMeasure": "Retenção do veículo até a apresentação de condutor habilitado. (Vide a Parte Geral deste Manual).",
+        "whenToCite": [
+          "Condutor que não possui CNH, PPD ou ACC.",
+          "Condutor que não apresenta a CNH/PPD/ACC, digital ou impressa, com a confirmação, pelo sistema informatizado, de que não é habilitado, devendo o agente exaurir todas as possibilidades de acesso à informação.",
+          "Aprendiz que não possui LADV ou que esteja vencida, conduzindo veículo de aprendizagem, mesmo acompanhado por instrutor.",
+          "Aprendiz conduzindo veículo que não seja de aprendizagem, mesmo possuindo LADV e acompanhado por instrutor.",
+          "Condutor brasileiro residente no exterior e lá habilitado que não comprove que reside naquele país por, no mínimo, 06 meses quando da expedição do documento de habilitação, por meio de atestado, declaração ou certidão da autoridade consular.",
+          "Condutor com documento de habilitação cassado há mais de 02 anos.",
+          "Condutor com CNH/PPD/ACC cancelada.",
+          "Condutor com PPD vencida há mais de 30 dias.",
+          "Condutor com ACC dirigindo veículo para o qual é necessária habilitação de categoria de \"A\" a \"E\".",
+          "Condutor de ciclomotor sem possuir ACC ou CNH categoria A.",
+          "Condutor com ACC vencida há mais de 30 dias.",
+          "Condutor estrangeiro ou brasileiro residente no exterior e lá habilitados, portando documento de habilitação estrangeiro: 12.1. vencida a validade; 12.2. de país não Parte Contratante da Convenção de Viena sobre Trânsito Viário, de 1968, ou que não adote o Princípio da Reciprocidade; 12.3. de categoria diferente da do veículo; 12.4. não original (cópia); 12.5. não acompanhado por documento de identificação válido, expedido pelo país de origem do documento de habilitação; 12.6. sem documento que comprove a data de entrada no Brasil ou saída do país de origem a menos de 180 dias; 12.7. vencido o prazo de 180 dias da entrada no Brasil; 12.8. nas categorias \"D\" e \"E\", com idade inferior a 21 anos; 12.9. com idade inferior a 18 anos.",
+          "Condutor estrangeiro portanto a Permissão Internacional para Dirigir (PID) desacompanhada do documento de habilitação estrangeiro.",
+          "Condutor estrangeiro sem possuir ou portar documento de habilitação estrangeiro."
+        ],
+        "whenNotToCite": [
+          "Condutor com CNH/PPD/ACC cassado até 02 anos ou com suspensão do direito de dirigir, utilizar enquadramento específico: 502-91 ou 502-92, art. 162, II.",
+          "Condutor com CNH ou PPD de categoria diferente da do veículo, utilizar enquadramento específico: 503-71 ou 503-72, art. 162, III.",
+          "Condutor com CNH vencida há mais de 30 dias, utilizar enquadramento específico: 504-50, art. 162, V.",
+          "Condutor conduzindo veículo, descumprindo as restrições impostas na CNH, utilizar enquadramento específico: 505-31 a 505-34, art. 162, VI.",
+          "Condutor que não portar CNH/PPD/ACC ou aprendiz que não porta LADV, utilizar enquadramento específico: 691-20, art. 232.",
+          "Condutor que não possuir os cursos especializados ou específicos obrigatórios, ou que esteja com os cursos especializados vencidos, quando estes sejam obrigatórios, utilizar enquadramento específico: 774-91 ou 774-92, art. 162, VII, conforme o caso.",
+          "Condutor estrangeiro de carreira diplomática ultrapassado o período de 180 dias inserto no item 11.7. do campo “Quando Autuar”."
+        ],
+        "procedures": [
+          "Consultar, sempre que possível, o Renach para verificar a existência e regularidade da CNH/PPD/ACC.",
+          "Caso o condutor não seja o proprietário, utilizar, concomitantemente, enquadramento específico: 506-10, art. 163 c/c art. 162, I ou 511-80, art. 164 c/c art. 162, I.",
+          "Se o condutor gerar perigo de dano (condução do veículo de maneira anormal), adotar providências junto à autoridade competente para registro do crime do art. 309 do CTB.",
+          "Não será reconhecida a habilitação estrangeira do cidadão brasileiro ou estrangeiro que possuir, pendente de cumprimento no Brasil, penalidade de Suspensão do Direito de Dirigir (SDD) ou Cassação da CNH, bem como esteja proibido, por decisão judicial, de obter a Permissão para Dirigir ou a Habilitação, conforme disposto no art. 294 do CTB.",
+          "A Permissão Internacional para Dirigir – PID expedida no Brasil, não substituirá a Carteira Nacional de Habilitação – CNH para condutores residentes e habilitados no Brasil.",
+          "A Permissão Internacional para Dirigir (PID) deverá ser acompanhada do documento de habilitação estrangeiro, desde que expedida por país Parte Contratante da Convenção de Viena sobre Trânsito Viário, de 1968.",
+          "Não é exigível a tradução juramentada e o registro de reconhecimento da habilitação estrangeira junto aos órgãos ou entidades executivos de trânsito dos estados ou do Distrito Federal."
+        ],
+        "aitObservations": [
+          "Condutor não possui CNH ou PPD, conforme consulta aos sistemas.",
+          "CNH cassada há mais de 2 anos.",
+          "Condutor estrangeiro com habilitação de categoria diferente da do veículo.",
+          "Aprendiz conduzindo veículo não destinado à aprendizagem."
+        ]
+      },
+      "verification": {
+        "state": "CORRECTED",
+        "verifiedAt": "2026-10-17",
+        "verifiedAgainstSourceSha256": "5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2",
+        "verifiedSourceDocument": "Manual Brasileiro de Fiscalização de Trânsito - MBFT / Resolução CONTRAN nº 985/2022",
+        "verificationMethod": "MANUAL_FIELD_REVIEW",
+        "reviewRecordId": "baseline-501-review-2026-10-17:501-00",
+        "reviewedFields": [
+          "points",
+          "administrativeMeasure",
+          "whenToCite",
+          "whenNotToCite",
+          "procedures",
+          "aitObservations"
+        ],
+        "reviewReason": "Revisão individual da ficha 501-00 após a correção do parser estrutural. A fonte oficial vigente registra Pontuação: Não Computável e contém conteúdo operacional integral que substitui resumos históricos e o exemplo de AIT corrompido.",
+        "reviewEvidence": "MBFT/Resolução CONTRAN nº 985/2022, ficha 501-00, páginas-fonte 40-42 da extração auditada; SHA-256 5214BC8CFA3C8D1B5ACDE7C34C3C27F2D06EA1BA1589F5BBFAB5AE041E06B1B2. Confirmados: Pontuação Não Computável; medida administrativa Retenção do veículo até a apresentação de condutor habilitado; campos Quando Autuar, Quando NÃO Autuar, Definições e Procedimentos e exemplos do AIT recompostos da tabela oficial, sem a cauda espúria 'possuir'."
+      }
+    }
+  }
+}

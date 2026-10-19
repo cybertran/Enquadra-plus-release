@@ -143,6 +143,7 @@ class SafeDatasetPromoter(
                             addAll(record.whenNotToCite)
                             addAll(record.procedures)
                             addAll(record.aitObservations)
+                            addAll(record.sourceConflicts)
                             addAll(record.related.map { it.code })
                             addAll(record.related.mapNotNull { it.reason })
                         }.joinToString(" "),
@@ -168,6 +169,7 @@ class SafeDatasetPromoter(
                     appendNotes("WHEN_NOT_TO_CITE", record.whenNotToCite)
                     appendNotes("PROCEDURE", record.procedures)
                     appendNotes("AIT_OBSERVATION", record.aitObservations)
+                    appendNotes("SOURCE_CONFLICT", record.sourceConflicts)
                 }
             }
             if (notes.isNotEmpty()) dao.insertNotes(notes)
