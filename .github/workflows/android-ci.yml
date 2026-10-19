@@ -54,9 +54,17 @@ jobs:
           gradle-version: "9.6.0"
           cache-disabled: true
 
+      - name: Verify canonical version state
+        if: steps.detect.outputs.android == 'true'
+        shell: bash
+        run: bash tools/release/verify-version-state.sh
+
       - name: Test, lint and build
         if: steps.detect.outputs.android == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          gradle --no-daemon --stacktrace --warning-mode all             :app:testDebugUnitTest             :app:lintDebug             :app:assembleDebug
+          gradle --no-daemon --stacktrace --warning-mode all \
+            :app:testDebugUnitTest \
+            :app:lintDebug \
+            :app:assembleDebug
