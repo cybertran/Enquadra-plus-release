@@ -38,6 +38,10 @@ jobs:
           gradle-version: "9.6.0"
           cache-disabled: true
 
+      - name: Verify canonical version state
+        shell: bash
+        run: bash tools/release/verify-version-state.sh
+
       - name: Test, lint and build unsigned release
         shell: bash
         run: |
@@ -48,6 +52,7 @@ jobs:
             :app:assembleRelease
           test -f app/build/outputs/apk/release/app-release-unsigned.apk
           cp app/build/outputs/apk/release/app-release-unsigned.apk Enquadra-release-unsigned.apk
+          bash tools/release/verify-version-state.sh Enquadra-release-unsigned.apk
           sha256sum Enquadra-release-unsigned.apk > Enquadra-release-unsigned.apk.sha256
 
       - name: Upload unsigned release candidate
