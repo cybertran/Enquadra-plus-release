@@ -7,7 +7,7 @@ O GitHub Actions pode compilar e validar o aplicativo, mas **não recebe a chave
 Certificado oficial esperado:
 
 ```text
-SHA-256: 50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18
+SHA-256: 36:37:7E:0A:E2:63:B8:ED:79:B2:A9:1F:C4:A4:82:69:34:BC:5B:9D:FB:D4:4E:B7:B9:3D:6F:01:7A:2B:F0:53
 Alias: app-release
 ```
 
@@ -88,3 +88,8 @@ python3 tools/release/verify-app-update-manifest.py
 O manifesto pode ficar atrás da versão do código-fonte enquanto uma candidata ainda não foi publicada. Ele **não pode** ficar à frente do `versionCode` do código público e nunca deve apontar para APK de CI, debug, candidato não assinado ou arquivo de terceiros.
 
 A alteração do manifesto deve ser revisável e passar pelo CI antes de entrar em `main`. Assim, usuários antigos só recebem o aviso depois que o APK oficial realmente existe.
+
+
+## Migração de assinatura na v0.2.0-alpha.10
+
+A v0.2.0-alpha.10 inicia uma nova cadeia de assinatura após a perda da chave privada usada na v0.2.0-alpha.9. Por isso, usuários da alpha.9 precisam desinstalar essa versão e instalar a alpha.10 manualmente uma única vez. A partir da alpha.10, todas as versões oficiais devem preservar o novo certificado acima.
