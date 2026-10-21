@@ -42,6 +42,10 @@ jobs:
         shell: bash
         run: bash tools/release/verify-version-state.sh
 
+      - name: Verify published app update manifest
+        shell: bash
+        run: python3 tools/release/verify-app-update-manifest.py
+
       - name: Test, lint and build unsigned release
         shell: bash
         run: |
