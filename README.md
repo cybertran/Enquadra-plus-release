@@ -4,7 +4,7 @@ Repositório público e open source do Enquadra+, aplicativo Android para consul
 
 ## Estado
 
-O código-fonte público está sincronizado com a versão canônica **v0.2.0-alpha.9** (`versionCode = 10`), mantendo histórico Git público limpo e o fluxo de segurança/release próprio deste repositório.
+O código-fonte público está preparado como candidato **v0.2.0-alpha.10** (`versionCode = 11`), mantendo histórico Git público limpo e o fluxo de segurança/release próprio deste repositório. A última release oficial assinada continua sendo **v0.2.0-alpha.9** (`versionCode = 10`) até que uma nova build seja publicada e verificada.
 
 O projeto usa fontes públicas e oficiais, como CTB, MBFT, Resoluções CONTRAN, atos da Senatran e demais normas aplicáveis. O Enquadra+ é independente e não incorpora análises jurídicas, comentários, resumos de jurisprudência ou outros conteúdos autorais de produtos de terceiros.
 
@@ -33,6 +33,8 @@ O fluxo público gera apenas um candidato de release **não assinado**. A assina
 ```text
 https://github.com/cybertran/Enquadra-plus-release/releases/latest/download/Enquadra.apk
 ```
+
+O arquivo [app-update.json](app-update.json) é o manifesto consumido pela verificação manual de atualização do aplicativo. Ele aponta **somente para uma release oficial já assinada e publicada**; nunca deve ser antecipado para uma versão que exista apenas no código-fonte ou no CI.
 
 O procedimento completo está em [docs/RELEASING.md](docs/RELEASING.md).
 

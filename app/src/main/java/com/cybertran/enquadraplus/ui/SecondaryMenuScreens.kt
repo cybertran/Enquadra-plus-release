@@ -40,8 +40,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.cybertran.enquadraplus.R
 import com.cybertran.enquadraplus.data.update.UpdateNotificationManager
+import com.cybertran.enquadraplus.ui.update.AppUpdateStatus
+import com.cybertran.enquadraplus.ui.update.AppUpdateViewModel
 
 private const val PROJECT_URL = "https://github.com/cybertran/Enquadra-plus-release"
 private const val DEVELOPER_EMAIL = "cybertran@proton.me"
@@ -209,7 +213,7 @@ fun AboutAppScreen(
             InfoCard(
                 symbol = "◇",
                 title = "Privacidade e dados",
-                body = "O Enquadra+ é local-first e não depende de conta ou servidor próprio para as consultas principais. A internet é usada para acessar fontes oficiais quando o aplicativo verifica atualizações das bases jurídicas.",
+                body = "O Enquadra+ é local-first e não depende de conta ou servidor próprio para as consultas principais. A internet é usada para acessar fontes oficiais das bases jurídicas e, quando você solicitar, consultar no GitHub se existe uma versão oficial mais recente do aplicativo.",
             )
         }
 
@@ -226,11 +230,15 @@ fun AboutAppScreen(
 @Composable
 fun VersionInfoScreen(
     contentPadding: PaddingValues,
+    appUpdateViewModel: AppUpdateViewModel = viewModel(),
 ) {
     val context = LocalContext.current
+    val uriHandler = LocalUriHandler.current
     val packageInfo = remember(context) {
         context.packageManager.getPackageInfo(context.packageName, 0)
     }
+    val updateState by appUpdateViewModel.state.collectAsStateWithLifecycle()
+    val installedVersionCode = packageInfo.versionCodeCompat()
 
     SecondaryScreen(contentPadding = contentPadding) {
         InfoCard(
@@ -239,11 +247,93 @@ fun VersionInfoScreen(
             body = buildString {
                 append(packageInfo.versionName ?: "Não informada")
                 append("\nBuild ")
-                append(packageInfo.versionCodeCompat())
+                append(installedVersionCode)
             },
         )
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surface,
+            ),
+        ) {
+            Column(
+                modifier = Modifier.padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp),
+            ) {
+                CardTitle(
+                    symbol = "↻",
+                    title = "Atualização do aplicativo",
+                )
+                HorizontalDivider()
+
+                Text(
+                    text = when (updateState.status) {
+                        AppUpdateStatus.IDLE ->
+                            "Consulte se existe uma versão oficial mais recente do Enquadra+."
+                        AppUpdateStatus.CHECKING ->
+                            "Consultando a versão oficial publicada…"
+                        AppUpdateStatus.UP_TO_DATE ->
+                            "Você está usando a versão mais recente disponível."
+                        AppUpdateStatus.UPDATE_AVAILABLE ->
+                            "Nova versão disponível: " +
+                                (updateState.release?.versionName ?: "versão mais recente") +
+                                "."
+                        AppUpdateStatus.ERROR ->
+                            "Não foi possível verificar a atualização agora. Sua versão instalada não foi alterada."
+                    },
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+
+                when (updateState.status) {
+                    AppUpdateStatus.UPDATE_AVAILABLE -> {
+                        val release = updateState.release
+                        Button(
+                            modifier = Modifier.fillMaxWidth(),
+                            enabled = release != null,
+                            onClick = {
+                                release?.let { uriHandler.openUri(it.apkUrl) }
+                            },
+                        ) {
+                            Text("Baixar atualização")
+                        }
+                        Text(
+                            text = "O download é aberto no GitHub. A instalação depende da confirmação do Android e nunca é feita silenciosamente.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    AppUpdateStatus.CHECKING -> {
+                        Button(
+                            modifier = Modifier.fillMaxWidth(),
+                            enabled = false,
+                            onClick = {},
+                        ) {
+                            Text("Verificando…")
+                        }
+                    }
+                    else -> {
+                        Button(
+                            modifier = Modifier.fillMaxWidth(),
+                            onClick = {
+                                appUpdateViewModel.checkNow(installedVersionCode)
+                            },
+                        ) {
+                            Text(
+                                if (updateState.status == AppUpdateStatus.ERROR) {
+                                    "Tentar novamente"
+                                } else {
+                                    "Verificar atualização"
+                                },
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
         Text(
-            text = "As versões das bases jurídicas e a última verificação ficam em Configurações > Base jurídica e atualizações.",
+            text = "A atualização do aplicativo é independente das atualizações jurídicas. As versões das bases e a última verificação ficam em Configurações > Base jurídica e atualizações.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )

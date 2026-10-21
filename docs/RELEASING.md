@@ -66,3 +66,25 @@ https://github.com/cybertran/Enquadra-plus-release/releases/latest/download/Enqu
 ```
 
 Para versões alpha ou beta marcadas como pre-release, use o endereço específico da tag até a primeira release estável.
+
+## 5. Atualizar o manifesto consumido pelo aplicativo
+
+Somente **depois** de a release oficial estar publicada e de `Enquadra.apk` ter passado pela verificação de assinatura e SHA-256, atualize `app-update.json`.
+
+Preencha:
+
+- `versionCode` e `versionName` exatamente como no APK publicado;
+- `releaseUrl` para a tag oficial;
+- `apkUrl` para o asset `Enquadra.apk` daquela mesma tag;
+- `apkSha256` com o SHA-256 calculado do APK oficial;
+- `signingCertificateSha256` com o fingerprint oficial documentado.
+
+Execute:
+
+```bash
+python3 tools/release/verify-app-update-manifest.py
+```
+
+O manifesto pode ficar atrás da versão do código-fonte enquanto uma candidata ainda não foi publicada. Ele **não pode** ficar à frente do `versionCode` do código público e nunca deve apontar para APK de CI, debug, candidato não assinado ou arquivo de terceiros.
+
+A alteração do manifesto deve ser revisável e passar pelo CI antes de entrar em `main`. Assim, usuários antigos só recebem o aviso depois que o APK oficial realmente existe.

@@ -59,6 +59,11 @@ jobs:
         shell: bash
         run: bash tools/release/verify-version-state.sh
 
+      - name: Verify published app update manifest
+        if: steps.detect.outputs.android == 'true'
+        shell: bash
+        run: python3 tools/release/verify-app-update-manifest.py
+
       - name: Test, lint and build
         if: steps.detect.outputs.android == 'true'
         shell: bash

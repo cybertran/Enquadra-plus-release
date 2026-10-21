@@ -52,6 +52,7 @@ O Enquadra+ usa fontes públicas e oficiais como base de verdade. Conteúdo auto
 | Assistente de observação do AIT | 🟡 Misto | Compor texto somente a partir de fatos informados pelo usuário e referências oficiais; não inventar fatos nem conclusão jurídica |
 | Calendários estaduais de licenciamento | 🟢 Oficial | Incluir somente UFs/exercícios conferidos em fonte oficial do órgão competente, com cobertura explícita e sem inferência de datas |
 | Alertas de atualização | 🟡 Serviço local | Notificar de forma opt-in apenas quando houver candidata normativa validada; nunca aplicar automaticamente por causa da notificação |
+| Atualização do aplicativo | 🟡 Distribuição oficial | Verificar manualmente a última release oficial assinada, comparar `versionCode` e oferecer download no GitHub; manter separado das atualizações jurídicas e nunca instalar silenciosamente |
 
 ## Modelo de acesso
 
@@ -71,6 +72,7 @@ A ordem de trabalho deve considerar o que já existe no aplicativo e evitar reco
 8. **Concluído em 15/10/2026:** bloco v0.17 de sinalização e documentos oficiais: nove volumes do Manual Brasileiro de Sinalização acessíveis pelo app, catálogo pesquisável dos 57 sinais de regulamentação com visual oficial, Deliberações CONTRAN no catálogo normativo, atos explicitamente citados vinculados às fichas e visualizador interno de PDFs oficiais com política de origem restrita.
 9. **Concluído em 15/10/2026:** bloco v0.18 de fechamento do núcleo de paridade operacional: todas as 409 fichas foram auditadas para vínculos normativos com evidência oficial; o pacote offline passou a indexar 3.141 de 3.192 atos (98,4% do catálogo) e 100% dos 3.017 documentos PDF, com FTS próprio; e os nove volumes oficiais de sinalização passaram a ter catálogo pesquisável com 1.038 entradas. A auditoria comparativa posterior identificou lacunas complementares de produtividade, documentadas em [QAP_FUNCTIONAL_PARITY_AUDIT.md](QAP_FUNCTIONAL_PARITY_AUDIT.md).
 10. **Em implementação em 15/10/2026:** bloco v0.19 de paridade operacional complementar: guias operacionais próprios, calendários estaduais 2026 somente para UFs auditadas em fonte oficial, assistente de observação do AIT baseado em fatos do usuário, alertas locais opt-in para candidatas normativas validadas e salvar/compartilhar PDFs oficiais. Análise jurídica autoral, conteúdo editorial proprietário e camada comercial continuam fora do escopo.
+11. **Implementado em 21/10/2026 para v0.2.0-alpha.10:** verificação manual de atualização do próprio aplicativo na tela Versão, por manifesto público de release oficial assinada, com comparação por `versionCode`, validação restritiva do manifesto e download iniciado somente por decisão do usuário. O fluxo permanece independente das atualizações jurídico-normativas.
 
 ## Estado funcional já existente
 
