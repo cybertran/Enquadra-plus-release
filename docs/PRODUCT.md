@@ -16,6 +16,8 @@ A ordem funcional e as regras de fonte que orientam o desenvolvimento estão reg
 
 O mecanismo de atualização local das bases jurídico-normativas possui especificação canônica própria em [SAFE_NORMATIVE_UPDATE_DOSSIER.md](SAFE_NORMATIVE_UPDATE_DOSSIER.md). Qualquer funcionalidade de consulta remota, geração candidata, promoção ou rollback deve obedecer a esse dossiê.
 
+A atualização do próprio aplicativo é independente desse mecanismo. Em **Versão**, o usuário pode solicitar uma verificação manual da última release oficial assinada. Uma versão nova é apenas informada e oferecida para download no GitHub; não há download em segundo plano, instalação silenciosa nem aplicação automática.
+
 ## Diretriz canônica de UX operacional
 
 A interface deve separar claramente três camadas:
