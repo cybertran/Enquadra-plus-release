@@ -23,7 +23,7 @@ O código-fonte pode ser compilado por qualquer pessoa. Isso não transforma uma
 A identidade criptográfica oficial do aplicativo é verificada pelo certificado de assinatura. Fingerprint SHA-256 oficial:
 
 ```text
-50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18
+36:37:7E:0A:E2:63:B8:ED:79:B2:A9:1F:C4:A4:82:69:34:BC:5B:9D:FB:D4:4E:B7:B9:3D:6F:01:7A:2B:F0:53
 ```
 
 A chave privada de assinatura e sua senha não fazem parte deste repositório e não devem ser enviadas em issues, pull requests, workflows ou commits.
