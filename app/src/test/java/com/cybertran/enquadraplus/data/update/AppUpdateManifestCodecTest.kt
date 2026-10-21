@@ -10,8 +10,8 @@ class AppUpdateManifestCodecTest {
     fun decodesOfficialReleaseManifest() {
         val manifest = AppUpdateManifestCodec.decode(validManifest())
 
-        assertEquals(10L, manifest.versionCode)
-        assertEquals("0.2.0-alpha.9", manifest.versionName)
+        assertEquals(11L, manifest.versionCode)
+        assertEquals("0.2.0-alpha.10", manifest.versionName)
         assertEquals(
             "8EC9880AA9DCEA7D3CFFE7A6435224B7751DDD971E1C97A8DEAABC99A2EF6148",
             manifest.apkSha256,
@@ -45,7 +45,7 @@ class AppUpdateManifestCodecTest {
     @Test
     fun rejectsUnexpectedCertificate() {
         val invalid = validManifest().replace(
-            "50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18",
+            "36:37:7E:0A:E2:63:B8:ED:79:B2:A9:1F:C4:A4:82:69:34:BC:5B:9D:FB:D4:4E:B7:B9:3D:6F:01:7A:2B:F0:53",
             "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
         )
 
@@ -57,7 +57,7 @@ class AppUpdateManifestCodecTest {
     @Test
     fun rejectsVersionPathMismatch() {
         val invalid = validManifest().replace(
-            "releases/tag/v0.2.0-alpha.9",
+            "releases/tag/v0.2.0-alpha.10",
             "releases/tag/v0.2.0-alpha.8",
         )
 
@@ -70,12 +70,12 @@ class AppUpdateManifestCodecTest {
         """
         {
           "schemaVersion": 1,
-          "versionCode": 10,
-          "versionName": "0.2.0-alpha.9",
-          "releaseUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/tag/v0.2.0-alpha.9",
-          "apkUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/download/v0.2.0-alpha.9/Enquadra.apk",
+          "versionCode": 11,
+          "versionName": "0.2.0-alpha.10",
+          "releaseUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/tag/v0.2.0-alpha.10",
+          "apkUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/download/v0.2.0-alpha.10/Enquadra.apk",
           "apkSha256": "8EC9880AA9DCEA7D3CFFE7A6435224B7751DDD971E1C97A8DEAABC99A2EF6148",
-          "signingCertificateSha256": "50:D7:B4:DD:CA:B4:B9:37:62:C1:1A:3E:BB:1C:EF:44:4B:45:F3:EE:8F:F4:79:B7:3F:07:F2:51:15:C9:E1:18"
+          "signingCertificateSha256": "36:37:7E:0A:E2:63:B8:ED:79:B2:A9:1F:C4:A4:82:69:34:BC:5B:9D:FB:D4:4E:B7:B9:3D:6F:01:7A:2B:F0:53"
         }
         """.trimIndent()
 }
