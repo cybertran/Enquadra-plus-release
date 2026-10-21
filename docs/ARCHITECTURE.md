@@ -45,6 +45,12 @@ Nenhuma fonte remota pode alterar diretamente a base ativa. Toda atualização d
 
 A especificação canônica completa está em [SAFE_NORMATIVE_UPDATE_DOSSIER.md](SAFE_NORMATIVE_UPDATE_DOSSIER.md) e é obrigatória para qualquer implementação relacionada ao bloco de atualização.
 
+### Atualização do aplicativo
+
+A atualização do APK é um fluxo separado da atualização jurídico-normativa. A tela **Versão** pode consultar manualmente um manifesto de release mantido no repositório público de distribuição. O manifesto só representa APKs oficiais já publicados e assinados; código presente na branch principal ou um candidato de CI não deve ser anunciado como atualização disponível.
+
+A consulta compara o `versionCode` instalado com o `versionCode` publicado. O manifesto remoto é entrada não confiável: a implementação exige HTTPS, endpoint fixo, limite de tamanho, schema conhecido, URLs restritas ao repositório oficial, nome de APK fixo e fingerprint do certificado oficial esperado. O aplicativo não instala nem aplica APKs automaticamente. Quando houver nova versão, a ação do usuário abre o download oficial no GitHub e a instalação permanece sob confirmação do Android.
+
 ## Estado de UI
 
 Cada tela com lógica própria terá ViewModel responsável pelo estado observável. A UI Compose apenas renderiza o estado e envia ações do usuário.
