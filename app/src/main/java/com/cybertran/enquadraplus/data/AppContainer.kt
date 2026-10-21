@@ -11,6 +11,7 @@ import com.cybertran.enquadraplus.data.repository.OfflineCtbRepository
 import com.cybertran.enquadraplus.data.repository.OfflineNormativeRepository
 import com.cybertran.enquadraplus.data.repository.OfflineTrafficRepository
 import com.cybertran.enquadraplus.data.repository.OfflineUserInfractionRepository
+import com.cybertran.enquadraplus.data.update.AppUpdateChecker
 import com.cybertran.enquadraplus.data.update.SafeNormativeUpdateRepository
 import com.cybertran.enquadraplus.data.user.UserDataDatabase
 import com.cybertran.enquadraplus.domain.repository.CtbRepository
@@ -42,6 +43,7 @@ class AppContainer(context: Context) {
         OfflineNormativeRepository(database.normativeDao())
 
     val safeUpdateRepository = SafeNormativeUpdateRepository(context, database)
+    val appUpdateChecker = AppUpdateChecker()
 
     suspend fun importBundledDatasetIfNeeded() {
         mbftImporter.importIfNeeded()
