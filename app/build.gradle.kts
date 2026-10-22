@@ -13,10 +13,43 @@ android {
         applicationId = "com.cybertran.enquadraplus"
         minSdk = 24
         targetSdk = 37
-        // Development candidate v0.2.0-alpha.11
-        versionCode = 12
-        versionName = "0.2.0-alpha.11"
+        // Development candidate v0.2.0-alpha.12
+        versionCode = 13
+        versionName = "0.2.0-alpha.12"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    val releaseKeystorePath = providers.environmentVariable("ENQUADRA_RELEASE_KEYSTORE").orNull
+    val releaseStorePassword = providers.environmentVariable("ENQUADRA_RELEASE_STORE_PASSWORD").orNull
+    val releaseKeyAlias = providers.environmentVariable("ENQUADRA_RELEASE_KEY_ALIAS").orNull
+    val releaseKeyPassword = providers.environmentVariable("ENQUADRA_RELEASE_KEY_PASSWORD").orNull
+    val releaseSigningReady = listOf(
+        releaseKeystorePath,
+        releaseStorePassword,
+        releaseKeyAlias,
+        releaseKeyPassword,
+    ).all { !it.isNullOrBlank() }
+
+    signingConfigs {
+        if (releaseSigningReady) {
+            create("release") {
+                storeFile = file(requireNotNull(releaseKeystorePath))
+                storePassword = releaseStorePassword
+                keyAlias = releaseKeyAlias
+                keyPassword = releaseKeyPassword
+            }
+        }
+    }
+
+    buildTypes {
+        getByName("debug") {
+            isDebuggable = true
+        }
+        getByName("release") {
+            isDebuggable = false
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.findByName("release")
+        }
     }
 
     buildFeatures {
