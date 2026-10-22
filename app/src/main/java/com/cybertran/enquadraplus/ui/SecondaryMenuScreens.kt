@@ -43,11 +43,14 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.cybertran.enquadraplus.R
+import com.cybertran.enquadraplus.data.feedback.FeedbackContextProvider
 import com.cybertran.enquadraplus.data.update.UpdateNotificationManager
 import com.cybertran.enquadraplus.ui.update.AppUpdateStatus
 import com.cybertran.enquadraplus.ui.update.AppUpdateViewModel
 
 private const val PROJECT_URL = "https://github.com/cybertran/Enquadra-plus-release"
+private const val FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf5B-n0P-p6k-n71mOsqf5P15R-n3V9yB7pI7c0wX3fQ3q_xQ/viewform"
+private const val FEEDBACK_CONTEXT_ENTRY = "entry.1038453569"
 private const val DEVELOPER_EMAIL = "cybertran@proton.me"
 private const val DEVELOPER_NAME = "Wanderson Maike Campos Pinto"
 
@@ -164,6 +167,19 @@ fun AboutAppScreen(
     val packageInfo = remember(context) {
         context.packageManager.getPackageInfo(context.packageName, 0)
     }
+    val feedbackUrl = remember(context, packageInfo) {
+        val installationId = FeedbackContextProvider.installationId(context)
+        val diagnosticPayload = FeedbackContextProvider.diagnosticPayload(
+            installationId = installationId,
+            versionName = packageInfo.versionName ?: "não informada",
+            versionCode = packageInfo.versionCodeCompat(),
+        )
+        FeedbackContextProvider.prefilledUrl(
+            baseUrl = FEEDBACK_URL,
+            entryKey = FEEDBACK_CONTEXT_ENTRY,
+            diagnosticPayload = diagnosticPayload,
+        )
+    }
 
     LazyColumn(
         modifier = Modifier
@@ -194,6 +210,16 @@ fun AboutAppScreen(
 
         item {
             InfoCard(
+                symbol = "✎",
+                title = "Feedback",
+                body = "Envie uma sugestão, relate um problema ou informe conteúdo incorreto. Você pode responder sem se identificar. Ao abrir o formulário pelo app, um identificador aleatório da instalação e a versão do Enquadra+ podem ser incluídos para ajudar no diagnóstico.",
+                onClick = { uriHandler.openUri(feedbackUrl) },
+                actionText = "Enviar feedback",
+            )
+        }
+
+        item {
+            InfoCard(
                 symbol = "</>",
                 title = "Projeto",
                 body = "O código-fonte, o histórico de versões e a documentação de desenvolvimento ficam concentrados no GitHub.",
@@ -213,7 +239,7 @@ fun AboutAppScreen(
             InfoCard(
                 symbol = "◇",
                 title = "Privacidade e dados",
-                body = "O Enquadra+ é local-first e não depende de conta ou servidor próprio para as consultas principais. A internet é usada para acessar fontes oficiais das bases jurídicas e, quando você solicitar, consultar no GitHub se existe uma versão oficial mais recente do aplicativo.",
+                body = "O Enquadra+ é local-first e não depende de conta ou servidor próprio para as consultas principais. Ao abrir o feedback pelo app, é incluído um identificador aleatório da instalação, sem uso de ANDROID_ID, IMEI, conta Google, telefone ou identificadores de publicidade, além da versão instalada. O e-mail no formulário continua opcional.",
             )
         }
 
