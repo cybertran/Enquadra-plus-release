@@ -49,8 +49,8 @@ import com.cybertran.enquadraplus.ui.update.AppUpdateStatus
 import com.cybertran.enquadraplus.ui.update.AppUpdateViewModel
 
 private const val PROJECT_URL = "https://github.com/cybertran/Enquadra-plus-release"
-private const val FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf5B-n0P-p6k-n71mOsqf5P15R-n3V9yB7pI7c0wX3fQ3q_xQ/viewform"
-private const val FEEDBACK_CONTEXT_ENTRY = "entry.1038453569"
+internal const val FEEDBACK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeenUB00lPbYq6ZNpTIyhNB7gyvQukRtnal9_J6egMlAlPDUg/viewform"
+internal const val FEEDBACK_CONTEXT_ENTRY = "entry.1546345396"
 private const val DEVELOPER_EMAIL = "cybertran@proton.me"
 private const val DEVELOPER_NAME = "Wanderson Maike Campos Pinto"
 
