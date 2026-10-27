@@ -39,6 +39,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
@@ -48,6 +49,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -108,6 +112,7 @@ fun EnquadraApp(
     infractionsViewModel: InfractionsViewModel = viewModel(),
 ) {
     var destination by rememberSaveable { mutableStateOf(TopDestination.HOME) }
+    var focusInfractionSearch by rememberSaveable { mutableStateOf(false) }
     var toolDestination by rememberSaveable { mutableStateOf<ToolDestination?>(null) }
     var secondaryDestination by rememberSaveable {
         mutableStateOf<SecondaryDestination?>(null)
@@ -338,9 +343,10 @@ fun EnquadraApp(
                         TopDestination.HOME -> HomeScreen(
                             contentPadding = innerPadding,
                             viewModel = infractionsViewModel,
-                            onOpenInfractions = { mode ->
+                            onOpenInfractions = { mode, focusSearch ->
                                 infractionsViewModel.updateQuery("")
                                 infractionsViewModel.setListMode(mode)
+                                focusInfractionSearch = focusSearch
                                 destination = TopDestination.INFRACTIONS
                             },
                             onOpenInfraction = infractionsViewModel::open,
@@ -352,6 +358,8 @@ fun EnquadraApp(
                         TopDestination.INFRACTIONS -> InfractionsScreen(
                             contentPadding = innerPadding,
                             viewModel = infractionsViewModel,
+                            requestSearchFocus = focusInfractionSearch,
+                            onSearchFocusHandled = { focusInfractionSearch = false },
                         )
                         TopDestination.NORMS -> OfficialNormsScreen(
                             contentPadding = innerPadding,
@@ -380,7 +388,7 @@ fun EnquadraApp(
 private fun HomeScreen(
     contentPadding: PaddingValues,
     viewModel: InfractionsViewModel,
-    onOpenInfractions: (InfractionListMode) -> Unit,
+    onOpenInfractions: (InfractionListMode, Boolean) -> Unit,
     onOpenInfraction: (String) -> Unit,
     onOpenNorms: () -> Unit,
     onOpenUpdates: () -> Unit,
@@ -402,7 +410,7 @@ private fun HomeScreen(
             HomeSection(title = "Consulta rápida") {
                 HomeSearchCard(
                     onClick = {
-                        onOpenInfractions(InfractionListMode.ALL)
+                        onOpenInfractions(InfractionListMode.ALL, true)
                     },
                 )
             }
@@ -413,7 +421,7 @@ private fun HomeScreen(
                 title = "Consultas recentes",
                 actionLabel = if (recentInfractions.isNotEmpty()) "Ver todas" else null,
                 onAction = {
-                    onOpenInfractions(InfractionListMode.RECENT)
+                    onOpenInfractions(InfractionListMode.RECENT, false)
                 },
             ) {
                 if (recentInfractions.isEmpty()) {
@@ -445,7 +453,7 @@ private fun HomeScreen(
                             "${favoriteCodes.size} salvas"
                         },
                         onClick = {
-                            onOpenInfractions(InfractionListMode.FAVORITES)
+                            onOpenInfractions(InfractionListMode.FAVORITES, false)
                         },
                     )
                     HomeCompactCard(
@@ -869,6 +877,8 @@ private const val HOME_RECENT_LIMIT = 3
 private fun InfractionsScreen(
     contentPadding: PaddingValues,
     viewModel: InfractionsViewModel,
+    requestSearchFocus: Boolean,
+    onSearchFocusHandled: () -> Unit,
 ) {
     val query by viewModel.query.collectAsStateWithLifecycle()
     val results by viewModel.results.collectAsStateWithLifecycle()
@@ -876,6 +886,16 @@ private fun InfractionsScreen(
     val listMode by viewModel.listMode.collectAsStateWithLifecycle()
     val favoriteCodes by viewModel.favoriteCodes.collectAsStateWithLifecycle()
     var showFilters by rememberSaveable { mutableStateOf(false) }
+    val searchFocusRequester = remember { FocusRequester() }
+    val keyboardController = LocalSoftwareKeyboardController.current
+
+    LaunchedEffect(requestSearchFocus) {
+        if (requestSearchFocus) {
+            searchFocusRequester.requestFocus()
+            keyboardController?.show()
+            onSearchFocusHandled()
+        }
+    }
 
     LazyColumn(
         modifier = Modifier
@@ -894,7 +914,9 @@ private fun InfractionsScreen(
         }
         item {
             OutlinedTextField(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(searchFocusRequester),
                 value = query,
                 onValueChange = viewModel::updateQuery,
                 singleLine = true,
