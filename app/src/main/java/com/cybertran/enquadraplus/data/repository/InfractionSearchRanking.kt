@@ -21,8 +21,8 @@ internal fun List<TrafficInfraction>.rankForInfractionSearch(
     val requestedArticle = numericQuery
         ?.let { NUMERIC_ARTICLE_QUERY.matchEntire(it) }
         ?.let { match ->
-            match.groupValues[1] + match.groupValues[2].takeIf(String::isNotEmpty)
-                .orEmpty().let { suffix -> if (suffix.isEmpty()) "" else "-${suffix.lowercase(Locale.ROOT)}" }
+            val suffix = match.groupValues[2].lowercase(Locale.ROOT)
+            match.groupValues[1] + if (suffix.isEmpty()) "" else "-$suffix"
         }
     val requestedCodeDigits = numericQuery
         ?.filter(Char::isDigit)
