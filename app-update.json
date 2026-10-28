@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "versionCode": 13,
-  "versionName": "0.2.0-alpha.12",
-  "releaseUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/tag/v0.2.0-alpha.12",
-  "apkUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/download/v0.2.0-alpha.12/Enquadra.apk",
-  "apkSha256": "A7263B19A5137FD1A6E3471B102C544DE01951BB89121FBDFBFB7DC9BF7B1D4B",
+  "versionCode": 15,
+  "versionName": "0.2.0-alpha.14",
+  "releaseUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/tag/v0.2.0-alpha.14",
+  "apkUrl": "https://github.com/cybertran/Enquadra-plus-release/releases/download/v0.2.0-alpha.14/Enquadra.apk",
+  "apkSha256": "DA92D11B8B012D363A0F3D233DB7ADF0AF211431682A93495D7BD8B6BC758AB0",
   "signingCertificateSha256": "36:37:7E:0A:E2:63:B8:ED:79:B2:A9:1F:C4:A4:82:69:34:BC:5B:9D:FB:D4:4E:B7:B9:3D:6F:01:7A:2B:F0:53"
 }
