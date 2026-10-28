@@ -15,6 +15,7 @@ enum class AppUpdateStatus {
     IDLE,
     CHECKING,
     UP_TO_DATE,
+    NOT_CONFIRMED,
     UPDATE_AVAILABLE,
     ERROR,
 }
@@ -51,6 +52,11 @@ class AppUpdateViewModel(
                     is AppUpdateCheckResult.UpToDate ->
                         AppUpdateUiState(
                             status = AppUpdateStatus.UP_TO_DATE,
+                            release = result.release,
+                        )
+                    is AppUpdateCheckResult.NotConfirmed ->
+                        AppUpdateUiState(
+                            status = AppUpdateStatus.NOT_CONFIRMED,
                             release = result.release,
                         )
                 }

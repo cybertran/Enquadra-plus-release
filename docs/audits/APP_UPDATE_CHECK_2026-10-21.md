@@ -39,3 +39,13 @@ Um comprometimento da conta/repositório público poderia causar informação fa
 ## Validação automatizada
 
 Foram adicionados testes unitários para o codec do manifesto cobrindo manifesto oficial válido e rejeição de HTTP, repositório divergente, certificado divergente e inconsistência entre versão e URL. Build, lint, testes completos, auditoria de dependências e Security Policy Gate permanecem como gates do CI antes do merge.
+
+## Evolução v0.2.0-alpha.15 — mitigação de cache compartilhado
+
+Após a publicação da alpha.14, o cliente ocasionalmente consultou uma cópia anterior do manifesto no cache HTTP e declarou incorretamente que não existia atualização. O cliente já usava `useCaches=false`, que não impede resposta antiga de CDN/proxy remoto.
+
+A verificação da alpha.15 usa um parâmetro de consulta `check=<timestamp>` diferente em cada tentativa no endpoint HTTPS oficial fixo, com cabeçalhos `Cache-Control: no-cache, no-store, max-age=0` e `Pragma: no-cache`. O hostname e o caminho continuam pinados; redirecionamentos permanecem proibidos. O manifesto recebido continua sujeito aos mesmos limites de tamanho, schema, versão, URLs e identidade de certificado.
+
+Uma versão publicada maior que a instalada oferece atualização; igual confirma que não há versão nova identificada; menor é **inconclusiva** e não autoriza a mensagem de versão atualizada. A interface informa a versão oficial efetivamente consultada para facilitar o diagnóstico.
+
+Testes unitários cobrem consulta única, endpoint permitido, nonce, comparação de versões e estado inconclusivo. Essa mitigação reduz muito a chance de falso negativo causado por cache compartilhado, mas não garante ausência de atraso na propagação da informação após uma publicação. A assinatura e o fluxo de promoção do manifesto permanecem inalterados.

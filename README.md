@@ -4,7 +4,7 @@ Repositório público e open source do Enquadra+, aplicativo Android para consul
 
 ## Estado
 
-O código-fonte público está preparado como candidato **v0.2.0-alpha.14** (`versionCode = 15`), mantendo histórico Git público limpo e o fluxo de segurança/release próprio deste repositório. A última release oficial assinada é **v0.2.0-alpha.12** (`versionCode = 13`) até que uma nova candidata seja assinada, publicada e verificada. As correções da alpha.13 permanecem incorporadas na alpha.14.
+O código-fonte público está preparado como candidato **v0.2.0-alpha.15** (`versionCode = 16`), mantendo histórico Git público limpo e o fluxo de segurança/release próprio deste repositório. A última release oficial assinada é **v0.2.0-alpha.14** (`versionCode = 15`). A alpha.15 aprimora a verificação manual de atualização para mitigar respostas antigas de cache; as melhorias da alpha.14 permanecem incorporadas. O manifesto `app-update.json` continuará apontando para a alpha.14 até uma nova versão ser assinada e publicada.
 
 O projeto usa fontes públicas e oficiais, como CTB, MBFT, Resoluções CONTRAN, atos da Senatran e demais normas aplicáveis. O Enquadra+ é independente e não incorpora análises jurídicas, comentários, resumos de jurisprudência ou outros conteúdos autorais de produtos de terceiros.
 
