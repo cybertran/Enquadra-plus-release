@@ -46,6 +46,12 @@ class OfflineTrafficRepository(
 }
 
 internal fun String.toInfractionFtsQuery(): String {
+    // The official code 537-10 is indexed as separate FTS tokens ("537" and "10").
+    // Make continuous numeric input (53710) searchable without requiring the hyphen.
+    val compactCode = trim()
+    if (compactCode.matches(Regex("""\d{4,5}"""))) {
+        return "${compactCode.take(3)}* AND ${compactCode.drop(3)}*"
+    }
     val tokens = Regex("[\\p{L}\\p{N}]+")
         .findAll(lowercase())
         .map { it.value }

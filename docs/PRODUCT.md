@@ -58,7 +58,7 @@ A aplicação por tela está registrada em [UI_SELECTION_CONTROLS_AUDIT_2026-10-
 
 ### Consulta de infrações
 
-- Pesquisa de infrações, com resultados cujo título começa pelo termo buscado priorizados antes de ocorrências do termo no meio do título; demais correspondências por código, artigo e campos indexados aparecem depois. A consulta deve ser tolerante a palavras de ligação comuns do português, como `em`, `de`, `do`, `da`, `a`, `o` e `e`, para que expressões como `transitar em` não eliminem resultados válidos. Durante a digitação, a consulta deve usar debounce curto para evitar uma ida ao banco a cada tecla e um último token alfabético ainda incompleto de um único caractere não pode zerar prematuramente os resultados.
+- Pesquisa de infrações, com resultados cujo título começa pelo termo buscado priorizados antes de ocorrências do termo no meio do título quando a busca é textual. Quando a consulta é numérica (código ou artigo), correspondências exatas de código de enquadramento têm prioridade, seguidas das correspondências exatas de artigo, correspondências parciais de identificadores e, por fim, a tipificação e os demais campos indexados. A busca por artigo distingue artigos com sufixo (ex.: 180 e 180-A). A consulta deve ser tolerante a palavras de ligação comuns do português, como `em`, `de`, `do`, `da`, `a`, `o` e `e`, para que expressões como `transitar em` não eliminem resultados válidos. Durante a digitação, a consulta deve usar debounce curto para evitar uma ida ao banco a cada tecla e um último token alfabético ainda incompleto de um único caractere não pode zerar prematuramente os resultados.
 - Busca por código de enquadramento.
 - Busca por artigo e palavra-chave.
 - Enquadramento e tipificação.
