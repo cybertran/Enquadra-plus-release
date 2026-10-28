@@ -300,7 +300,11 @@ fun VersionInfoScreen(
                         AppUpdateStatus.CHECKING ->
                             "Consultando a versão oficial publicada…"
                         AppUpdateStatus.UP_TO_DATE ->
-                            "Você está usando a versão mais recente disponível."
+                            "Nenhuma atualização encontrada. Versão oficial consultada: " +
+                                (updateState.release?.versionName ?: "não informada") + "."
+                        AppUpdateStatus.NOT_CONFIRMED ->
+                            "Não foi possível confirmar a versão mais recente agora. " +
+                                "Tente verificar novamente em instantes."
                         AppUpdateStatus.UPDATE_AVAILABLE ->
                             "Nova versão disponível: " +
                                 (updateState.release?.versionName ?: "versão mais recente") +
