@@ -22,10 +22,12 @@ data class AppReleaseManifest(
 sealed interface AppUpdateCheckResult {
     data class UpdateAvailable(val release: AppReleaseManifest) : AppUpdateCheckResult
     data class UpToDate(val release: AppReleaseManifest) : AppUpdateCheckResult
+    data class NotConfirmed(val release: AppReleaseManifest) : AppUpdateCheckResult
 }
 
 class AppUpdateChecker(
     private val manifestUrl: URL = URL(DEFAULT_MANIFEST_URL),
+    private val requestNonce: () -> Long = System::currentTimeMillis,
 ) {
 
     suspend fun check(installedVersionCode: Long): AppUpdateCheckResult =
@@ -35,15 +37,12 @@ class AppUpdateChecker(
             }
 
             val release = fetchManifest()
-            if (release.versionCode > installedVersionCode) {
-                AppUpdateCheckResult.UpdateAvailable(release)
-            } else {
-                AppUpdateCheckResult.UpToDate(release)
-            }
+            classifyAppUpdate(release, installedVersionCode)
         }
 
     private fun fetchManifest(): AppReleaseManifest {
-        val connection = manifestUrl.openConnection() as? HttpsURLConnection
+        val freshUrl = AppUpdateRequestPolicy.freshUrl(manifestUrl, requestNonce())
+        val connection = freshUrl.openConnection() as? HttpsURLConnection
             ?: throw IOException("Update manifest must use HTTPS.")
 
         return try {
@@ -51,6 +50,8 @@ class AppUpdateChecker(
             connection.connectTimeout = CONNECT_TIMEOUT_MS
             connection.readTimeout = READ_TIMEOUT_MS
             connection.useCaches = false
+            connection.setRequestProperty("Cache-Control", "no-cache, no-store, max-age=0")
+            connection.setRequestProperty("Pragma", "no-cache")
             connection.setRequestProperty("Accept", "application/json")
             connection.setRequestProperty("User-Agent", "EnquadraPlus-AppUpdate")
 
@@ -95,6 +96,33 @@ class AppUpdateChecker(
         private const val CONNECT_TIMEOUT_MS = 5_000
         private const val READ_TIMEOUT_MS = 10_000
         private const val MAX_MANIFEST_BYTES = 32 * 1024
+    }
+}
+
+internal object AppUpdateRequestPolicy {
+
+    fun freshUrl(base: URL, nonce: Long): URL {
+        require(base.toExternalForm() == AppUpdateChecker.DEFAULT_MANIFEST_URL) {
+            "Unexpected app update manifest endpoint."
+        }
+        require(nonce >= 0) { "Request nonce must be non-negative." }
+        return URL("${AppUpdateChecker.DEFAULT_MANIFEST_URL}?check=$nonce")
+    }
+}
+
+/**
+ * A published version older than the installed build is inconclusive, not evidence
+ * that the installed build is the newest. Only an equal version is up to date.
+ */
+internal fun classifyAppUpdate(
+    release: AppReleaseManifest,
+    installedVersionCode: Long,
+): AppUpdateCheckResult {
+    require(installedVersionCode > 0) { "Installed versionCode must be positive." }
+    return when {
+        release.versionCode > installedVersionCode -> AppUpdateCheckResult.UpdateAvailable(release)
+        release.versionCode == installedVersionCode -> AppUpdateCheckResult.UpToDate(release)
+        else -> AppUpdateCheckResult.NotConfirmed(release)
     }
 }
 
