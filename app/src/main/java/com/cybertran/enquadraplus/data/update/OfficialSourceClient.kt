@@ -14,6 +14,29 @@ class SourceUnavailableException(
     cause: Throwable? = null,
 ) : IOException(message, cause)
 
+/**
+ * Technical-only diagnostic labels. They never trigger a fallback domain,
+ * override TLS verification, or authorize promotion of a normative dataset.
+ */
+internal object OfficialSourceErrorDiagnostics {
+    fun describe(failure: Throwable): String {
+        val root = generateSequence(failure) { it.cause }.take(8).last()
+        return when (root) {
+            is java.net.SocketTimeoutException ->
+                "Tempo esgotado ao comunicar com a fonte oficial."
+            is java.net.UnknownHostException ->
+                "Não foi possível resolver o endereço da fonte oficial (DNS)."
+            is javax.net.ssl.SSLException ->
+                "Falha na conexão HTTPS/TLS com a fonte oficial."
+            is java.net.SocketException ->
+                "Conexão interrompida durante a consulta (SocketException)."
+            else -> (root.message ?: root::class.java.simpleName)
+                .replace(Regex("\\s+"), " ")
+                .take(300)
+        }
+    }
+}
+
 class OfficialSourceClient {
 
     suspend fun fetch(spec: OfficialSourceSpec): OfficialFetchResult =
