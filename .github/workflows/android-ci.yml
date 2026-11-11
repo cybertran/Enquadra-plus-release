@@ -72,29 +72,4 @@ jobs:
           gradle --no-daemon --stacktrace --warning-mode all \
             :app:testDebugUnitTest \
             :app:lintDebug \
-            :app:assembleDebug \
-            :app:assembleLab
-
-      - name: Verify isolated, installable laboratory APK
-        if: steps.detect.outputs.android == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          apk="app/build/outputs/apk/lab/app-lab.apk"
-          test -s "$apk"
-          "$ANDROID_HOME/build-tools/37.0.0/aapt" dump badging "$apk" |
-            grep -F "package: name='com.cybertran.enquadraplus.lab'"
-          "$ANDROID_HOME/build-tools/37.0.0/apksigner" verify --verbose "$apk"
-          cp "$apk" "Enquadra-Laboratorio-alpha15.apk"
-          sha256sum "Enquadra-Laboratorio-alpha15.apk" > "Enquadra-Laboratorio-alpha15.apk.sha256"
-
-      - name: Upload installable laboratory APK (not official release)
-        if: steps.detect.outputs.android == 'true'
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
-        with:
-          name: enquadra-lab-alpha15
-          path: |
-            Enquadra-Laboratorio-alpha15.apk
-            Enquadra-Laboratorio-alpha15.apk.sha256
-          if-no-files-found: error
-          retention-days: 7
+            :app:assembleDebug

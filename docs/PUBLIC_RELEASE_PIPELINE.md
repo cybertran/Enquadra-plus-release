@@ -20,23 +20,6 @@ A assinatura continua offline como na v0.2.0-alpha.9, mas a alpha.10 inicia uma 
 10. O manifesto só entra em `main` depois dos gates do repositório público.
 
 
-## APK de laboratório (não é release oficial)
-
-Para validar correções no Android **antes** da assinatura oficial, a variante Gradle `lab` gera um aplicativo separado:
-
-- `applicationId = com.cybertran.enquadraplus.lab`, nome visível **Enquadra+ Laboratório**;
-- `versionName` acrescenta `-lab`, deixando evidente que é uma build de teste;
-- assinatura automática descartável de desenvolvimento do Android (não usa a keystore oficial);
-- `isDebuggable=false`, com comportamento próximo ao tipo `release`;
-- backup do aplicativo de laboratório desabilitado;
-- dados, banco e histórico ficam no sandbox independente do app oficial instalado.
-
-No CI público, o workflow **Android CI** compila `:app:assembleLab`, valida identidade do pacote e assinatura com `aapt` e `apksigner`, e disponibiliza o artifact `enquadra-lab-alpha15` com `Enquadra-Laboratorio-alpha15.apk` e seu SHA-256 (retenção de 7 dias). O APK pode ser instalado no mesmo aparelho que a release oficial **sem substituí-la**.
-
-A chave debug do runner é efêmera: um APK de laboratório produzido em execução diferente pode ter assinatura distinta. Nesse caso, para atualizar o laboratório será necessário desinstalar **somente o Enquadra+ Laboratório** e instalar o novo arquivo, perdendo exclusivamente os dados desse aplicativo de teste.
-
-**Nunca** enviar o APK de laboratório para GitHub Releases nem apontar `app-update.json` para ele. O laboratório não comprova, por si só, compatibilidade de instalação/upgrade, assinatura ou persistência do APK oficial. A promoção para produção continua exigindo a assinatura offline e todos os controles de release definidos neste dossiê.
-
 ## Candidato unsigned
 
 No repositório público, use **Actions → Release Candidate → Run workflow** na branch `main`.
