@@ -391,6 +391,44 @@ object NormativeUpdateCodec {
         )
     }
 
+    /**
+     * Diagnostics only. Every source field remains part of the strict canonical diff,
+     * and these counts never authorize promotion or relax mass-change safeguards.
+     */
+    fun changedFieldCounts(
+        active: NormativeDatasetPayload,
+        candidate: NormativeDatasetPayload,
+    ): Map<String, Int> {
+        val candidateById = candidate.records.associateBy(NormativeUpdateRecord::id)
+        val fields = listOf(
+            "numberLabel",
+            "actDate",
+            "publicationDate",
+            "subject",
+            "status",
+            "officialUrl",
+            "sourcePageUrl",
+            "agency",
+            "actType",
+            "number",
+            "year",
+        )
+        val counts = linkedMapOf<String, Int>()
+
+        active.records.forEach { previous ->
+            val updated = candidateById[previous.id] ?: return@forEach
+            val oldValues = previous.toMap()
+            val newValues = updated.toMap()
+            fields.forEach { field ->
+                if (oldValues[field] != newValues[field]) {
+                    counts[field] = (counts[field] ?: 0) + 1
+                }
+            }
+        }
+
+        return counts
+    }
+
     fun validateTransition(
         active: NormativeDatasetPayload,
         candidate: NormativeDatasetPayload,

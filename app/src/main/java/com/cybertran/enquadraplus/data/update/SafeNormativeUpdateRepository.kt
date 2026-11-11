@@ -280,7 +280,7 @@ class SafeNormativeUpdateRepository(
                 dataset = dataset,
                 status = UpdateStatus.SOURCE_UNAVAILABLE,
                 checkedAt = checkedAt,
-                message = "A consulta à fonte oficial do CTB não foi concluída: ${safeMessage(error.cause ?: error)}. A base ativa foi preservada.",
+                message = "A consulta à fonte oficial do CTB não foi concluída: ${OfficialSourceErrorDiagnostics.describe(error.cause ?: error)}. A base ativa foi preservada.",
             )
         } catch (error: IllegalArgumentException) {
             store.mark(
@@ -358,11 +358,23 @@ class SafeNormativeUpdateRepository(
                 diff = diff,
             )
             if (!report.isValid) {
+                val changedFields = NormativeUpdateCodec
+                    .changedFieldCounts(active, candidate)
+                    .entries
+                    .sortedWith(compareByDescending<Map.Entry<String, Int>> { it.value }
+                        .thenBy { it.key })
+                    .take(6)
+                    .joinToString(", ") { "${it.key}=${it.value}" }
+                val fieldSummary = if (changedFields.isNotEmpty()) {
+                    " Campos divergentes (quantidade de atos): $changedFields."
+                } else {
+                    ""
+                }
                 store.mark(
                     dataset = dataset,
                     status = UpdateStatus.CANDIDATE_BLOCKED,
                     checkedAt = checkedAt,
-                    message = blockedMessage(report),
+                    message = blockedMessage(report) + fieldSummary,
                     diff = diff,
                     clearCandidate = true,
                 )
