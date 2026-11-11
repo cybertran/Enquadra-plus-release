@@ -50,16 +50,6 @@ android {
             isMinifyEnabled = false
             signingConfig = signingConfigs.findByName("release")
         }
-        create("lab") {
-            // Install independently beside the official signed app.
-            // Uses disposable Android debug signing, NEVER the release keystore.
-            initWith(getByName("release"))
-            applicationIdSuffix = ".lab"
-            versionNameSuffix = "-lab"
-            isDebuggable = false
-            signingConfig = signingConfigs.getByName("debug")
-            matchingFallbacks += listOf("release")
-        }
     }
 
     buildFeatures {
